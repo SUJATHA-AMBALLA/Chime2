@@ -1935,6 +1935,764 @@ body{padding-top:125px;}
         max-height: 50px;
     }
 }
+/* ============================================================
+   APPROVALS
+   ============================================================ */
+
+.approvals-modern {
+  position: relative;
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(40, 74, 108, 0.045),
+      transparent 34%
+    ),
+    #f7f8fa;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.approvals-page-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.approvals-page-hero::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -180px;
+  top: -220px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+  pointer-events: none;
+}
+
+.page-eyebrow {
+  display: inline-flex;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.68;
+}
+
+
+/* ============================================================
+   TABS
+   ============================================================ */
+
+.approvals-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 48px;
+  padding: 7px;
+  border: 1px solid rgba(20,35,50,0.09);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 8px 30px rgba(15,30,45,0.055);
+}
+
+.approvals-tabs .tab-btn {
+  border: 0;
+  padding: 11px 23px;
+  border-radius: 9px;
+  background: transparent;
+  color: #536170;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.approvals-tabs .tab-btn:hover {
+  color: #172838;
+  background: #f1f4f7;
+}
+
+.approvals-tabs .tab-btn.active {
+  color: #fff;
+  background: #243d55;
+  box-shadow: 0 5px 16px rgba(25,48,70,0.18);
+}
+
+
+/* ============================================================
+   INTRO
+   ============================================================ */
+
+.approval-intro {
+  max-width: 760px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.approval-kicker {
+  display: inline-block;
+  margin-bottom: 11px;
+  color: #6c7b89;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+.approval-intro h2 {
+  margin: 0;
+  color: #1b2c3c;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.approval-intro p {
+  max-width: 620px;
+  margin: 16px auto 0;
+  color: #687685;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+
+.approval-timeline {
+  position: relative;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 10px 0 60px;
+}
+
+.approval-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 150px;
+  width: 1px;
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      #d6dde4 4%,
+      #d6dde4 96%,
+      transparent
+    );
+}
+
+
+/* ============================================================
+   EVENT
+   ============================================================ */
+
+.approval-event {
+  position: relative;
+  display: grid;
+  grid-template-columns: 125px 50px minmax(0,1fr);
+  min-height: 130px;
+  padding-bottom: 44px;
+}
+
+.approval-event:last-child {
+  padding-bottom: 0;
+}
+
+.approval-year {
+  padding-top: 9px;
+  color: #263b4d;
+  font-size: 16px;
+  font-weight: 850;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.approval-dot {
+  position: relative;
+  z-index: 2;
+  justify-self: center;
+  width: 12px;
+  height: 12px;
+  margin-top: 11px;
+  border: 3px solid #f7f8fa;
+  border-radius: 50%;
+  background: #435f76;
+  box-shadow:
+    0 0 0 1px rgba(67,95,118,0.22),
+    0 3px 9px rgba(30,55,75,0.12);
+}
+
+.approval-content {
+  min-width: 0;
+  padding-left: 26px;
+}
+
+.approval-type {
+  display: inline-flex;
+  padding: 5px 9px;
+  border: 1px solid #dbe2e8;
+  border-radius: 5px;
+  background: #fff;
+  color: #73808c;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+}
+
+.approval-content h3 {
+  margin: 8px 0 0;
+  color: #1d3041;
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 760;
+}
+
+.approval-description,
+.approval-detail {
+  max-width: 620px;
+  margin: 8px 0 0;
+  color: #6b7885;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.approval-detail {
+  color: #566776;
+  font-weight: 650;
+}
+
+
+/* ============================================================
+   DOCUMENT CARD
+   ============================================================ */
+
+.approval-document {
+  display: block;
+  width: min(100%,420px);
+  margin: 19px 0 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #dce3e9;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 7px 22px rgba(27,45,60,0.07);
+  text-align: left;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.approval-document:hover {
+  transform: translateY(-3px);
+  border-color: #c7d1da;
+  box-shadow: 0 13px 32px rgba(27,45,60,0.12);
+}
+
+.approval-document:focus-visible {
+  outline: 3px solid rgba(61,93,120,0.25);
+  outline-offset: 4px;
+}
+
+.approval-document-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  background: #eef1f4;
+}
+
+.approval-document-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  object-fit: contain;
+  background: #eef1f4;
+  transition: transform 300ms ease;
+}
+
+.approval-document:hover
+.approval-document-image img {
+  transform: scale(1.025);
+}
+
+.approval-document--portrait {
+  width: min(100%,330px);
+}
+
+.approval-document--portrait
+.approval-document-image {
+  height: 390px;
+}
+
+
+/* ============================================================
+   IMAGE OVERLAY
+   ============================================================ */
+
+.approval-image-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(19,35,49,0);
+  transition: background 180ms ease;
+}
+
+.approval-document:hover
+.approval-image-overlay {
+  background: rgba(19,35,49,0.22);
+}
+
+.zoom-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border: 1px solid rgba(255,255,255,0.65);
+  border-radius: 50%;
+  background: rgba(20,36,50,0.78);
+  color: #fff;
+  font-size: 25px;
+  opacity: 0;
+  transform: scale(.8);
+  transition: all 180ms ease;
+}
+
+.approval-document:hover .zoom-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* ============================================================
+   DOCUMENT FOOTER
+   ============================================================ */
+
+.approval-document-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 0 14px;
+  color: #455766;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.approval-open-arrow {
+  font-size: 16px;
+  color: #778692;
+}
+
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+
+.approval-lightbox {
+  position: fixed;
+  z-index: 99999;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.approval-lightbox.is-open {
+  display: flex;
+}
+
+.approval-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,18,26,0.90);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.approval-lightbox-dialog {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: min(96vw,1450px);
+  height: min(94vh,950px);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 14px;
+  background: #17232e;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.45);
+}
+
+
+/* ============================================================
+   LIGHTBOX TOOLBAR
+   ============================================================ */
+
+.approval-lightbox-toolbar {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 72px;
+  padding: 12px 16px 12px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.09);
+  background: #1c2a36;
+}
+
+.approval-lightbox-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #8f9ca7;
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: .18em;
+}
+
+.approval-lightbox-title {
+  overflow: hidden;
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.approval-lightbox-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.approval-viewer-btn {
+  display: grid;
+  place-items: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 7px;
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  cursor: pointer;
+}
+
+.approval-viewer-btn:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.approval-zoom-value {
+  min-width: 53px;
+  color: #aeb9c2;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.approval-reset-btn {
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.approval-lightbox-close {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  margin-left: 8px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+
+/* ============================================================
+   DOCUMENT VIEWER
+   ============================================================ */
+
+.approval-lightbox-stage {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  touch-action: none;
+  background:
+    radial-gradient(
+      circle at center,
+      #344553 0%,
+      #253542 45%,
+      #182630 100%
+    );
+  cursor: grab;
+}
+
+.approval-lightbox-stage.is-dragging {
+  cursor: grabbing;
+}
+
+.approval-document-canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max-content;
+  height: max-content;
+  transform:
+    translate(-50%,-50%)
+    translate(0,0)
+    scale(1);
+  transform-origin: center center;
+}
+
+.approval-document-canvas img {
+  display: block;
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.32);
+}
+
+
+/* ============================================================
+   VIEWER HINT
+   ============================================================ */
+
+.approval-lightbox-hint {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 34px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: #182630;
+  color: #8997a2;
+  font-size: 9px;
+}
+
+/* Registration timeline accents */
+#tab-registrations .approval-type {
+  color: #2563eb;
+}
+
+#tab-registrations .approval-dot {
+  background: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+#tab-registrations .approval-document {
+  color: #2563eb;
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
+#tab-registrations .approval-document:hover {
+  background: rgba(37, 99, 235, 0.06);
+  border-color: #2563eb;
+}
+
+#tab-registrations .approval-open-arrow {
+  color: #2563eb;
+}
+
+/* ============================================================
+   APPROVALS — MOBILE POLISH
+   ============================================================ */
+@media (max-width: 800px) {
+
+  /* Tabs */
+  #page-approvals .approvals-tabs {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  #page-approvals .approvals-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  #page-approvals .approvals-tabs .tab-btn {
+    flex: 0 0 auto;
+    padding: 10px 17px;
+    white-space: nowrap;
+  }
+
+  /* Timeline */
+  #page-approvals .approval-timeline {
+    padding-bottom: 35px;
+  }
+
+  #page-approvals .approval-event {
+    grid-template-columns: 28px minmax(0, 1fr);
+  }
+
+  #page-approvals .approval-content {
+    min-width: 0;
+    padding-left: 14px;
+  }
+
+  #page-approvals .approval-content h3 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  #page-approvals .approval-description {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  /* Documents / downloads */
+  #page-approvals .approval-document,
+  #page-approvals .approval-document--portrait {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #page-approvals .approval-document-footer {
+    min-height: 50px;
+    padding: 0 13px;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 480px) {
+
+  #page-approvals .approval-intro h2 {
+    font-size: 25px;
+    line-height: 1.25;
+  }
+
+  #page-approvals .approval-intro p {
+    font-size: 14px;
+  }
+
+  #page-approvals .approval-year {
+    font-size: 12px;
+  }
+
+  #page-approvals .approval-type {
+    font-size: 10px;
+  }
+
+  #page-approvals .approval-document-image {
+    height: 210px;
+  }
+
+  #page-approvals .approval-document--portrait
+  .approval-document-image {
+    height: 300px;
+  }
+}
+/* ============================================================
+   BODY LOCK
+   ============================================================ */
+
+body.approval-viewer-open {
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width:800px) {
+
+  .approvals-tabs {
+    width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .approvals-tabs .tab-btn {
+    flex: 0 0 auto;
+  }
+
+  .approval-timeline::before {
+    left: 14px;
+  }
+
+  .approval-event {
+    grid-template-columns: 28px minmax(0,1fr);
+    grid-template-areas:
+      "dot content";
+  }
+
+  .approval-year {
+    grid-area: content;
+    margin-bottom: 8px;
+    padding: 0;
+    text-align: left;
+  }
+
+  .approval-dot {
+    grid-area: dot;
+    margin-top: 5px;
+  }
+
+  .approval-content {
+    grid-area: content;
+    padding-left: 18px;
+  }
+
+  .approval-document,
+  .approval-document--portrait {
+    width: 100%;
+  }
+
+  .approval-lightbox-dialog {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .approval-reset-btn,
+  .approval-lightbox-hint {
+    display: none;
+  }
+
+}
+
+
+@media (max-width:520px) {
+
+  .approval-zoom-value {
+    display: none;
+  }
+
+  .approval-viewer-btn {
+    min-width: 32px;
+    height: 32px;
+  }
+
+  .approval-lightbox-close {
+    width: 34px;
+    height: 34px;
+  }
+
+}
+
 </style>
 </head>
 <body>
@@ -2428,7 +3186,7 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 </div>
 </section>
 </section>
-<section class="page" data-page="approvals" id="page-approvals" style="display:none;">
+<!-- <section class="page" data-page="approvals" id="page-approvals" style="display:none;">
 <section class="page-hero">
 <div class="wrap page-hero__inner">
 <div>
@@ -2467,6 +3225,993 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <div class="tab-panel" id="tab-performances"><h2>Field performance record</h2><div class="timeline"><li class="tl-item"><p style="color:var(--ink-700);">Solar Hybrid UPS — satisfactory performance report forwarded by CE Chandigarh Zone (Oct 2016)</p></li><li class="tl-item"><p style="color:var(--ink-700);">R&amp;R Hospital, New Delhi — crucial contracts awarded and completed through 2020</p></li><li class="tl-item"><p style="color:var(--ink-700);">Command-level Group 1 category approval — Central, Western &amp; other Commands (2015)</p></li></div></div>
 </div>
 </section>
+</section> -->
+
+<section class="page" data-page="approvals" id="page-approvals" style="display:none;">
+
+  <!-- =====================================================
+       APPROVALS PAGE HERO
+       ===================================================== -->
+  <section class="page-hero approvals-page-hero">
+
+    <div class="wrap page-hero__inner">
+
+      <div class="page-hero-copy">
+
+        <span class="page-eyebrow">
+          TRUST • APPROVALS • EXPERIENCE
+        </span>
+
+        <h1>Approvals &amp; Registrations</h1>
+
+        <p>
+          Our journey of approvals, registrations and proven performance
+          across Defence, government and institutional customers.
+        </p>
+
+      </div>
+
+      <div class="page-hero__icon">
+
+        <div class="icon-plate">
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 12l5 5L20 6"></path>
+          </svg>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       APPROVALS CONTENT
+       ===================================================== -->
+  <section class="section approvals-modern">
+
+    <div class="wrap">
+
+      <!-- =================================================
+           TABS
+           ================================================= -->
+      <div class="tabs approvals-tabs" role="tablist">
+
+        <button
+          class="tab-btn active"
+          type="button"
+          data-tab="tab-approvals"
+          role="tab"
+          aria-selected="true"
+        >
+          Approvals
+        </button>
+
+        <button
+          class="tab-btn"
+          type="button"
+          data-tab="tab-registrations"
+          role="tab"
+          aria-selected="false"
+        >
+          Registrations
+        </button>
+
+        <button
+          class="tab-btn"
+          type="button"
+          data-tab="tab-performances"
+          role="tab"
+          aria-selected="false"
+        >
+          Performances
+        </button>
+
+      </div>
+
+
+      <!-- =================================================
+           APPROVALS TAB
+           ================================================= -->
+      <div
+        class="tab-panel active"
+        id="tab-approvals"
+        role="tabpanel"
+      >
+
+        <div class="approval-intro">
+
+          <span class="approval-kicker">
+            OUR JOURNEY
+          </span>
+
+          <h2>
+            Approvals &amp; Institutional Milestones
+          </h2>
+
+          <p>
+            A documented record of our work with MES, Defence and
+            government institutions.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             APPROVAL TIMELINE
+             ================================================= -->
+        <div class="approval-timeline">
+
+
+          <!-- 1997 -->
+          <article class="approval-event">
+
+            <div class="approval-year">
+              1996
+            </div>
+
+            <div class="approval-dot"></div>
+
+            <div class="approval-content">
+
+              <span class="approval-type">
+                MES
+              </span>
+
+              <h3>
+                First MES Supply
+              </h3>
+
+              <p class="approval-description">
+                First supply to MES, marking the beginning of a
+                long-standing institutional relationship.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- 2001–02 -->
+          <article class="approval-event has-document">
+
+            <div class="approval-year">
+              2001–02
+            </div>
+
+            <div class="approval-dot"></div>
+
+            <div class="approval-content">
+
+              <span class="approval-type">
+                E-IN-C'S BRANCH
+              </span>
+
+              <h3>
+                H. Qtr. E-in-C’s Br. Approval-1
+              </h3>
+
+              <p class="approval-description">
+                E-in-C’s Branch approval covering the company's
+                approved products and subsequent renewals.
+              </p>
+
+              <button
+                class="approval-document"
+                type="button"
+                data-document="images/approvals/approvals_overview_2001_2015_display_4x.jpg"
+                data-document-title="E-in-C's Branch Approvals — 2001–2015"
+              >
+
+                <span class="approval-document-image">
+
+                  <img
+                    src="images/approvals/approvals_overview_2001_2015_display_4x.jpg"
+                    alt="E-in-C's Branch approval documents, 2001–2015"
+                    loading="lazy"
+                  >
+
+                  <span class="approval-image-overlay">
+                    <span class="zoom-icon">+</span>
+                  </span>
+
+                </span>
+
+                <span class="approval-document-footer">
+
+                  <span>
+                    View approval document
+                  </span>
+
+                  <span class="approval-open-arrow">
+                    ↗
+                  </span>
+
+                </span>
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- 2002 -->
+          <article class="approval-event has-document">
+
+            <div class="approval-year">
+              2002
+            </div>
+
+            <div class="approval-dot"></div>
+
+            <div class="approval-content">
+
+              <span class="approval-type">
+                E-IN-C'S BRANCH
+              </span>
+
+              <h3>
+                H. Qtr. E-in-C’s Br. Approval-2
+              </h3>
+
+              <p class="approval-detail">
+                Phase Sequence Correctors
+              </p>
+
+              <button
+                class="approval-document"
+                type="button"
+                data-document="images/approvals/approvals_overview_2001_2015_display_4x.jpg"
+                data-document-title="E-in-C's Branch Approval — Phase Sequence Correctors, 2002"
+              >
+
+                <span class="approval-document-image">
+
+                  <img
+                    src="images/approvals/approvals_overview_2001_2015_display_4x.jpg"
+                    alt="E-in-C's Branch approval documents"
+                    loading="lazy"
+                  >
+
+                  <span class="approval-image-overlay">
+                    <span class="zoom-icon">+</span>
+                  </span>
+
+                </span>
+
+                <span class="approval-document-footer">
+
+                  <span>
+                    View approval document
+                  </span>
+
+                  <span class="approval-open-arrow">
+                    ↗
+                  </span>
+
+                </span>
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- 2009 -->
+          <article class="approval-event has-document">
+
+            <div class="approval-year">
+              2009
+            </div>
+
+            <div class="approval-dot"></div>
+
+            <div class="approval-content">
+
+              <span class="approval-type">
+                E-IN-C'S BRANCH
+              </span>
+
+              <h3>
+                H. Qtr. E-in-C’s Br. Open Approval
+              </h3>
+
+              <p class="approval-description">
+                An open approval was accorded following regular
+                renewals from E-in-C’s Branch.
+              </p>
+
+              <button
+                class="approval-document"
+                type="button"
+                data-document="images/approvals/approvals_overview_2001_2015_display_4x.jpg"
+                data-document-title="E-in-C's Branch Open Approval — 2009"
+              >
+
+                <span class="approval-document-image">
+
+                  <img
+                    src="images/approvals/approvals_overview_2001_2015_display_4x.jpg"
+                    alt="E-in-C's Branch approval documents"
+                    loading="lazy"
+                  >
+
+                  <span class="approval-image-overlay">
+                    <span class="zoom-icon">+</span>
+                  </span>
+
+                </span>
+
+                <span class="approval-document-footer">
+
+                  <span>
+                    View approval document
+                  </span>
+
+                  <span class="approval-open-arrow">
+                    ↗
+                  </span>
+
+                </span>
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- 2015 -->
+          <article class="approval-event has-document">
+
+            <div class="approval-year">
+              2015
+            </div>
+
+            <div class="approval-dot"></div>
+
+            <div class="approval-content">
+
+              <span class="approval-type">
+                E-IN-C'S BRANCH
+              </span>
+
+              <h3>
+                H. Qtr. E-in-C’s Br. Solar Hybrid UPS Approval
+              </h3>
+
+              <p class="approval-description">
+                Solar Hybrid UPS developed and approved by
+                E-in-C’s Branch in 2015.
+              </p>
+
+              <button
+                class="approval-document"
+                type="button"
+                data-document="images/approvals/approvals_overview_2001_2015_display_4x.jpg"
+                data-document-title="Solar Hybrid UPS Approval — 2015"
+              >
+
+                <span class="approval-document-image">
+
+                  <img
+                    src="images/approvals/approvals_overview_2001_2015_display_4x.jpg"
+                    alt="Solar Hybrid UPS approval documents"
+                    loading="lazy"
+                  >
+
+                  <span class="approval-image-overlay">
+                    <span class="zoom-icon">+</span>
+                  </span>
+
+                </span>
+
+                <span class="approval-document-footer">
+
+                  <span>
+                    View approval document
+                  </span>
+
+                  <span class="approval-open-arrow">
+                    ↗
+                  </span>
+
+                </span>
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- NORTHERN COMMAND -->
+          <article class="approval-event has-document">
+
+            <div class="approval-year">
+              2017
+            </div>
+
+            <div class="approval-dot"></div>
+
+            <div class="approval-content">
+
+              <span class="approval-type">
+                NORTHERN COMMAND
+              </span>
+
+              <h3>
+                Group-1 Category Approval
+              </h3>
+
+              <p class="approval-description">
+                Product approval under the Group-1 Category.
+              </p>
+
+              <button
+                class="approval-document approval-document--portrait"
+                type="button"
+                data-document="images/approvals/approval_northern_command_2017.png"
+                data-document-title="Northern Command — Group-1 Category Approval"
+              >
+
+                <span class="approval-document-image">
+
+                  <img
+                    src="images/approvals/approval_northern_command_2017.png"
+                    alt="Northern Command Group-1 Category approval"
+                    loading="lazy"
+                  >
+
+                  <span class="approval-image-overlay">
+                    <span class="zoom-icon">+</span>
+                  </span>
+
+                </span>
+
+                <span class="approval-document-footer">
+
+                  <span>
+                    View original document
+                  </span>
+
+                  <span class="approval-open-arrow">
+                    ↗
+                  </span>
+
+                </span>
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- WESTERN COMMAND -->
+          <article class="approval-event has-document">
+
+            <div class="approval-year">
+              2020
+            </div>
+
+            <div class="approval-dot"></div>
+
+            <div class="approval-content">
+
+              <span class="approval-type">
+                WESTERN COMMAND
+              </span>
+
+              <h3>
+                Group-1 Category Approval
+              </h3>
+
+              <p class="approval-description">
+                Group-1 Category approval documented for
+                Western Command.
+              </p>
+
+              <button
+                class="approval-document approval-document--portrait"
+                type="button"
+                data-document="images/approvals/approval_western_command_2020.png"
+                data-document-title="Western Command — Group-1 Category Approval"
+              >
+
+                <span class="approval-document-image">
+
+                  <img
+                    src="images/approvals/approval_western_command_2020.png"
+                    alt="Western Command Group-1 Category approval"
+                    loading="lazy"
+                  >
+
+                  <span class="approval-image-overlay">
+                    <span class="zoom-icon">+</span>
+                  </span>
+
+                </span>
+
+                <span class="approval-document-footer">
+
+                  <span>
+                    View original document
+                  </span>
+
+                  <span class="approval-open-arrow">
+                    ↗
+                  </span>
+
+                </span>
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           REGISTRATIONS TAB
+           KEEP YOUR EXISTING CONTENT HERE
+           ================================================= -->
+     <div
+  class="tab-panel"
+  id="tab-registrations"
+  role="tabpanel"
+>
+
+  <div class="approval-intro">
+    <span class="approval-kicker">
+      REGISTRATIONS
+    </span>
+
+    <h2>
+      Registrations &amp; Certifications
+    </h2>
+
+    <p>
+      Institutional registrations and certifications supporting our work
+      with government, Defence and public-sector organisations.
+    </p>
+  </div>
+
+  <div class="approval-timeline">
+
+    <article class="approval-event">
+      <div class="approval-year">
+        2010
+      </div>
+
+      <div class="approval-dot"></div>
+
+      <div class="approval-content">
+        <span class="approval-type">
+          CONTRACTOR ENLISTMENT
+        </span>
+
+        <h3>
+          Contractor Enlistment
+        </h3>
+
+        <p class="approval-description">
+          Contractor enlistment completed in 2010 and renewed in 2019.
+        </p>
+      </div>
+    </article>
+
+
+    <article class="approval-event">
+      <div class="approval-year">
+        2013
+      </div>
+
+      <div class="approval-dot"></div>
+
+      <div class="approval-content">
+        <span class="approval-type">
+          DGS&amp;D
+        </span>
+
+        <h3>
+          DGS&amp;D Registration
+        </h3>
+
+        <p class="approval-description">
+          Registration with the Directorate General of Supplies &amp;
+          Disposals.
+        </p>
+      </div>
+    </article>
+
+
+    <article class="approval-event">
+      <div class="approval-year">
+        2019
+      </div>
+
+      <div class="approval-dot"></div>
+
+      <div class="approval-content">
+        <span class="approval-type">
+          QCI
+        </span>
+
+        <h3>
+          QCI Certification
+        </h3>
+
+        <p class="approval-description">
+          Quality Council of India certification completed in 2019.
+        </p>
+      </div>
+    </article>
+
+
+    <article class="approval-event">
+      <div class="approval-year">
+        2019
+      </div>
+
+      <div class="approval-dot"></div>
+
+      <div class="approval-content">
+        <span class="approval-type">
+          GOVERNMENT E-MARKETPLACE
+        </span>
+
+        <h3>
+          GeM Registration
+        </h3>
+
+        <p class="approval-description">
+          Registered on the Government e-Marketplace (GeM) in 2019.
+        </p>
+      </div>
+
+    </article>
+
+    <!-- ISO 9001:2015 -->
+<article class="approval-event has-document">
+  <div class="approval-year">2026</div>
+
+  <div class="approval-dot"></div>
+
+  <div class="approval-content">
+    <span class="approval-type">
+      QUALITY CERTIFICATION
+    </span>
+
+    <h3>ISO 9001:2015 Certification</h3>
+
+    <p class="approval-description">
+      Quality Management System certification for Chime Electronics.
+    </p>
+
+    <a
+      class="approval-document"
+      href="documents/4664-CHIME ELECTRONICS _9001.pdf"
+      download
+      target="_blank"
+      rel="noopener"
+    >
+      <span class="approval-document-footer">
+        <span>Download Certificate</span>
+        <span class="approval-open-arrow">↓</span>
+      </span>
+    </a>
+  </div>
+</article>
+
+
+<!-- IEC -->
+<article class="approval-event has-document">
+  <div class="approval-year">2015</div>
+
+  <div class="approval-dot"></div>
+
+  <div class="approval-content">
+    <span class="approval-type">
+      GOVERNMENT REGISTRATION
+    </span>
+
+    <h3>Importer Exporter Code (IEC)</h3>
+
+    <p class="approval-description">
+      Importer Exporter Code registration for Chime Electronics.
+    </p>
+
+    <a
+      class="approval-document"
+      href="documents/IEC LICENSE.pdf"
+      download
+      target="_blank"
+      rel="noopener"
+    >
+      <span class="approval-document-footer">
+        <span>Download IEC Certificate</span>
+        <span class="approval-open-arrow">↓</span>
+      </span>
+    </a>
+  </div>
+</article>
+
+
+<!-- MSME / UDYAM -->
+<article class="approval-event has-document">
+  <div class="approval-year">2020</div>
+
+  <div class="approval-dot"></div>
+
+  <div class="approval-content">
+    <span class="approval-type">
+      MSME REGISTRATION
+    </span>
+
+    <h3>Udyam Registration Certificate</h3>
+
+    <p class="approval-description">
+      MSME Udyam Registration for Chime Electronics.
+    </p>
+
+    <a
+      class="approval-document"
+      href="documents/MSME Udyam Registration Certificate.pdf"
+      download
+      target="_blank"
+      rel="noopener"
+    >
+      <span class="approval-document-footer">
+        <span>Download Certificate</span>
+        <span class="approval-open-arrow">↓</span>
+      </span>
+    </a>
+  </div>
+</article>
+
+  </div>
+
+</div>
+
+
+      <!-- =================================================
+           PERFORMANCES TAB
+           KEEP YOUR EXISTING CONTENT HERE
+           ================================================= -->
+<div
+  class="tab-panel"
+  id="tab-performances"
+  role="tabpanel"
+>
+
+  <div class="approval-intro">
+    <span class="approval-kicker">
+      PERFORMANCE
+    </span>
+
+    <h2>
+      Performance &amp; Track Record
+    </h2>
+
+    <p>
+      Selected examples of our equipment performance and completed
+      institutional work.
+    </p>
+  </div>
+
+  <div class="approval-timeline">
+
+    <article class="approval-event">
+      <div class="approval-year">
+        2016
+      </div>
+
+      <div class="approval-dot"></div>
+
+      <div class="approval-content">
+        <span class="approval-type">
+          SOLAR HYBRID UPS
+        </span>
+
+        <h3>
+          Solar Hybrid UPS Performance
+        </h3>
+
+        <p class="approval-description">
+          Satisfactory performance report forwarded by CE Chandigarh
+          Zone in October 2016.
+        </p>
+      </div>
+    </article>
+
+
+    <article class="approval-event">
+      <div class="approval-year">
+        2020
+      </div>
+
+      <div class="approval-dot"></div>
+
+      <div class="approval-content">
+        <span class="approval-type">
+          R&amp;R HOSPITAL
+        </span>
+
+        <h3>
+          R&amp;R Hospital, New Delhi
+        </h3>
+
+        <p class="approval-description">
+          Crucial contracts awarded and completed through 2020.
+        </p>
+      </div>
+    </article>
+
+
+    <article class="approval-event">
+      <div class="approval-year">
+        2015+
+      </div>
+
+      <div class="approval-dot"></div>
+
+      <div class="approval-content">
+        <span class="approval-type">
+          DEFENCE COMMANDS
+        </span>
+
+        <h3>
+          Command-Level Group 1 Category Approval
+        </h3>
+
+        <p class="approval-description">
+          Group 1 category approval covering Central, Western and
+          other Defence Commands.
+        </p>
+      </div>
+    </article>
+
+  </div>
+
+</div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       DOCUMENT VIEWER / LIGHTBOX
+       ===================================================== -->
+  <div
+    class="approval-lightbox"
+    id="approval-lightbox"
+    aria-hidden="true"
+  >
+
+    <div class="approval-lightbox-backdrop"></div>
+
+    <div
+      class="approval-lightbox-dialog"
+      role="dialog"
+      aria-modal="true"
+    >
+
+      <!-- TOOLBAR -->
+      <div class="approval-lightbox-toolbar">
+
+        <div class="approval-lightbox-title-wrap">
+
+          <span class="approval-lightbox-label">
+            DOCUMENT VIEWER
+          </span>
+
+          <h3
+            id="approval-lightbox-title"
+            class="approval-lightbox-title"
+          >
+            Approval Document
+          </h3>
+
+        </div>
+
+
+        <div class="approval-lightbox-controls">
+
+          <button
+            type="button"
+            class="approval-viewer-btn"
+            id="approval-zoom-out"
+            title="Zoom out"
+          >
+            −
+          </button>
+
+          <span
+            class="approval-zoom-value"
+            id="approval-zoom-value"
+          >
+            100%
+          </span>
+
+          <button
+            type="button"
+            class="approval-viewer-btn"
+            id="approval-zoom-in"
+            title="Zoom in"
+          >
+            +
+          </button>
+
+          <button
+            type="button"
+            class="approval-viewer-btn approval-reset-btn"
+            id="approval-zoom-reset"
+          >
+            Reset
+          </button>
+
+          <button
+            type="button"
+            class="approval-lightbox-close"
+            id="approval-lightbox-close"
+            title="Close"
+            aria-label="Close document"
+          >
+            ×
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- DOCUMENT AREA -->
+      <div
+        class="approval-lightbox-stage"
+        id="approval-lightbox-stage"
+      >
+
+        <div
+          class="approval-document-canvas"
+          id="approval-document-canvas"
+        >
+
+          <img
+            id="approval-lightbox-image"
+            src=""
+            alt=""
+            draggable="false"
+          >
+
+        </div>
+
+      </div>
+
+
+      <div class="approval-lightbox-hint">
+        <span>Scroll to zoom</span>
+        <span>•</span>
+        <span>Drag to move</span>
+        <span>•</span>
+        <span>Esc to close</span>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 <section class="page gallery-v3" data-page="gallery" id="page-gallery" style="display:none;"><section class="page-hero"><div class="wrap page-hero__inner"><div><h1>Gallery</h1><p>Take a closer look at the equipment we build, the manufacturing and testing work behind it, and the applications our products are designed to serve. This is also where we share selected company moments and special features.</p></div><div class="page-hero__icon"><div class="icon-plate">◎</div></div></div></section><section class="section"><div class="wrap"><div class="gal-filter-v3"><button class="active" data-cat="all">All</button><button data-cat="products">Products</button><button data-cat="manufacturing">Manufacturing &amp; Testing</button></div><div class="patriotic-feature" aria-label="80th Independence Day patriotic song and video">
   <div class="patriotic-tricolor" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -2596,6 +4341,562 @@ document.addEventListener('DOMContentLoaded', function () {
       navToggle.setAttribute('aria-expanded', String(open));
     });
   }
+/* ============================================================
+   APPROVAL DOCUMENT VIEWER
+   ============================================================ */
+
+(function () {
+
+  "use strict";
+
+  const lightbox =
+    document.getElementById("approval-lightbox");
+
+  const backdrop =
+    document.querySelector(".approval-lightbox-backdrop");
+
+  const stage =
+    document.getElementById("approval-lightbox-stage");
+
+  const canvas =
+    document.getElementById("approval-document-canvas");
+
+  const image =
+    document.getElementById("approval-lightbox-image");
+
+  const title =
+    document.getElementById("approval-lightbox-title");
+
+  const zoomValue =
+    document.getElementById("approval-zoom-value");
+
+  const zoomIn =
+    document.getElementById("approval-zoom-in");
+
+  const zoomOut =
+    document.getElementById("approval-zoom-out");
+
+  const zoomReset =
+    document.getElementById("approval-zoom-reset");
+
+  const closeButton =
+    document.getElementById("approval-lightbox-close");
+
+
+  if (!lightbox || !stage || !canvas || !image) {
+    return;
+  }
+
+
+  /* ----------------------------------------------------------
+     STATE
+     ---------------------------------------------------------- */
+
+  let scale = 1;
+
+  let translateX = 0;
+
+  let translateY = 0;
+
+  let isDragging = false;
+
+  let dragStartX = 0;
+
+  let dragStartY = 0;
+
+  let startTranslateX = 0;
+
+  let startTranslateY = 0;
+
+
+  const MIN_ZOOM = 0.5;
+
+  const MAX_ZOOM = 4;
+
+  const ZOOM_STEP = 0.25;
+
+
+  /* ----------------------------------------------------------
+     UPDATE
+     ---------------------------------------------------------- */
+
+  function updateTransform() {
+
+    canvas.style.transform =
+      "translate(-50%, -50%) " +
+      "translate(" +
+      translateX +
+      "px, " +
+      translateY +
+      "px) " +
+      "scale(" +
+      scale +
+      ")";
+
+    zoomValue.textContent =
+      Math.round(scale * 100) + "%";
+  }
+
+
+  /* ----------------------------------------------------------
+     RESET
+     ---------------------------------------------------------- */
+function resetViewer() {
+
+  const stageWidth = stage.clientWidth;
+  const stageHeight = stage.clientHeight;
+
+  const imageWidth = image.naturalWidth;
+  const imageHeight = image.naturalHeight;
+
+  if (!imageWidth || !imageHeight) {
+    scale = 1;
+    translateX = 0;
+    translateY = 0;
+    updateTransform();
+    return;
+  }
+
+  const padding = 40;
+
+  const availableWidth = stageWidth - padding;
+  const availableHeight = stageHeight - padding;
+
+  const fitScale = Math.min(
+    availableWidth / imageWidth,
+    availableHeight / imageHeight,
+    1
+  );
+
+  scale = Math.max(
+    0.1,
+    fitScale
+  );
+
+  translateX = 0;
+  translateY = 0;
+
+  updateTransform();
+}
+
+
+  /* ----------------------------------------------------------
+     ZOOM
+     ---------------------------------------------------------- */
+
+  function setZoom(value) {
+
+    scale = Math.min(
+      MAX_ZOOM,
+      Math.max(MIN_ZOOM, value)
+    );
+
+    updateTransform();
+  }
+
+
+  /* ----------------------------------------------------------
+     OPEN
+     ---------------------------------------------------------- */
+function openDocument(button) {
+
+  const documentPath =
+    button.getAttribute("data-document");
+
+  const documentTitle =
+    button.getAttribute("data-document-title") ||
+    "Approval Document";
+
+  if (!documentPath) {
+    console.warn("No document specified.");
+    return;
+  }
+
+  image.src = documentPath;
+  image.alt = documentTitle;
+
+  title.textContent = documentTitle;
+
+  lightbox.classList.add("is-open");
+
+  lightbox.setAttribute(
+    "aria-hidden",
+    "false"
+  );
+
+  document.body.classList.add(
+    "approval-viewer-open"
+  );
+
+  image.onload = function () {
+    resetViewer();
+  };
+
+  setTimeout(function () {
+    if (closeButton) {
+      closeButton.focus();
+    }
+  }, 50);
+}
+  
+
+
+  /* ----------------------------------------------------------
+     CLOSE
+     ---------------------------------------------------------- */
+
+  function closeDocument() {
+
+    lightbox.classList.remove(
+      "is-open"
+    );
+
+    lightbox.setAttribute(
+      "aria-hidden",
+      "true"
+    );
+
+    document.body.classList.remove(
+      "approval-viewer-open"
+    );
+
+
+    setTimeout(function () {
+
+      if (
+        !lightbox.classList.contains("is-open")
+      ) {
+
+        image.removeAttribute("src");
+
+      }
+
+    }, 150);
+
+  }
+
+
+  /* ----------------------------------------------------------
+     OPEN DOCUMENT BUTTONS
+     ---------------------------------------------------------- */
+
+  document
+    .querySelectorAll(".approval-document")
+    .forEach(function (button) {
+
+      button.addEventListener(
+        "click",
+        function () {
+
+          openDocument(button);
+
+        }
+      );
+
+    });
+
+
+  /* ----------------------------------------------------------
+     CLOSE
+     ---------------------------------------------------------- */
+
+  if (closeButton) {
+
+    closeButton.addEventListener(
+      "click",
+      closeDocument
+    );
+
+  }
+
+
+  if (backdrop) {
+
+    backdrop.addEventListener(
+      "click",
+      closeDocument
+    );
+
+  }
+
+
+  /* ----------------------------------------------------------
+     ZOOM BUTTONS
+     ---------------------------------------------------------- */
+
+  if (zoomIn) {
+
+    zoomIn.addEventListener(
+      "click",
+      function () {
+
+        setZoom(
+          scale + ZOOM_STEP
+        );
+
+      }
+    );
+
+  }
+
+
+  if (zoomOut) {
+
+    zoomOut.addEventListener(
+      "click",
+      function () {
+
+        setZoom(
+          scale - ZOOM_STEP
+        );
+
+      }
+    );
+
+  }
+
+
+  if (zoomReset) {
+
+    zoomReset.addEventListener(
+      "click",
+      resetViewer
+    );
+
+  }
+
+
+  /* ----------------------------------------------------------
+     MOUSE WHEEL
+     ---------------------------------------------------------- */
+
+  stage.addEventListener(
+    "wheel",
+    function (event) {
+
+      event.preventDefault();
+
+      if (event.deltaY < 0) {
+
+        setZoom(
+          scale + ZOOM_STEP
+        );
+
+      } else {
+
+        setZoom(
+          scale - ZOOM_STEP
+        );
+
+      }
+
+    },
+    {
+      passive: false
+    }
+  );
+
+
+/* ----------------------------------------------------------
+   DOCUMENT PAN / DRAG
+   ---------------------------------------------------------- */
+
+stage.addEventListener("pointerdown", function (event) {
+
+  if (scale <= 1) return;
+
+  isDragging = true;
+
+  stage.classList.add("is-dragging");
+
+  dragStartX = event.clientX;
+  dragStartY = event.clientY;
+
+  startTranslateX = translateX;
+  startTranslateY = translateY;
+
+  stage.setPointerCapture(event.pointerId);
+
+  event.preventDefault();
+});
+
+
+stage.addEventListener("pointermove", function (event) {
+
+  if (!isDragging) return;
+
+  translateX =
+    startTranslateX +
+    (event.clientX - dragStartX);
+
+  translateY =
+    startTranslateY +
+    (event.clientY - dragStartY);
+
+  updateTransform();
+
+  event.preventDefault();
+});
+
+
+stage.addEventListener("pointerup", function (event) {
+
+  isDragging = false;
+
+  stage.classList.remove("is-dragging");
+
+  if (stage.hasPointerCapture(event.pointerId)) {
+    stage.releasePointerCapture(event.pointerId);
+  }
+});
+
+
+stage.addEventListener("pointercancel", function (event) {
+
+  isDragging = false;
+
+  stage.classList.remove("is-dragging");
+
+  if (stage.hasPointerCapture(event.pointerId)) {
+    stage.releasePointerCapture(event.pointerId);
+  }
+});
+
+  /* ----------------------------------------------------------
+     KEYBOARD
+     ---------------------------------------------------------- */
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (
+        !lightbox.classList.contains("is-open")
+      ) {
+        return;
+      }
+
+
+      if (event.key === "Escape") {
+
+        closeDocument();
+
+      }
+
+
+      if (
+        event.key === "+" ||
+        event.key === "="
+      ) {
+
+        setZoom(
+          scale + ZOOM_STEP
+        );
+
+      }
+
+
+      if (event.key === "-") {
+
+        setZoom(
+          scale - ZOOM_STEP
+        );
+
+      }
+
+
+      if (event.key === "0") {
+
+        resetViewer();
+
+      }
+
+    }
+  );
+
+
+  /* ----------------------------------------------------------
+     APPROVAL TABS
+     ---------------------------------------------------------- */
+
+  document
+    .querySelectorAll(
+      "#page-approvals .approvals-tabs .tab-btn"
+    )
+    .forEach(function (button) {
+
+      button.addEventListener(
+        "click",
+        function () {
+
+          const targetId =
+            button.getAttribute(
+              "data-tab"
+            );
+
+
+          document
+            .querySelectorAll(
+              "#page-approvals .approvals-tabs .tab-btn"
+            )
+            .forEach(function (tab) {
+
+              tab.classList.remove(
+                "active"
+              );
+
+              tab.setAttribute(
+                "aria-selected",
+                "false"
+              );
+
+            });
+
+
+          document
+            .querySelectorAll(
+              "#page-approvals .tab-panel"
+            )
+            .forEach(function (panel) {
+
+              panel.classList.remove(
+                "active"
+              );
+
+            });
+
+
+          button.classList.add(
+            "active"
+          );
+
+          button.setAttribute(
+            "aria-selected",
+            "true"
+          );
+
+
+          const target =
+            document.getElementById(
+              targetId
+            );
+
+
+          if (target) {
+
+            target.classList.add(
+              "active"
+            );
+
+          }
+
+        }
+      );
+
+    });
+
+
+})();
 
   // Tabs (Approvals & Registrations)
   var tabBtns = document.querySelectorAll('.tab-btn');
