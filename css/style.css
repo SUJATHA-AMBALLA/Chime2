@@ -1745,3 +1745,215 @@ body{padding-top:125px;}
   .cred-fixed__item span{font-size:10px;}
   .about-home__intro h2{font-size:32px;}
 }
+/* =========================================================
+   HEADER CONTACT — CSS ONLY
+   CALL US + EMAIL
+   ========================================================= */
+
+@media (min-width:1025px){
+
+  /* Keep contact area compact and closer to logo */
+  .header-contact{
+    width:350px !important;
+    flex:0 0 350px !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+
+    gap:18px !important;
+  }
+
+
+  /* =======================================================
+     CALL US
+     ======================================================= */
+
+  .header-call{
+    width:205px !important;
+    flex:0 0 205px !important;
+
+    display:grid !important;
+
+    /* Heading + two phone rows */
+    grid-template-columns:1fr 1fr !important;
+    grid-template-rows:auto auto auto !important;
+
+    align-items:center !important;
+    justify-items:center !important;
+
+    padding:2px 10px !important;
+    margin:0 !important;
+
+    border-right:1px solid #dfe5ed !important;
+  }
+
+
+  /* CALL US heading — centered across BOTH columns */
+  .header-call > span{
+    grid-column:1 / 3 !important;
+    grid-row:1 !important;
+
+    display:block !important;
+
+    width:100% !important;
+
+    margin:0 0 5px !important;
+    padding:0 0 4px !important;
+
+    text-align:center !important;
+
+    font-family:'Inter',sans-serif !important;
+    font-size:10px !important;
+    font-weight:800 !important;
+
+    letter-spacing:.13em !important;
+    text-transform:uppercase !important;
+
+    color:#d46f18 !important;
+
+    border-bottom:2px solid #d46f18 !important;
+  }
+
+
+  /* =======================================================
+     PHONE NUMBERS
+     ======================================================= */
+
+  .header-call .header-number{
+    display:flex !important;
+
+    align-items:center !important;
+    justify-content:center !important;
+
+    gap:5px !important;
+
+    margin:0 !important;
+    padding:1px 2px !important;
+
+    font-family:'Inter',sans-serif !important;
+    font-size:9.5px !important;
+    font-weight:600 !important;
+
+    line-height:1.3 !important;
+
+    color:#30445d !important;
+
+    white-space:nowrap !important;
+  }
+
+
+  /*
+     Existing HTML order is:
+     1. Landline
+     2. Mobile
+     3. Mobile
+
+     CSS rearranges it to:
+     Row 1 → Mobile 1 | Mobile 2
+     Row 2 →     Landline
+  */
+
+  /* First mobile */
+  .header-call a[href="tel:+919818211890"]{
+    grid-column:1 !important;
+    grid-row:2 !important;
+  }
+
+  /* Second mobile */
+  .header-call a[href="tel:+919810818175"]{
+    grid-column:2 !important;
+    grid-row:2 !important;
+  }
+
+  /* Landline — centered underneath */
+  .header-call a[href="tel:+9146536498"]{
+    grid-column:1 / 3 !important;
+    grid-row:3 !important;
+  }
+
+
+  /* Phone icons */
+  .header-call .header-number svg{
+    width:11px !important;
+    height:11px !important;
+
+    flex:0 0 11px !important;
+
+    fill:none !important;
+    stroke:currentColor !important;
+    stroke-width:1.8 !important;
+
+    stroke-linecap:round !important;
+    stroke-linejoin:round !important;
+  }
+
+
+  /* =======================================================
+     EMAIL — SEPARATE COLUMN
+     ======================================================= */
+
+  .header-contact > a[href^="mailto:"]{
+    width:125px !important;
+    min-width:125px !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    margin:0 !important;
+    padding:2px 0 !important;
+
+    font-family:'Inter',sans-serif !important;
+    font-size:10.5px !important;
+    font-weight:500 !important;
+
+    line-height:1.35 !important;
+
+    color:#52657a !important;
+
+    text-align:center !important;
+    white-space:nowrap !important;
+  }
+
+
+  /* EMAIL heading */
+  .header-contact > a[href^="mailto:"] span{
+    display:block !important;
+
+    margin:0 0 5px !important;
+    padding:0 0 4px !important;
+
+    font-family:'Inter',sans-serif !important;
+    font-size:10px !important;
+    font-weight:800 !important;
+
+    letter-spacing:.13em !important;
+    text-transform:uppercase !important;
+
+    color:#d46f18 !important;
+
+    border-bottom:2px solid #d46f18 !important;
+  }
+
+
+  /* Email hover */
+  .header-contact > a[href^="mailto:"]:hover{
+    color:#1f5bd7 !important;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE — LEAVE HEADER CONTACT HIDDEN
+   ========================================================= */
+
+@media (max-width:1024px){
+
+  .header-contact{
+    display:none !important;
+  }
+
+}

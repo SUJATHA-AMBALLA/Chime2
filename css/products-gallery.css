@@ -1416,74 +1416,59 @@ body.approval-viewer-open {
   }
 }
 /* =========================================================
-   SINETRAC PRODUCTS — MOBILE ONLY
-   Desktop / laptop layout remains unchanged.
+   PRODUCTS PAGE — MOBILE / TABLET-PHONE ONLY
+   Desktop remains unchanged
    ========================================================= */
 
-@media (max-width: 600px){
+@media (max-width: 850px){
 
-  .products-v3 .products-wrap{
-    width:100%;
-    padding-left:16px;
-    padding-right:16px;
-  }
-
-  /* HERO */
-  .products-v3 .products-hero-inner{
-    min-height:auto;
-    display:block;
-    padding:42px 16px 38px;
-  }
-
-  .products-v3 .products-kicker{
-    font-size:10px;
-    margin-bottom:11px;
-  }
-
-  .products-v3 .products-hero h1{
-    font-size:34px !important;
-    line-height:1.05;
-    letter-spacing:-.035em;
-    max-width:100%;
-  }
-
-  .products-v3 .products-hero p{
-    font-size:13px !important;
-    line-height:1.6 !important;
-    margin-top:16px;
-    max-width:100%;
-  }
-
-  /* PRODUCT EXPLORER */
-  .products-v3 .products-explorer{
-    padding:34px 0 12px;
-  }
+  /* -----------------------------------------
+     PRODUCT EXPLORER HEADER
+     Heading and description must stack
+     ----------------------------------------- */
 
   .products-v3 .products-explorer-head{
-    display:block;
+    display:block !important;
+  }
+
+  .products-v3 .products-explorer-head > div{
+    width:100%;
   }
 
   .products-v3 .products-explorer-head h2{
-    font-size:27px;
-    line-height:1.12;
-    margin-top:6px;
+    font-size:32px !important;
+    line-height:1.12 !important;
+    margin:6px 0 14px !important;
+    max-width:100%;
   }
 
-  .products-v3 .products-explorer-head p{
-    font-size:12px;
-    line-height:1.5;
-    margin-top:8px;
+  .products-v3 .products-explorer-head > p{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 0 20px !important;
+    font-size:14px !important;
+    line-height:1.55 !important;
   }
 
-  /* FILTERS — horizontal scroll on phone */
+
+  /* -----------------------------------------
+     FILTERS
+     Horizontal scrolling row
+     ----------------------------------------- */
+
   .products-v3 .product-filters{
-    flex-wrap:nowrap;
-    overflow-x:auto;
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+
+    gap:8px !important;
+    padding:3px 0 10px !important;
+    margin-top:10px !important;
+
     -webkit-overflow-scrolling:touch;
     scrollbar-width:none;
-    gap:7px;
-    margin-top:17px;
-    padding:2px 0 7px;
   }
 
   .products-v3 .product-filters::-webkit-scrollbar{
@@ -1491,117 +1476,257 @@ body.approval-viewer-open {
   }
 
   .products-v3 .product-filter{
-    flex:0 0 auto;
-    padding:8px 11px;
-    font-size:10px;
-    white-space:nowrap;
+    flex:0 0 auto !important;
+    white-space:nowrap !important;
+
+    padding:9px 14px !important;
+    font-size:11px !important;
   }
 
-  /* ONE PRODUCT CARD PER ROW */
-  .products-v3 .product-grid{
+
+  /* -----------------------------------------
+     PRODUCT GRID
+     ONE CARD PER ROW
+     ----------------------------------------- */
+
+  .products-v3.product-grid{
     grid-template-columns:1fr !important;
-    gap:16px;
-    padding:10px 0 38px;
+    gap:18px !important;
+    padding-top:20px !important;
+    padding-bottom:45px !important;
   }
+
+
+  /* -----------------------------------------
+     PRODUCT CARD
+     ----------------------------------------- */
 
   .products-v3 .product-card{
-    width:100%;
+    width:100% !important;
+    min-width:0 !important;
     border-radius:12px;
   }
 
-  /* PRODUCT TITLE */
+
+  /* Product title */
+
   .products-v3 .product-identifier{
-    min-height:54px;
-    padding:13px 15px 10px;
-    font-size:13px;
-    line-height:1.25;
+    min-height:56px !important;
+    padding:14px 16px 11px !important;
+    font-size:14px !important;
+    line-height:1.25 !important;
   }
 
-  /* PRODUCT IMAGE */
+
+  /* Product image */
+
+  .products-v3 .product-main-image{
+    height:250px !important;
+  }
+
+
+  /* Thumbnails */
+
+  .products-v3 .product-thumbs{
+    min-height:52px;
+    gap:6px;
+    padding:6px 8px;
+    overflow-x:auto;
+  }
+
+  .products-v3 .product-thumb{
+    flex:0 0 58px;
+    width:58px;
+    height:47px;
+  }
+
+
+  /* Product information */
+
+  .products-v3 .product-info{
+    padding:18px 17px 21px !important;
+  }
+
+  .products-v3 .product-info .product-label{
+    font-size:20px !important;
+    line-height:1.18 !important;
+    margin-bottom:9px !important;
+  }
+
+  .products-v3 .product-info > p{
+    font-size:13px !important;
+    line-height:1.6 !important;
+    margin-bottom:16px !important;
+  }
+
+
+  /* Usage */
+
+  .products-v3 .product-usage{
+    padding-top:13px !important;
+  }
+
+  .products-v3 .product-usage strong{
+    font-size:9px !important;
+    margin-bottom:7px !important;
+  }
+
+  .products-v3 .product-usage span{
+    font-size:10px !important;
+    padding:5px 7px !important;
+  }
+
+
+  /* -----------------------------------------
+     DOWNLOAD SECTION
+     ----------------------------------------- */
+
+  .products-v3 .products-download-note{
+    display:block !important;
+    margin-bottom:40px !important;
+    padding:22px 18px !important;
+  }
+
+  .products-v3 .products-download-note h2{
+    font-size:23px !important;
+    line-height:1.2 !important;
+  }
+
+  .products-v3 .products-download-note p{
+    font-size:12px !important;
+    line-height:1.55 !important;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width:480px){
+
+  .products-v3 .products-explorer{
+    padding-left:16px;
+    padding-right:16px;
+  }
+
+  .products-v3 .products-explorer-head h2{
+    font-size:29px !important;
+  }
+
+  .products-v3 .products-explorer-head > p{
+    font-size:13px !important;
+  }
+
   .products-v3 .product-main-image{
     height:220px !important;
   }
 
-  /* THUMBNAILS */
-  .products-v3 .product-thumbs{
-    min-height:51px;
-    gap:6px;
-    padding:6px 8px;
-  }
-
-  .products-v3 .product-thumb{
-    flex:0 0 56px;
-    width:56px;
-    height:46px;
-  }
-
-  /* PRODUCT DETAILS */
   .products-v3 .product-info{
-    padding:16px 15px 19px;
+    padding:16px !important;
   }
 
   .products-v3 .product-info .product-label{
-    font-size:18px;
-    line-height:1.18;
-    margin-bottom:8px;
-  }
-
-  .products-v3 .product-info > p{
-    font-size:12.5px;
-    line-height:1.6;
-    margin-bottom:15px;
-  }
-
-  /* USAGE */
-  .products-v3 .product-usage{
-    padding-top:12px;
-  }
-
-  .products-v3 .product-usage strong{
-    margin-bottom:7px;
-    font-size:9px;
-  }
-
-  .products-v3 .product-usage span{
-    font-size:9.5px;
-    padding:5px 6px;
-  }
-
-  /* DOWNLOADS BANNER */
-  .products-v3 .products-download-note{
-    margin:0 0 40px;
-    padding:20px 17px;
-    display:block;
-    border-radius:12px;
-  }
-
-  .products-v3 .products-download-note h2{
-    font-size:22px;
-    line-height:1.15;
-  }
-
-  .products-v3 .products-download-note p{
-    font-size:12px;
-    line-height:1.55;
-  }
-
-  .products-v3 .product-spec--light{
-    display:inline-flex;
-    margin-top:16px;
-    padding:10px 13px;
-    font-size:10px;
+    font-size:18px !important;
   }
 }
+/* =========================================================
+   HEADER CONTACT — CLEAN COMPACT LAYOUT
+   ========================================================= */
 
+@media (min-width:1025px){
 
-/* VERY SMALL PHONES */
-@media (max-width:380px){
-
-  .products-v3 .products-hero h1{
-    font-size:31px !important;
+  /* Contact area */
+  .header-contact{
+    flex:0 0 285px !important;
+    width:285px !important;
+    display:flex !important;
+    align-items:center !important;
+    gap:18px !important;
   }
 
-  .products-v3 .product-main-image{
-    height:200px !important;
+  /* CALL US */
+  .header-call{
+    display:block !important;
+    width:190px !important;
+    flex:0 0 190px !important;
+  }
+
+  .header-call > span{
+    display:block !important;
+    color:#d47a24 !important;
+    text-align:center !important;
+    font-size:10px !important;
+    font-weight:700 !important;
+    line-height:1.2 !important;
+    letter-spacing:.08em !important;
+    text-transform:uppercase;
+    margin:0 0 5px !important;
+  }
+
+  /* Phone numbers: 2 + 1 */
+  .header-phones{
+    display:grid !important;
+    grid-template-columns:1fr 1fr;
+    column-gap:8px;
+    row-gap:3px;
+    justify-items:center;
+  }
+
+  .header-number{
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+
+    gap:4px !important;
+
+    font-family:inherit !important;
+    font-size:10px !important;
+    font-weight:600 !important;
+    color:#263f5d !important;
+    line-height:1.25 !important;
+
+    white-space:nowrap;
+  }
+
+  .header-number svg{
+    width:11px !important;
+    height:11px !important;
+    flex:0 0 11px !important;
+  }
+
+  /* Third number centered underneath */
+  .header-mobile:last-child{
+    grid-column:1 / -1;
+  }
+
+  /* EMAIL */
+  .header-contact > a[href^="mailto"]{
+    display:block !important;
+
+    width:auto !important;
+    margin:0 !important;
+
+    text-align:center !important;
+
+    font-family:inherit !important;
+    font-size:10px !important;
+    font-weight:500 !important;
+    color:#536575 !important;
+    line-height:1.3 !important;
+    white-space:nowrap;
+  }
+
+  .header-contact > a[href^="mailto"] span{
+    display:block !important;
+
+    color:#d47a24 !important;
+    font-size:9px !important;
+    font-weight:700 !important;
+    letter-spacing:.08em !important;
+    text-transform:uppercase;
+
+    margin:0 0 3px !important;
   }
 }
