@@ -1415,3 +1415,193 @@ body.approval-viewer-open {
     font-size:18px;
   }
 }
+/* =========================================================
+   SINETRAC PRODUCTS — MOBILE ONLY
+   Desktop / laptop layout remains unchanged.
+   ========================================================= */
+
+@media (max-width: 600px){
+
+  .products-v3 .products-wrap{
+    width:100%;
+    padding-left:16px;
+    padding-right:16px;
+  }
+
+  /* HERO */
+  .products-v3 .products-hero-inner{
+    min-height:auto;
+    display:block;
+    padding:42px 16px 38px;
+  }
+
+  .products-v3 .products-kicker{
+    font-size:10px;
+    margin-bottom:11px;
+  }
+
+  .products-v3 .products-hero h1{
+    font-size:34px !important;
+    line-height:1.05;
+    letter-spacing:-.035em;
+    max-width:100%;
+  }
+
+  .products-v3 .products-hero p{
+    font-size:13px !important;
+    line-height:1.6 !important;
+    margin-top:16px;
+    max-width:100%;
+  }
+
+  /* PRODUCT EXPLORER */
+  .products-v3 .products-explorer{
+    padding:34px 0 12px;
+  }
+
+  .products-v3 .products-explorer-head{
+    display:block;
+  }
+
+  .products-v3 .products-explorer-head h2{
+    font-size:27px;
+    line-height:1.12;
+    margin-top:6px;
+  }
+
+  .products-v3 .products-explorer-head p{
+    font-size:12px;
+    line-height:1.5;
+    margin-top:8px;
+  }
+
+  /* FILTERS — horizontal scroll on phone */
+  .products-v3 .product-filters{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    gap:7px;
+    margin-top:17px;
+    padding:2px 0 7px;
+  }
+
+  .products-v3 .product-filters::-webkit-scrollbar{
+    display:none;
+  }
+
+  .products-v3 .product-filter{
+    flex:0 0 auto;
+    padding:8px 11px;
+    font-size:10px;
+    white-space:nowrap;
+  }
+
+  /* ONE PRODUCT CARD PER ROW */
+  .products-v3 .product-grid{
+    grid-template-columns:1fr !important;
+    gap:16px;
+    padding:10px 0 38px;
+  }
+
+  .products-v3 .product-card{
+    width:100%;
+    border-radius:12px;
+  }
+
+  /* PRODUCT TITLE */
+  .products-v3 .product-identifier{
+    min-height:54px;
+    padding:13px 15px 10px;
+    font-size:13px;
+    line-height:1.25;
+  }
+
+  /* PRODUCT IMAGE */
+  .products-v3 .product-main-image{
+    height:220px !important;
+  }
+
+  /* THUMBNAILS */
+  .products-v3 .product-thumbs{
+    min-height:51px;
+    gap:6px;
+    padding:6px 8px;
+  }
+
+  .products-v3 .product-thumb{
+    flex:0 0 56px;
+    width:56px;
+    height:46px;
+  }
+
+  /* PRODUCT DETAILS */
+  .products-v3 .product-info{
+    padding:16px 15px 19px;
+  }
+
+  .products-v3 .product-info .product-label{
+    font-size:18px;
+    line-height:1.18;
+    margin-bottom:8px;
+  }
+
+  .products-v3 .product-info > p{
+    font-size:12.5px;
+    line-height:1.6;
+    margin-bottom:15px;
+  }
+
+  /* USAGE */
+  .products-v3 .product-usage{
+    padding-top:12px;
+  }
+
+  .products-v3 .product-usage strong{
+    margin-bottom:7px;
+    font-size:9px;
+  }
+
+  .products-v3 .product-usage span{
+    font-size:9.5px;
+    padding:5px 6px;
+  }
+
+  /* DOWNLOADS BANNER */
+  .products-v3 .products-download-note{
+    margin:0 0 40px;
+    padding:20px 17px;
+    display:block;
+    border-radius:12px;
+  }
+
+  .products-v3 .products-download-note h2{
+    font-size:22px;
+    line-height:1.15;
+  }
+
+  .products-v3 .products-download-note p{
+    font-size:12px;
+    line-height:1.55;
+  }
+
+  .products-v3 .product-spec--light{
+    display:inline-flex;
+    margin-top:16px;
+    padding:10px 13px;
+    font-size:10px;
+  }
+}
+
+
+/* VERY SMALL PHONES */
+@media (max-width:380px){
+
+  .products-v3 .products-hero h1{
+    font-size:31px !important;
+  }
+
+  .products-v3 .product-main-image{
+    height:200px !important;
+  }
+}
