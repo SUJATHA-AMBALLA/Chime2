@@ -1032,3 +1032,277 @@ body.approval-viewer-open {
   }
 
 }
+
+/* ==========================================================================
+   PRODUCTS PAGE — CLEAN PRODUCT CARD LAYOUT
+   Identifier -> image frame -> thumbnails -> category -> description -> usage
+   ========================================================================== */
+
+.products-v3 .product-card{
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  background:#fff;
+}
+
+/* ----------------------------------------------------------
+   PRODUCT IDENTIFIER
+   Dynamic variant title — above the image
+   ---------------------------------------------------------- */
+
+.products-v3 .product-identifier{
+  padding:17px 22px 13px;
+  min-height:68px;
+
+  display:flex;
+  align-items:center;
+
+  background:#fff;
+
+  color:#d86b12;
+  font-size:clamp(14px,1.15vw,17px);
+  line-height:1.25;
+  font-weight:800;
+  letter-spacing:.055em;
+  text-transform:uppercase;
+}
+
+
+/* ----------------------------------------------------------
+   IMAGE AREA
+   Fixed visual frame, but NEVER crops the original image.
+   Tall / narrow images remain completely visible.
+   ---------------------------------------------------------- */
+
+.products-v3 .product-media{
+  background:#edf2f6;
+}
+
+.products-v3 .product-main-image{
+  width:100%;
+  height:290px !important;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:0;
+
+  background:#edf2f6;
+  overflow:hidden;
+}
+
+.products-v3 .product-main-image img{
+  width:100%;
+  height:100% !important;
+
+  display:block;
+
+  object-fit:contain !important;
+  object-position:center;
+
+  /* Keeps the complete source image visible */
+  max-width:100%;
+  max-height:100%;
+}
+
+
+/* ----------------------------------------------------------
+   THUMBNAILS
+   ---------------------------------------------------------- */
+
+.products-v3 .product-thumbs{
+  display:flex;
+  align-items:center;
+  gap:7px;
+
+  min-height:54px;
+  padding:7px 9px;
+
+  background:#e7edf2;
+
+  overflow-x:auto;
+  overflow-y:hidden;
+
+  scrollbar-width:thin;
+}
+
+.products-v3 .product-thumb{
+  flex:0 0 62px;
+
+  width:62px;
+  height:50px;
+
+  padding:2px;
+
+  background:#fff;
+  border:1px solid #d4dde5;
+
+  border-radius:2px;
+
+  overflow:hidden;
+}
+
+.products-v3 .product-thumb.active{
+  border:2px solid #f08a24;
+}
+
+.products-v3 .product-thumb img{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:contain;
+}
+
+
+/* ----------------------------------------------------------
+   PRODUCT INFORMATION
+   ---------------------------------------------------------- */
+
+.products-v3 .product-info{
+  padding:19px 22px 23px;
+  background:#fff;
+}
+
+/* Category / classifier */
+
+.products-v3 .product-info .product-label{
+  margin:0 0 10px;
+
+  color:#17447f;
+
+  font-size:clamp(18px,1.55vw,22px);
+  line-height:1.18;
+  font-weight:700;
+
+  letter-spacing:-.02em;
+}
+
+
+/* Description */
+
+.products-v3 .product-info > p{
+  margin:0 0 17px;
+
+  color:#536575;
+
+  font-size:13px;
+  line-height:1.62;
+}
+
+
+/* ----------------------------------------------------------
+   USAGE
+   ---------------------------------------------------------- */
+
+.products-v3 .product-usage{
+  padding-top:13px;
+
+  border-top:1px solid #e0e7ed;
+}
+
+.products-v3 .product-usage strong{
+  display:block;
+
+  margin-bottom:8px;
+
+  color:#17447f;
+
+  font-size:10px;
+  font-weight:800;
+
+  text-transform:uppercase;
+  letter-spacing:.13em;
+}
+
+.products-v3 .product-usage div{
+  display:flex;
+  gap:5px;
+  flex-wrap:wrap;
+}
+
+.products-v3 .product-usage span{
+  padding:5px 7px;
+
+  color:#435667;
+  background:#f5f7f9;
+
+  border:1px solid #e0e7ed;
+  border-radius:4px;
+
+  font-size:10px;
+}
+
+
+/* ----------------------------------------------------------
+   HIDE OLD SPEC BUTTON / EXTRA PRODUCT ACTION
+   ---------------------------------------------------------- */
+
+.products-v3 .product-spec{
+  display:none !important;
+}
+
+
+/* ----------------------------------------------------------
+   MOBILE
+   ---------------------------------------------------------- */
+
+@media(max-width:850px){
+
+  .products-v3 .product-identifier{
+    min-height:60px;
+
+    padding:15px 18px 12px;
+
+    font-size:14px;
+  }
+
+  .products-v3 .product-main-image{
+    height:250px !important;
+  }
+
+  .products-v3 .product-info{
+    padding:17px 18px 21px;
+  }
+
+  .products-v3 .product-info .product-label{
+    font-size:19px;
+  }
+
+  .products-v3 .product-info > p{
+    font-size:13px;
+    line-height:1.6;
+  }
+}
+
+
+/* ----------------------------------------------------------
+   SMALL PHONES
+   ---------------------------------------------------------- */
+
+@media(max-width:480px){
+
+  .products-v3 .product-identifier{
+    min-height:56px;
+
+    padding:13px 16px 10px;
+
+    font-size:13px;
+  }
+
+  .products-v3 .product-main-image{
+    height:220px !important;
+  }
+
+  .products-v3 .product-thumb{
+    flex-basis:58px;
+    width:58px;
+    height:47px;
+  }
+
+  .products-v3 .product-info .product-label{
+    font-size:18px;
+  }
+}
