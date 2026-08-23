@@ -641,7 +641,57 @@ h1,h2,h3,h4{
 .sinetrac-lockup{justify-self:center;display:flex;align-items:center;padding:3px 14px;}
 .sinetrac-lockup img{height:62px;width:auto;display:block;object-fit:contain;}
 .header-contact{display:flex;justify-content:flex-end;gap:26px;align-items:center;}
-.header-contact a{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#3d4858;display:flex;flex-direction:column;gap:2px;white-space:nowrap;}
+/* .header-contact a{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#3d4858;display:flex;flex-direction:column;gap:2px;white-space:nowrap;} */
+.header-contact a{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  color:#3d4858;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  white-space:nowrap;
+}
+
+.header-call .header-number{
+  flex-direction:row;
+  align-items:center;
+  gap:6px;
+}
+
+.header-call .header-number svg{
+  width:14px;
+  height:14px;
+  flex:none;
+}
+
+.header-contact > a[href^="mailto:"]{
+  align-items:flex-start;
+  justify-content:center;
+}
+
+.header-contact > a[href^="mailto:"] span{
+  margin-bottom:2px;
+}
+.header-call{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.header-call > span{
+  font-family:'Inter',sans-serif;
+  font-size:10px;
+  color:#111b2e;
+}
+
+.header-call .header-number svg{
+  width:14px;
+  height:14px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  flex:none;
+}
 .header-contact a span{font-family:'Inter',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:#8a94a4;}
 .header-contact a:hover{color:var(--brand-600);}
 .header-quote{white-space:nowrap;}
