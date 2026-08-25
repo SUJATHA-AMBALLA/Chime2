@@ -1957,3 +1957,159 @@ body{padding-top:125px;}
   }
 
 }
+
+/* =========================================================
+   HERO — 40+ YEARS EXPERIENCE PLAQUE
+   ========================================================= */
+
+.hero-experience{
+  position:relative;
+  display:flex;
+  align-items:center;
+  width:min(100%, 470px);
+  min-height:118px;
+  padding:22px 28px;
+  margin-top:28px;
+
+  background:rgba(255,255,255,.92);
+  border:1px solid rgba(255,255,255,.95);
+  border-left:5px solid #2555b2;
+  border-radius:4px;
+
+  box-shadow:
+    0 14px 35px rgba(15,39,64,.16),
+    0 2px 8px rgba(15,39,64,.08);
+
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+
+  overflow:hidden;
+}
+
+/* subtle architectural accent */
+.hero-experience::after{
+  content:'';
+  position:absolute;
+  right:-35px;
+  top:-55px;
+  width:130px;
+  height:130px;
+  border:1px solid rgba(37,85,178,.12);
+  transform:rotate(45deg);
+  pointer-events:none;
+}
+
+.experience-number{
+  position:relative;
+  z-index:1;
+
+  font-family:'Space Grotesk',sans-serif;
+  font-size:64px;
+  line-height:.9;
+  font-weight:700;
+  letter-spacing:-.055em;
+
+  color:#2555b2;
+  white-space:nowrap;
+}
+
+.experience-divider{
+  width:1px;
+  height:58px;
+  margin:0 22px;
+
+  background:#cfd8e4;
+}
+
+.experience-copy{
+  position:relative;
+  z-index:1;
+
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.experience-copy span{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  line-height:1.2;
+  letter-spacing:.16em;
+  font-weight:600;
+  color:#68758a;
+}
+
+.experience-copy strong{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:18px;
+  line-height:1.2;
+  font-weight:600;
+  color:#173a67;
+  max-width:230px;
+}
+
+
+/* ---------- Desktop placement ---------- */
+
+@media (min-width:821px){
+  .hero-experience{
+    margin-top:30px;
+  }
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:820px){
+
+  .hero-experience{
+    width:100%;
+    max-width:440px;
+    min-height:100px;
+    margin:26px auto 0;
+    padding:18px 20px;
+  }
+
+  .experience-number{
+    font-size:50px;
+  }
+
+  .experience-divider{
+    height:48px;
+    margin:0 16px;
+  }
+
+  .experience-copy span{
+    font-size:9px;
+  }
+
+  .experience-copy strong{
+    font-size:16px;
+  }
+}
+
+@media (max-width:430px){
+
+  .hero-experience{
+    padding:16px 17px;
+    min-height:90px;
+  }
+
+  .experience-number{
+    font-size:43px;
+  }
+
+  .experience-divider{
+    margin:0 13px;
+    height:42px;
+  }
+
+  .experience-copy span{
+    font-size:8px;
+    letter-spacing:.12em;
+  }
+
+  .experience-copy strong{
+    font-size:14px;
+  }
+}
