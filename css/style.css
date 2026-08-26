@@ -2115,3 +2115,402 @@ body{padding-top:125px;}
     font-size:14px;
   }
 }
+/* =========================================================
+   FINAL HEADER + MOBILE CREDIBILITY FIX
+   CSS ONLY — DO NOT CHANGE SITE CONTENT
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   HEADER — DESKTOP
+   Clean, balanced three-zone header:
+   Chime Electronics | Navigation | Sinetrac / Contact
+   --------------------------------------------------------- */
+
+@media (min-width:1025px){
+
+  .site-header{
+    background:#fff !important;
+    border-bottom:1px solid #e2e7ed !important;
+    box-shadow:0 3px 14px rgba(17,34,68,.06) !important;
+  }
+
+  .header-main{
+    background:#fff !important;
+  }
+
+  .header-main__inner{
+    min-height:76px !important;
+    display:grid !important;
+    grid-template-columns:minmax(210px,1fr) auto minmax(210px,1fr) !important;
+    align-items:center !important;
+    gap:24px !important;
+    padding:8px 0 !important;
+  }
+
+  /* Chime Electronics */
+  .company-lockup{
+    display:flex !important;
+    flex-direction:column !important;
+    justify-self:start !important;
+    line-height:1.05 !important;
+    text-decoration:none !important;
+  }
+
+  .company-name{
+    font-family:'Space Grotesk',sans-serif !important;
+    font-size:25px !important;
+    font-weight:800 !important;
+    letter-spacing:-.035em !important;
+    color:#111b2e !important;
+    white-space:nowrap !important;
+  }
+
+  .company-tag{
+    font-size:9px !important;
+    letter-spacing:.11em !important;
+    text-transform:uppercase !important;
+    color:#7b8797 !important;
+    margin-top:6px !important;
+    white-space:nowrap !important;
+  }
+
+  /* Sinetrac logo */
+  .sinetrac-lockup{
+    grid-column:3 !important;
+    justify-self:end !important;
+    display:flex !important;
+    align-items:center !important;
+    padding:2px 0 !important;
+  }
+
+  .sinetrac-lockup img{
+    height:50px !important;
+    width:auto !important;
+    max-width:180px !important;
+    display:block !important;
+    object-fit:contain !important;
+  }
+
+  /* Navigation stays in its existing row */
+  .site-nav{
+    background:#fff !important;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+   Keep the header compact without disturbing the page.
+   --------------------------------------------------------- */
+
+@media (min-width:701px) and (max-width:1024px){
+
+  .header-main__inner{
+    min-height:68px !important;
+    display:grid !important;
+    grid-template-columns:1fr auto 1fr !important;
+    align-items:center !important;
+    gap:16px !important;
+    padding:8px 24px !important;
+  }
+
+  .company-lockup{
+    display:flex !important;
+    justify-self:start !important;
+    flex-direction:column !important;
+    line-height:1.05 !important;
+  }
+
+  .company-name{
+    font-size:21px !important;
+    white-space:nowrap !important;
+  }
+
+  .company-tag{
+    font-size:8px !important;
+    margin-top:5px !important;
+  }
+
+  .sinetrac-lockup{
+    grid-column:3 !important;
+    justify-self:end !important;
+    padding:0 !important;
+  }
+
+  .sinetrac-lockup img{
+    height:48px !important;
+    max-width:165px !important;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE HEADER
+   Required order:
+
+   MENU   CHIME ELECTRONICS                    SINETRAC
+   --------------------------------------------------------- */
+
+@media (max-width:700px){
+
+  .site-header{
+    background:#fff !important;
+    border-bottom:1px solid #e2e7ed !important;
+    box-shadow:0 2px 12px rgba(17,34,68,.07) !important;
+  }
+
+  .header-main{
+    background:#fff !important;
+  }
+
+  .header-main__inner{
+    min-height:62px !important;
+    height:62px !important;
+    display:grid !important;
+    grid-template-columns:42px minmax(0,1fr) auto !important;
+    align-items:center !important;
+    gap:10px !important;
+    padding:7px 16px !important;
+  }
+
+  /* MENU — LEFT */
+  .nav-toggle{
+    display:inline-flex !important;
+    grid-column:1 !important;
+    grid-row:1 !important;
+    width:38px !important;
+    height:38px !important;
+    align-items:center !important;
+    justify-content:center !important;
+    padding:0 !important;
+    margin:0 !important;
+    border:1px solid #d5dde6 !important;
+    border-radius:8px !important;
+    background:#fff !important;
+    color:#173b67 !important;
+    font-size:20px !important;
+    line-height:1 !important;
+    cursor:pointer !important;
+  }
+
+  /* CHIME ELECTRONICS — CENTRE/LEFT */
+  .company-lockup{
+    display:flex !important;
+    grid-column:2 !important;
+    grid-row:1 !important;
+    justify-self:start !important;
+    align-items:flex-start !important;
+    flex-direction:column !important;
+    min-width:0 !important;
+    line-height:1 !important;
+    text-decoration:none !important;
+  }
+
+  .company-name{
+    font-family:'Space Grotesk',sans-serif !important;
+    font-size:17px !important;
+    line-height:1.05 !important;
+    font-weight:800 !important;
+    letter-spacing:-.035em !important;
+    color:#111b2e !important;
+    white-space:nowrap !important;
+  }
+
+  .company-tag{
+    display:none !important;
+  }
+
+  /* SINETRAC LOGO — RIGHT */
+  .sinetrac-lockup{
+    grid-column:3 !important;
+    grid-row:1 !important;
+    justify-self:end !important;
+    display:flex !important;
+    align-items:center !important;
+    padding:0 !important;
+    margin:0 !important;
+    min-width:0 !important;
+  }
+
+  .sinetrac-lockup img{
+    height:43px !important;
+    width:auto !important;
+    max-width:120px !important;
+    display:block !important;
+    object-fit:contain !important;
+  }
+
+  .header-contact,
+  .header-quote{
+    display:none !important;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   VERY SMALL PHONES
+   Keep all three header elements visible.
+   --------------------------------------------------------- */
+
+@media (max-width:380px){
+
+  .header-main__inner{
+    grid-template-columns:36px minmax(0,1fr) auto !important;
+    gap:7px !important;
+    padding-left:11px !important;
+    padding-right:11px !important;
+  }
+
+  .nav-toggle{
+    width:34px !important;
+    height:34px !important;
+    font-size:18px !important;
+  }
+
+  .company-name{
+    font-size:15px !important;
+  }
+
+  .sinetrac-lockup img{
+    height:38px !important;
+    max-width:105px !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE CREDIBILITY STRIP
+   Show ALL existing items — no hiding, no horizontal scroll.
+   ========================================================= */
+
+@media (max-width:820px){
+
+  .credbar--fixed{
+    height:auto !important;
+    overflow:visible !important;
+    width:100% !important;
+  }
+
+  .cred-fixed{
+    width:100% !important;
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    padding:0 !important;
+    margin:0 !important;
+  }
+
+  .cred-fixed__item{
+    min-width:0 !important;
+    min-height:62px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:7px !important;
+    padding:9px 10px !important;
+    border-right:1px solid #dce3eb !important;
+    border-bottom:1px solid #dce3eb !important;
+    box-sizing:border-box !important;
+  }
+
+  .cred-fixed__item:nth-child(2n){
+    border-right:0 !important;
+  }
+
+  .cred-fixed__item strong{
+    display:block !important;
+    font-family:'Space Grotesk',sans-serif !important;
+    font-size:19px !important;
+    line-height:1 !important;
+    color:var(--site-blue) !important;
+    white-space:nowrap !important;
+  }
+
+  .cred-fixed__item span{
+    display:block !important;
+    font-size:10px !important;
+    line-height:1.25 !important;
+    color:#657284 !important;
+    white-space:normal !important;
+    text-align:left !important;
+  }
+
+  /* IMPORTANT:
+     The existing CSS hides the ISO item.
+     Do not allow that rule to remove credibility content. */
+  .hero--modern + .credbar--fixed .cred-fixed__item--iso{
+    display:flex !important;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   SMALL MOBILE CREDIBILITY STRIP
+   Stack the value above its description so all 5 items
+   remain readable without making the strip too wide.
+   --------------------------------------------------------- */
+
+@media (max-width:560px){
+
+  .cred-fixed{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+
+  .cred-fixed__item{
+    min-height:66px !important;
+    flex-direction:column !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:3px !important;
+    padding:9px 6px !important;
+    text-align:center !important;
+  }
+
+  .cred-fixed__item:nth-child(2n){
+    border-right:0 !important;
+  }
+
+  .cred-fixed__item strong{
+    font-size:18px !important;
+    line-height:1 !important;
+  }
+
+  .cred-fixed__item span{
+    font-size:9.5px !important;
+    line-height:1.2 !important;
+    text-align:center !important;
+  }
+
+  /* Fifth item occupies the full width */
+  .cred-fixed__item:nth-child(5){
+    grid-column:1 / -1 !important;
+    border-right:0 !important;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   EXTRA SMALL PHONES
+   --------------------------------------------------------- */
+
+@media (max-width:360px){
+
+  .cred-fixed__item{
+    min-height:64px !important;
+    padding:8px 4px !important;
+  }
+
+  .cred-fixed__item strong{
+    font-size:17px !important;
+  }
+
+  .cred-fixed__item span{
+    font-size:9px !important;
+  }
+
+}
