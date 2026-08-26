@@ -65,11 +65,11 @@
 #about-home-title .decade-number{
   display:inline-block;
   color:#0b63c9;
-  font-size:1.42em;
+  font: size 1.3em;
   font-weight:900;
   line-height:.82;
   margin-right:.08em;
-  text-shadow:0 5px 14px rgba(11,99,201,.18);
+  <!-- text-shadow:0 5px 14px rgba(11,99,201,.18); -->
 }
 
 /* ISO is a credibility highlight — teal/blue, not warning red. */
@@ -115,9 +115,9 @@
 .product-filter[data-filter="water-level-indicators"].active{background:#4a82b8!important;color:#fff!important;border-color:#4a82b8!important;}
 
 /* Client logos: automatic horizontal marquee; still manually scrollable. */
-.client-logo-grid--placeholders{display:flex!important;grid-template-columns:none!important;overflow-x:auto!important;overflow-y:hidden!important;gap:18px!important;padding:8px 4px 18px!important;scroll-snap-type:x proximity;scrollbar-width:thin;}
-.client-logo-grid--placeholders .client-logo-card{flex:0 0 clamp(190px,23vw,245px)!important;scroll-snap-align:start;}
-.client-logo-grid--placeholders::-webkit-scrollbar{height:7px;}
+.client-logo-grid--placeholders{display:flex!important;grid-template-columns:none!important;overflow:hidden!important;overflow-x:hidden!important;overflow-y:hidden!important;gap:18px!important;padding:8px 4px 18px!important;scroll-snap-type:none!important;scroll-behavior:auto!important;}
+.client-logo-grid--placeholders .client-logo-card{flex:0 0 clamp(190px,23vw,245px)!important;scroll-snap-align:none!important;}
+.client-logo-grid--placeholders::-webkit-scrollbar{display:none!important;}
 
 .footer-brand-logo{display:block;width:min(190px,70%);height:auto;margin:0 0 18px;}
 .footer-col.right .co-line a{font-weight:700;}
@@ -136,6 +136,9 @@
   .home-40-badge{width:150px!important;}
   .why-engineers-image{min-height:210px;}
   .client-logo-grid--placeholders .client-logo-card{flex-basis:175px!important;}
+}
+.about-credential--iso h3{
+  color:#d46f18 !important;
 }
 </style>
 </head>
@@ -257,7 +260,7 @@
 <div class="about-home__layout">
 <div class="about-home__intro">
 <div class="eyebrow">ABOUT US</div>
-<h2 id="about-home-title"><span class="decade-number">4</span> decades of engineering. Built for what matters.</h2>
+<h2 id="about-home-title"><span class="decade-number">4 Decades</span> of engineering. Built for what matters.</h2>
 <p>Since 1986, we have built our capabilities around dependable electrical and power solutions for demanding applications. From our Delhi manufacturing facility, engineering, manufacturing, testing and service come together to deliver products designed for real-world performance.</p>
 <p>Our experience spans industry, Defence and public-sector institutions, where reliability, technical understanding and consistent support matter. With more than 25 years of defence-sector experience, we understand the importance of demanding requirements while maintaining the practical, responsive approach of an experienced engineering company.</p>
 </div>
@@ -1297,7 +1300,7 @@ document.addEventListener('click', function (event) {
   function tick(now){
     const dt=Math.min(40,now-last); last=now;
     if(!paused && halfWidth>0){
-      rail.scrollLeft += dt*0.035;
+      rail.scrollLeft += dt*0.045;
       if(rail.scrollLeft >= halfWidth) rail.scrollLeft -= halfWidth;
     }
     requestAnimationFrame(tick);

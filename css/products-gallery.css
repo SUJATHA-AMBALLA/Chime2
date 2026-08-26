@@ -1730,3 +1730,119 @@ body.approval-viewer-open {
     margin:0 0 3px !important;
   }
 }
+
+/* =========================================================
+   FINAL MOBILE FIXES — PRODUCTS + APPROVALS
+   Desktop layout is intentionally untouched.
+   ========================================================= */
+
+@media (max-width:850px){
+  .products-v3 .product-grid{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:20px !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
+
+  .products-v3 .product-card{
+    width:100% !important;
+    max-width:none !important;
+  }
+
+  .products-v3 .product-main-image{
+    height:280px !important;
+  }
+}
+
+@media (max-width:480px){
+  .products-v3 .product-grid{
+    gap:16px !important;
+  }
+
+  .products-v3 .product-main-image{
+    height:250px !important;
+  }
+
+  .products-v3 .product-info .product-label{
+    font-size:19px !important;
+    line-height:1.18 !important;
+  }
+}
+
+@media (max-width:800px){
+  /* Separate the year from the institution badge/content.
+     The previous mobile rule assigned both to the same grid area,
+     which caused the visible heading overlap in the phone layout. */
+  .approval-event{
+    grid-template-columns:28px minmax(0,1fr) !important;
+    grid-template-areas:
+      "dot year"
+      "dot content" !important;
+    min-height:0 !important;
+    padding-bottom:34px !important;
+    align-items:start !important;
+  }
+
+  .approval-timeline::before{
+    left:14px !important;
+  }
+
+  .approval-year{
+    grid-area:year !important;
+    margin:0 0 7px !important;
+    padding:0 0 0 18px !important;
+    text-align:left !important;
+    font-size:16px !important;
+    line-height:1.2 !important;
+    white-space:nowrap !important;
+  }
+
+  .approval-dot{
+    grid-area:dot !important;
+    margin-top:4px !important;
+    justify-self:center !important;
+  }
+
+  .approval-content{
+    grid-area:content !important;
+    min-width:0 !important;
+    padding-left:18px !important;
+  }
+
+  .approval-type{
+    max-width:100% !important;
+    white-space:normal !important;
+    line-height:1.25 !important;
+  }
+
+  .approval-content h3{
+    margin-top:8px !important;
+    font-size:19px !important;
+    line-height:1.28 !important;
+  }
+
+  .approval-description{
+    font-size:13px !important;
+    line-height:1.6 !important;
+  }
+}
+
+@media (max-width:520px){
+  .approval-event{
+    grid-template-columns:24px minmax(0,1fr) !important;
+  }
+
+  .approval-timeline::before{
+    left:12px !important;
+  }
+
+  .approval-year,
+  .approval-content{
+    padding-left:14px !important;
+  }
+
+  .approval-content h3{
+    font-size:18px !important;
+  }
+}
