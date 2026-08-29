@@ -866,28 +866,13 @@
 
 /* =========================================================
    TABLET / MOBILE
-   Do not apply the desktop contact redesign below 1025px.
+   Header layout for these breakpoints now lives in one place:
+   see "HEADER — FINAL, SINGLE SOURCE OF TRUTH" in
+   products-gallery.css (loaded last). Do not add
+   header-main__inner / nav-toggle / site-nav rules here —
+   duplicate rules across files is exactly what broke the
+   mobile menu placement before.
    ========================================================= */
-
-@media (max-width:1024px){
-  .header-main__inner{
-    display:flex !important;
-  }
-}
-
-@media (max-width:700px){
-  .company-name{
-    font-size:20px !important;
-  }
-
-  .company-tag{
-    font-size:8px !important;
-  }
-
-  .sinetrac-lockup img{
-    height:44px !important;
-  }
-}
 
 
 /* =========================================================
@@ -1060,10 +1045,5 @@
   }
 }
 
-@media (max-width:1024px){
-  .header-main__inner{
-    height:auto !important;
-    min-height:0 !important;
-    display:flex !important;
-  }
-}
+/* Tablet/mobile header sizing now lives solely in
+   products-gallery.css — see note above. */
