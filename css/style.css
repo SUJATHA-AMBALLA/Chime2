@@ -2808,22 +2808,22 @@ body{padding-top:125px;}
 
     min-width:0 !important;
     min-height:62px !important;
-    height:62px !important;
+    height:auto !important;
 
     box-sizing:border-box !important;
 
-    flex-direction:row !important;
+    flex-direction:column !important;
 
     align-items:center !important;
     justify-content:center !important;
 
-    gap:6px !important;
+    gap:3px !important;
 
-    padding:8px 6px !important;
+    padding:10px 8px !important;
 
     overflow:visible !important;
 
-    white-space:nowrap !important;
+    white-space:normal !important;
 
     border-right:1px solid #dce3eb !important;
     border-bottom:1px solid #dce3eb !important;
@@ -2848,9 +2848,11 @@ body{padding-top:125px;}
     margin:0 !important;
 
     font-size:9px !important;
-    line-height:1.2 !important;
+    line-height:1.25 !important;
 
-    white-space:nowrap !important;
+    white-space:normal !important;
+    text-align:center !important;
+    word-break:break-word !important;
 
     color:#657284 !important;
   }
