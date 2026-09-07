@@ -1092,3 +1092,789 @@
   .clients-section .client-logo-card img,
   .client-logo-grid--placeholders .client-logo-card img{width:105px!important;height:48px!important;}
 }
+
+/* =========================================================
+   FINAL MOBILE / SECTION CLEANUP — 07 SEP 2026
+   Keep the existing site palette and structure. These are
+   targeted corrections only; do not recolor unrelated sections.
+   ========================================================= */
+
+:root{
+  --sinetrac-blue:#2555b2;
+}
+
+/* CLIENTS — restore the calm light section. */
+.clients-section{
+  background:#fff !important;
+  color:#17233a !important;
+  border-top:1px solid #e3e9f1 !important;
+  border-bottom:1px solid #e3e9f1 !important;
+}
+.clients-section .section-label{color:var(--sinetrac-blue) !important;}
+.clients-section .clients-intro h2,
+.clients-section .section-head h2{color:#17233a !important;}
+.clients-section .clients-intro .lead,
+.clients-section .section-head .lead{color:#5d6c80 !important;}
+
+/* ENGINEERING ADVANTAGE / WHY SINETRAC — keep ONE controlled blue section,
+   and explicitly restore every text layer so inherited/inline rules cannot hide it. */
+.section--brand{
+  background:var(--sinetrac-blue) !important;
+  color:#fff !important;
+}
+.section--brand h2,
+.section--brand h3,
+.section--brand .eyebrow,
+.section--brand .section-head h2,
+.section--brand .section-head .eyebrow,
+.section--brand .section-label{
+  color:#fff !important;
+}
+.section--brand p,
+.section--brand p[style],
+.section--brand .lead,
+.section--brand li,
+.section--brand li span{
+  color:#eaf1ff !important;
+}
+.section--brand .pill-list li{
+  border-bottom-color:rgba(255,255,255,.20) !important;
+}
+.section--brand .pill-list svg{stroke:#fff !important;}
+
+/* FOOTER — use the same blue as the navigation/brand section. */
+.footer,
+.footer-copy{
+  background:var(--sinetrac-blue) !important;
+}
+.footer-copy{border-top-color:rgba(255,255,255,.18) !important;}
+.footer h2,.footer h3,.footer .co-name-big{color:#fff !important;}
+.footer p,.footer .co-line,.footer .co-line a,.footer-copy{color:#dce8ff !important;}
+
+/* CREDIBILITY STRIP — never let browser/system font scaling clip the content. */
+@media (max-width:600px){
+  .hero--modern + .credbar--fixed .cred-fixed{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    grid-auto-rows:auto !important;
+    width:100% !important;
+    overflow:visible !important;
+  }
+  .hero--modern + .credbar--fixed .cred-fixed__item{
+    min-width:0 !important;
+    min-height:82px !important;
+    height:auto !important;
+    padding:13px 12px !important;
+    box-sizing:border-box !important;
+    align-items:flex-start !important;
+    justify-content:center !important;
+    overflow:visible !important;
+  }
+  .hero--modern + .credbar--fixed .cred-fixed__item strong{
+    font-size:clamp(20px,6vw,24px) !important;
+    line-height:1 !important;
+    white-space:nowrap !important;
+  }
+  .hero--modern + .credbar--fixed .cred-fixed__item span,
+  .hero--modern + .credbar--fixed .cred-sub{
+    display:block !important;
+    max-width:100% !important;
+    white-space:normal !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+    font-size:clamp(10px,2.8vw,12px) !important;
+    line-height:1.35 !important;
+  }
+  .hero--modern + .credbar--fixed .cred-fixed__item:nth-child(2n){border-right:0 !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item:nth-child(n){border-bottom:1px solid #e1e7ef !important;}
+}
+
+/* PRODUCTION FLOW — one arrow only, compact vertical rhythm on phones. */
+@media (max-width:600px){
+  .process-flow{
+    display:block !important;
+    margin-top:14px !important;
+  }
+  .process-lane{
+    padding:14px 12px 15px !important;
+    margin-bottom:14px !important;
+    border-radius:12px !important;
+    box-shadow:none !important;
+  }
+  .process-lane__title{
+    font-size:13px !important;
+    line-height:1.3 !important;
+    margin:0 0 10px !important;
+  }
+  .process-flow__steps{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:0 !important;
+  }
+  .process-node{
+    min-height:42px !important;
+    height:auto !important;
+    padding:9px 11px !important;
+    border-radius:9px !important;
+    box-sizing:border-box !important;
+    font-size:13px !important;
+    line-height:1.25 !important;
+  }
+  .process-node small{
+    font-size:10px !important;
+    line-height:1.2 !important;
+    max-width:45% !important;
+  }
+  .process-flow__arrow{
+    display:flex !important;
+    width:100% !important;
+    height:14px !important;
+    min-height:14px !important;
+    margin:0 !important;
+    padding:0 !important;
+    align-items:center !important;
+    justify-content:center !important;
+    font-size:0 !important;
+    transform:none !important;
+  }
+  .process-flow__arrow::before{content:none !important;display:none !important;}
+  .process-flow__arrow::after{
+    content:'↓' !important;
+    display:block !important;
+    font-size:13px !important;
+    line-height:1 !important;
+    color:#71839a !important;
+  }
+}
+
+/* Very small phones: let the layout breathe instead of shrinking text into illegibility. */
+@media (max-width:380px){
+  .hero--modern + .credbar--fixed .cred-fixed__item{min-height:88px !important;padding:12px 10px !important;}
+  .process-node{font-size:12.5px !important;padding:8px 10px !important;}
+  .process-node small{font-size:9.5px !important;}
+}
+
+
+/* =========================================================
+   CLIENT REDESIGN — 08 SEP 2026
+   Hero credibility / Defence proof / Production flow /
+   Contact after-sales support.
+   ========================================================= */
+
+/* 1. HERO CREDIBILITY — turn the old ribbon into four compact
+   editorial proof cards. No new content; only presentation changes. */
+.hero--modern + .credbar--fixed{
+  padding:18px 0 !important;
+  background:#f4f7fb !important;
+  border-top:1px solid #dbe4ee !important;
+  border-bottom:1px solid #dbe4ee !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed{
+  width:min(1180px,calc(100% - 36px)) !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:12px !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed__item{
+  position:relative !important;
+  min-height:82px !important;
+  box-sizing:border-box !important;
+  display:grid !important;
+  grid-template-columns:auto 1fr !important;
+  align-content:center !important;
+  align-items:center !important;
+  justify-content:initial !important;
+  gap:12px !important;
+  padding:13px 15px !important;
+  white-space:normal !important;
+  overflow:hidden !important;
+  border:1px solid #d8e2ed !important;
+  border-radius:12px !important;
+  border-right:1px solid #d8e2ed !important;
+  background:#fff !important;
+  box-shadow:0 6px 18px rgba(20,50,85,.055) !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed__item::before{
+  content:'' !important;
+  width:4px !important;
+  position:absolute !important;
+  left:0 !important;
+  top:14px !important;
+  bottom:14px !important;
+  border-radius:0 4px 4px 0 !important;
+  background:#2555b2 !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed__item:nth-child(3)::before,
+.hero--modern + .credbar--fixed .cred-fixed__item:nth-child(4)::before{background:#c97a22 !important;}
+.hero--modern + .credbar--fixed .cred-fixed__item strong{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-width:58px !important;
+  height:58px !important;
+  margin:0 !important;
+  border-radius:50% !important;
+  background:#edf4fc !important;
+  color:#2555b2 !important;
+  font-family:'Space Grotesk',sans-serif !important;
+  font-size:21px !important;
+  line-height:1 !important;
+  font-weight:750 !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed__item:nth-child(3) strong,
+.hero--modern + .credbar--fixed .cred-fixed__item:nth-child(4) strong{
+  background:#fff3e6 !important;
+  color:#a75a15 !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed__item span{
+  display:block !important;
+  min-width:0 !important;
+  margin:0 !important;
+  color:#31445c !important;
+  font-family:'Inter',sans-serif !important;
+  font-size:12px !important;
+  line-height:1.35 !important;
+  font-weight:650 !important;
+  white-space:normal !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed__item .cred-sub{
+  display:block !important;
+  margin:3px 0 0 !important;
+  color:#77869a !important;
+  font-size:10px !important;
+  font-weight:500 !important;
+}
+
+/* 2. ABOUT — Defence/Government proof becomes a proper institutional
+   credential panel rather than a plain text box. */
+.about-defence-proof{
+  position:relative !important;
+  margin-top:26px !important;
+  padding:22px 22px 18px !important;
+  border:1px solid #cfdbe8 !important;
+  border-radius:16px !important;
+  background:linear-gradient(145deg,#f5f8fc 0%,#ffffff 62%,#f8fafc 100%) !important;
+  box-shadow:0 14px 32px rgba(17,48,82,.08) !important;
+  overflow:hidden !important;
+}
+.about-defence-proof::before{
+  content:'' !important;
+  position:absolute !important;
+  inset:0 auto 0 0 !important;
+  width:5px !important;
+  background:#2555b2 !important;
+}
+.about-defence-proof::after{
+  content:'DEFENCE' !important;
+  position:absolute !important;
+  right:-26px !important;
+  top:17px !important;
+  padding:6px 35px !important;
+  transform:rotate(35deg) !important;
+  background:#eef4fa !important;
+  color:#55708f !important;
+  border:1px solid #d6e1ed !important;
+  font:700 8px/1 'IBM Plex Mono',monospace !important;
+  letter-spacing:.16em !important;
+}
+.about-defence-proof__eyebrow{
+  color:#2555b2 !important;
+  font:700 9px/1.2 'IBM Plex Mono',monospace !important;
+  letter-spacing:.15em !important;
+  margin-bottom:8px !important;
+}
+.about-defence-proof h3{
+  margin:0 0 16px !important;
+  color:#172f50 !important;
+  font-family:'Space Grotesk',sans-serif !important;
+  font-size:22px !important;
+  line-height:1.12 !important;
+  letter-spacing:-.025em !important;
+}
+.about-defence-proof__grid{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:9px !important;
+}
+.about-defence-proof__grid > div{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:4px !important;
+  min-height:57px !important;
+  padding:10px 12px !important;
+  box-sizing:border-box !important;
+  border:1px solid #dce5ee !important;
+  border-radius:9px !important;
+  background:rgba(255,255,255,.82) !important;
+}
+.about-defence-proof__grid strong{
+  color:#1f5cae !important;
+  font:750 14px/1.15 'Space Grotesk',sans-serif !important;
+}
+.about-defence-proof__grid span{
+  color:#607187 !important;
+  font-size:10px !important;
+  line-height:1.3 !important;
+}
+.about-defence-proof__link{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:7px !important;
+  margin-top:15px !important;
+  color:#2555b2 !important;
+  font-size:11px !important;
+  font-weight:750 !important;
+  text-decoration:none !important;
+}
+.about-defence-proof__link span{transition:transform .2s ease;}
+.about-defence-proof__link:hover span{transform:translateX(4px);}
+
+/* 3. PRODUCTION — two lanes side-by-side. The process itself is compact,
+   while the shared quality gate visually joins both lines. */
+.process-flow{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:16px 18px !important;
+  align-items:stretch !important;
+}
+.process-lane{
+  min-width:0 !important;
+  padding:17px !important;
+  border-radius:13px !important;
+}
+.process-lane__title{
+  font-size:13px !important;
+  line-height:1.25 !important;
+  margin-bottom:12px !important;
+}
+.process-flow__steps{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:6px !important;
+  align-items:stretch !important;
+}
+.process-node{
+  min-width:0 !important;
+  min-height:38px !important;
+  box-sizing:border-box !important;
+  padding:7px 9px !important;
+  white-space:normal !important;
+  text-align:center !important;
+  font-size:9.5px !important;
+  line-height:1.15 !important;
+}
+.process-node small{
+  display:block !important;
+  margin-top:2px !important;
+  margin-left:0 !important;
+  text-align:center !important;
+  max-width:none !important;
+  font-size:6.5px !important;
+}
+.process-flow__arrow{
+  display:none !important;
+}
+.process-quality-gate{
+  grid-column:1 / -1 !important;
+  width:min(620px,100%) !important;
+  margin:0 auto !important;
+}
+
+/* 4. CONTACT — after-sales is now part of the right-hand information column,
+   directly beneath the map. The old standalone block is removed from flow. */
+.contact-support-card{
+  position:relative !important;
+  margin-top:18px !important;
+  padding:20px !important;
+  border:1px solid #d4e0eb !important;
+  border-radius:15px !important;
+  background:linear-gradient(145deg,#f7faff,#ffffff) !important;
+  box-shadow:0 12px 28px rgba(18,55,92,.08) !important;
+  overflow:hidden !important;
+}
+.contact-support-card::after{
+  content:'' !important;
+  position:absolute !important;
+  width:100px !important;
+  height:100px !important;
+  right:-45px !important;
+  bottom:-45px !important;
+  border:1px solid #dce7f1 !important;
+  border-radius:50% !important;
+}
+.contact-support-card__top{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+}
+.contact-support-card .eyebrow{
+  margin:0 !important;
+  color:#2555b2 !important;
+  font:700 9px/1.2 'IBM Plex Mono',monospace !important;
+  letter-spacing:.15em !important;
+}
+.contact-support-card__mark{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:27px !important;
+  height:27px !important;
+  border:1px solid #d6e2ed !important;
+  border-radius:50% !important;
+  color:#c46c18 !important;
+  font:600 18px/1 'Space Grotesk',sans-serif !important;
+  background:#fff8ef !important;
+}
+.contact-support-card h3{
+  margin:7px 0 6px !important;
+  color:#173a67 !important;
+  font:700 23px/1.1 'Space Grotesk',sans-serif !important;
+  letter-spacing:-.025em !important;
+}
+.contact-support-card > p{
+  margin:0 0 15px !important;
+  color:#5e6e82 !important;
+  font-size:11px !important;
+  line-height:1.5 !important;
+}
+.contact-support-card__grid{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:7px !important;
+}
+.contact-support-card__grid > div{
+  display:flex !important;
+  align-items:center !important;
+  gap:8px !important;
+  min-height:38px !important;
+  padding:7px 8px !important;
+  box-sizing:border-box !important;
+  border:1px solid #e0e7ef !important;
+  border-radius:8px !important;
+  background:#fff !important;
+}
+.contact-support-card__grid > div:last-child{grid-column:1 / -1;}
+.contact-support-card__grid span{
+  flex:0 0 auto !important;
+  color:#c46c18 !important;
+  font:700 8px/1 'IBM Plex Mono',monospace !important;
+}
+.contact-support-card__grid b{
+  color:#334b65 !important;
+  font:650 9.5px/1.25 'Inter',sans-serif !important;
+}
+
+@media (max-width:900px){
+  .hero--modern + .credbar--fixed .cred-fixed{width:min(100% - 28px,720px) !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item{min-height:76px !important;}
+  .process-flow{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+
+@media (max-width:700px){
+  /* Hero proof cards: clean 2 × 2 mobile dashboard. */
+  .hero--modern + .credbar--fixed{padding:10px 0 !important;}
+  .hero--modern + .credbar--fixed .cred-fixed{
+    width:calc(100% - 20px) !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:8px !important;
+  }
+  .hero--modern + .credbar--fixed .cred-fixed__item{
+    min-height:70px !important;
+    grid-template-columns:42px 1fr !important;
+    gap:8px !important;
+    padding:9px 9px 9px 10px !important;
+    border-radius:10px !important;
+  }
+  .hero--modern + .credbar--fixed .cred-fixed__item::before{top:11px !important;bottom:11px !important;width:3px !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item strong{
+    min-width:42px !important;
+    width:42px !important;
+    height:42px !important;
+    font-size:16px !important;
+  }
+  .hero--modern + .credbar--fixed .cred-fixed__item span{font-size:9.5px !important;line-height:1.25 !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item .cred-sub{font-size:8px !important;margin-top:2px !important;}
+
+  .about-defence-proof{padding:18px 14px 15px !important;margin-top:20px !important;border-radius:13px !important;}
+  .about-defence-proof::after{right:-31px !important;top:11px !important;font-size:7px !important;}
+  .about-defence-proof h3{font-size:19px !important;margin-bottom:12px !important;max-width:82% !important;}
+  .about-defence-proof__grid{gap:7px !important;}
+  .about-defence-proof__grid > div{min-height:54px !important;padding:8px !important;}
+  .about-defence-proof__grid strong{font-size:12px !important;}
+  .about-defence-proof__grid span{font-size:8.5px !important;}
+  .about-defence-proof__link{font-size:10px !important;margin-top:12px !important;}
+
+  /* Mobile production = two short columns; each process uses a compact 2-column grid. */
+  .process-flow{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:9px !important;
+  }
+  .process-lane{padding:11px 8px 10px !important;border-radius:10px !important;}
+  .process-lane__title{font-size:10px !important;line-height:1.2 !important;margin-bottom:8px !important;}
+  .process-flow__steps{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:4px !important;}
+  .process-node{min-height:34px !important;padding:5px 4px !important;border-radius:6px !important;font-size:7.5px !important;line-height:1.12 !important;}
+  .process-node small{font-size:5.5px !important;}
+  .process-quality-gate{margin-top:1px !important;}
+  .process-quality-gate__label{font-size:7px !important;padding:6px 8px !important;letter-spacing:.08em !important;}
+
+  .contact-support-card{margin-top:14px !important;padding:16px 13px !important;border-radius:12px !important;}
+  .contact-support-card h3{font-size:20px !important;}
+  .contact-support-card > p{font-size:10px !important;margin-bottom:12px !important;}
+  .contact-support-card__grid{gap:5px !important;}
+  .contact-support-card__grid > div{min-height:34px !important;padding:6px !important;gap:6px !important;}
+  .contact-support-card__grid b{font-size:8px !important;}
+  .contact-support-card__grid span{font-size:7px !important;}
+}
+
+@media (max-width:390px){
+  .hero--modern + .credbar--fixed .cred-fixed__item{min-height:66px !important;grid-template-columns:36px 1fr !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item strong{min-width:36px !important;width:36px !important;height:36px !important;font-size:14px !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item span{font-size:8.5px !important;}
+  .process-lane__title{font-size:9px !important;}
+  .process-node{font-size:7px !important;}
+}
+
+/* =========================================================
+   SIMPLE / RESPONSIVE CLEANUP
+   Final override: no clipped credibility items, no crowded
+   Defence panel, compact production flow.
+   ========================================================= */
+
+/* Credibility strip: 4 equal cards, text is allowed to wrap. */
+.hero--modern + .credbar--fixed{
+  width:100% !important;
+  overflow:visible !important;
+  background:#f6f8fa !important;
+  padding:0 !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed{
+  width:100% !important;
+  max-width:1200px !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:0 !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed__item{
+  min-width:0 !important;
+  min-height:72px !important;
+  height:auto !important;
+  box-sizing:border-box !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  justify-content:center !important;
+  gap:3px !important;
+  padding:12px 20px !important;
+  border-right:1px solid #dfe5eb !important;
+  border-bottom:0 !important;
+  border-radius:0 !important;
+  background:#fff !important;
+  overflow:visible !important;
+  white-space:normal !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed__item:last-child{border-right:0 !important;}
+.hero--modern + .credbar--fixed .cred-fixed__item strong{
+  width:auto !important;
+  min-width:0 !important;
+  height:auto !important;
+  margin:0 !important;
+  font-size:22px !important;
+  line-height:1.05 !important;
+  white-space:nowrap !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed__item span,
+.hero--modern + .credbar--fixed .cred-fixed__item .cred-sub{
+  max-width:100% !important;
+  margin:0 !important;
+  font-size:11px !important;
+  line-height:1.3 !important;
+  white-space:normal !important;
+  overflow-wrap:normal !important;
+}
+
+/* About / Defence: plain, spacious information block. */
+.about-defence-proof{
+  margin-top:22px !important;
+  padding:18px 20px !important;
+  border:1px solid #dce3ea !important;
+  border-left:3px solid #315f91 !important;
+  border-radius:8px !important;
+  background:#fff !important;
+  box-shadow:none !important;
+  overflow:visible !important;
+}
+.about-defence-proof::after{display:none !important;}
+.about-defence-proof__eyebrow{
+  margin:0 0 6px !important;
+  color:#64758a !important;
+  font-size:9px !important;
+  letter-spacing:.12em !important;
+}
+.about-defence-proof h3{
+  margin:0 0 15px !important;
+  max-width:none !important;
+  color:#1d3550 !important;
+  font-size:21px !important;
+  line-height:1.2 !important;
+}
+.about-defence-proof__grid{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:0 !important;
+  border-top:1px solid #e4e9ee !important;
+  border-left:0 !important;
+}
+.about-defence-proof__grid > div{
+  min-height:58px !important;
+  box-sizing:border-box !important;
+  padding:11px 14px 10px 0 !important;
+  border:0 !important;
+  border-bottom:1px solid #e4e9ee !important;
+  border-radius:0 !important;
+  background:transparent !important;
+}
+.about-defence-proof__grid > div:nth-child(odd){border-right:1px solid #e4e9ee !important;padding-right:14px !important;}
+.about-defence-proof__grid > div:nth-child(even){padding-left:14px !important;}
+.about-defence-proof__grid strong{
+  display:block !important;
+  margin:0 0 3px !important;
+  color:#294b70 !important;
+  font-size:13px !important;
+  line-height:1.2 !important;
+}
+.about-defence-proof__grid span{
+  display:block !important;
+  color:#69798b !important;
+  font-size:9.5px !important;
+  line-height:1.3 !important;
+}
+.about-defence-proof__link{
+  margin-top:13px !important;
+  color:#315f91 !important;
+  font-size:10px !important;
+}
+
+/* Production: simple two-column lanes on desktop, two columns on mobile too. */
+.process-flow{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:18px !important;
+  align-items:start !important;
+}
+.process-lane{
+  min-width:0 !important;
+  padding:14px !important;
+  border:1px solid #dfe5eb !important;
+  border-radius:8px !important;
+  background:#fff !important;
+  box-shadow:none !important;
+}
+.process-lane__title{
+  margin:0 0 10px !important;
+  color:#29445f !important;
+  font-size:12px !important;
+  line-height:1.3 !important;
+}
+.process-flow__steps{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:5px !important;
+}
+.process-node{
+  min-width:0 !important;
+  min-height:34px !important;
+  padding:6px 7px !important;
+  box-sizing:border-box !important;
+  border-radius:5px !important;
+  font-size:9px !important;
+  line-height:1.2 !important;
+  white-space:normal !important;
+}
+.process-node small{font-size:6.5px !important;line-height:1.2 !important;}
+.process-flow__arrow{display:none !important;}
+.process-quality-gate{display:none !important;}
+
+/* Support card: quiet and compact beside the map. */
+.contact-support-card{
+  margin-top:14px !important;
+  padding:16px !important;
+  border:1px solid #dfe5eb !important;
+  border-radius:8px !important;
+  background:#fff !important;
+  box-shadow:none !important;
+}
+.contact-support-card::after,
+.contact-support-card__mark{display:none !important;}
+.contact-support-card h3{
+  margin:5px 0 5px !important;
+  font-size:19px !important;
+}
+.contact-support-card > p{font-size:10px !important;line-height:1.45 !important;}
+.contact-support-card__grid{gap:0 !important;}
+.contact-support-card__grid > div{
+  min-height:32px !important;
+  padding:6px 0 !important;
+  border:0 !important;
+  border-top:1px solid #e6ebef !important;
+  border-radius:0 !important;
+  background:transparent !important;
+}
+.contact-support-card__grid > div:last-child{grid-column:auto !important;}
+
+@media (max-width:900px){
+  .hero--modern + .credbar--fixed .cred-fixed__item{padding:11px 14px !important;}
+  .process-flow{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+
+@media (max-width:700px){
+  .hero--modern + .credbar--fixed{padding:0 !important;}
+  .hero--modern + .credbar--fixed .cred-fixed{
+    width:100% !important;
+    grid-template-columns:1fr 1fr !important;
+  }
+  .hero--modern + .credbar--fixed .cred-fixed__item{
+    min-height:70px !important;
+    padding:11px 12px !important;
+    border-right:1px solid #dfe5eb !important;
+    border-bottom:1px solid #dfe5eb !important;
+  }
+  .hero--modern + .credbar--fixed .cred-fixed__item:nth-child(2n){border-right:0 !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item strong{font-size:20px !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item span{font-size:10px !important;line-height:1.3 !important;}
+
+  .about-defence-proof{padding:15px 14px !important;margin-top:18px !important;}
+  .about-defence-proof h3{font-size:18px !important;margin-bottom:12px !important;}
+  .about-defence-proof__grid{grid-template-columns:1fr !important;}
+  .about-defence-proof__grid > div,
+  .about-defence-proof__grid > div:nth-child(odd),
+  .about-defence-proof__grid > div:nth-child(even){
+    min-height:0 !important;
+    padding:9px 0 !important;
+    border-right:0 !important;
+  }
+  .about-defence-proof__grid strong{font-size:12px !important;}
+  .about-defence-proof__grid span{font-size:9px !important;}
+
+  .process-flow{
+    grid-template-columns:1fr 1fr !important;
+    gap:8px !important;
+  }
+  .process-lane{padding:10px 8px !important;}
+  .process-lane__title{font-size:9.5px !important;}
+  .process-flow__steps{grid-template-columns:1fr !important;gap:4px !important;}
+  .process-node{min-height:31px !important;font-size:7.5px !important;padding:5px 4px !important;}
+  .process-node small{font-size:5.5px !important;}
+}
+
+@media (max-width:390px){
+  .hero--modern + .credbar--fixed .cred-fixed__item{min-height:68px !important;padding:10px !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item strong{font-size:18px !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item span{font-size:9px !important;}
+  .process-flow{gap:6px !important;}
+  .process-lane{padding:9px 6px !important;}
+  .process-node{font-size:7px !important;}
+}
