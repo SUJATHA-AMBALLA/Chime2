@@ -1183,17 +1183,17 @@ body{padding-top:125px;}
 
 /* Client section only: restore a clear intro and give each real logo proper visual weight. */
 .clients-section .clients-intro{
-  max-width:900px !important;
-  margin-left:0 !important;
+  max-width:760px !important;
+  margin-left:auto !important;
   margin-right:auto !important;
   margin-bottom:34px !important;
-  text-align:left !important;
+  text-align:center !important;
 }
 .clients-section .clients-intro .section-label{margin-bottom:12px;}
 .clients-section .clients-intro h2{margin-bottom:14px;}
 .clients-section .clients-intro .lead{
   max-width:680px;
-  margin-left:0 !important;
+  margin-left:auto !important;
   margin-right:auto !important;
   color:#667085;
   font-size:17px;
