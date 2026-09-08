@@ -2132,3 +2132,33 @@ p,li,.lead{overflow-wrap:break-word !important;word-break:break-word !important;
   font-weight:700 !important;
 }
 .contact-support-card--highlight .contact-support-card__mark{display:none !important;}
+
+/* =========================================================
+   MOBILE FIX — 08 SEP 2026: centre the production flowchart
+   ========================================================= */
+@media (max-width:700px){
+  .process-flow{
+    justify-content:center !important;
+    justify-items:center !important;
+  }
+  .process-lane{
+    width:100% !important;
+    max-width:420px !important;
+    margin:0 auto !important;
+    text-align:center !important;
+  }
+  .process-lane__title{
+    text-align:center !important;
+  }
+  .process-flow__steps{
+    justify-items:center !important;
+    justify-content:center !important;
+    margin:0 auto !important;
+  }
+  .process-node{
+    width:100% !important;
+    margin:0 auto !important;
+    text-align:center !important;
+    justify-content:center !important;
+  }
+}
