@@ -1895,11 +1895,14 @@ html{-webkit-text-size-adjust:100% !important;text-size-adjust:100% !important;}
 img,svg,video,iframe{max-width:100% !important;}
 .wrap{width:100% !important;box-sizing:border-box !important;}
 table{max-width:100% !important;display:block !important;overflow-x:auto !important;}
+/* Removed blanket h1/h2/h3 font-size rules that used to live here.
+   They forced EVERY h2/h3 on the page — including the small About-Us
+   side-credential headings and the footer column headings — up to a
+   min. 16–21px with !important. That's what made those specific bits
+   of text look "gone up in size". Each component already carries its
+   own responsive heading size (see style.css), so this safety net now
+   only keeps genuine layout/overflow safety, not typography. */
 p,li,.lead{overflow-wrap:break-word !important;word-break:break-word !important;}
-/* NOTE: earlier round added blanket h1/h2/h3 clamp() rules here — removed.
-   They were inflating unrelated headings site-wide (footer col headings,
-   about-credential h3 items on the right of About Us). Sizing for those
-   is restored to its original per-component value below / in style.css. */
 @media (max-width:480px){
   .wrap{padding-left:16px !important;padding-right:16px !important;}
   .btn{width:100% !important;justify-content:center !important;text-align:center !important;}
@@ -1930,117 +1933,140 @@ p,li,.lead{overflow-wrap:break-word !important;word-break:break-word !important;
   .hero-badge-line span:last-child{font-size:11.5px !important;}
 }
 
-/* ---- 3. ABOUT / DEFENCE — proper credibility panel, not a crowded box ---- */
+/* ---- 3. ABOUT / DEFENCE — calmer palette, clearer hierarchy ----------------
+   Previous version leaned on the same blue for the badge, the numbers, the
+   left rail AND the button, which read as "all blue" and a bit undifferentiated.
+   This pass keeps ONE blue accent (for Defence, matching the brand) and uses
+   the site's existing copper/amber accent (already used for eyebrows/CTAs
+   elsewhere) for the Government item, so it reads as a separate, deliberate
+   point rather than being lumped in with Defence. Spacing/alignment is also
+   tightened so the block reads as one composed panel, not scattered pieces. */
 .about-defence-proof{
   position:relative !important;
   margin-top:28px !important;
-  padding:26px 28px 22px !important;
-  border:1px solid #dce6f0 !important;
-  border-radius:18px !important;
-  background:linear-gradient(180deg,#f7fafd 0%,#ffffff 55%) !important;
-  box-shadow:0 18px 38px rgba(16,45,80,.09) !important;
+  padding:24px 26px 24px !important;
+  border:1px solid #e4e8ee !important;
+  border-radius:14px !important;
+  background:#fbfcfd !important;
+  box-shadow:none !important;
   overflow:hidden !important;
 }
 .about-defence-proof::before{
   content:'' !important;
   position:absolute !important;
   inset:0 auto 0 0 !important;
-  width:5px !important;
-  background:linear-gradient(180deg,#2555b2,#173f85) !important;
+  width:3px !important;
+  background:var(--ink-strong,#0f2740) !important;
 }
 .about-defence-proof::after{display:none !important;}
 .about-defence-proof__eyebrow{
-  display:inline-flex !important;
+  display:flex !important;
   align-items:center !important;
-  gap:7px !important;
-  margin:0 0 12px !important;
-  padding:5px 12px !important;
-  border-radius:999px !important;
-  background:#e9f0fb !important;
-  color:#1f4c8f !important;
-  font:750 9.5px/1.2 'IBM Plex Mono',monospace !important;
+  gap:8px !important;
+  margin:0 0 10px !important;
+  padding:0 !important;
+  border-radius:0 !important;
+  background:none !important;
+  color:var(--copper-500,#b8722e) !important;
+  font:700 10px/1.2 'IBM Plex Mono',monospace !important;
   letter-spacing:.14em !important;
 }
+.about-defence-proof__eyebrow::before{
+  content:'' !important;
+  width:16px !important;
+  height:1.5px !important;
+  background:var(--copper-500,#b8722e) !important;
+  flex:0 0 auto !important;
+}
 .about-defence-proof h3{
-  margin:0 0 20px !important;
+  margin:0 0 18px !important;
   max-width:none !important;
-  color:#152c4d !important;
+  color:var(--ink-strong,#0f2740) !important;
   font-family:'Space Grotesk',sans-serif !important;
-  font-size:clamp(19px,2.6vw,25px) !important;
-  line-height:1.2 !important;
-  letter-spacing:-.02em !important;
+  font-size:clamp(18px,2.4vw,22px) !important;
+  line-height:1.25 !important;
+  letter-spacing:-.01em !important;
+  font-weight:600 !important;
 }
 .about-defence-proof__grid{
   display:grid !important;
   grid-template-columns:repeat(4,minmax(0,1fr)) !important;
   gap:0 !important;
   border:0 !important;
-  border-top:1px solid #e2e9f1 !important;
-  border-bottom:1px solid #e2e9f1 !important;
+  border-top:1px solid #e6eaef !important;
 }
 .about-defence-proof__grid > div{
   display:flex !important;
   flex-direction:column !important;
-  gap:5px !important;
+  gap:4px !important;
   min-height:0 !important;
-  padding:16px 16px 14px !important;
+  padding:15px 16px !important;
   border:0 !important;
-  border-right:1px solid #e2e9f1 !important;
+  border-right:1px solid #e6eaef !important;
   border-radius:0 !important;
   background:transparent !important;
 }
 .about-defence-proof__grid > div:last-child{border-right:0 !important;}
 .about-defence-proof__grid strong{
-  color:#1f4c8f !important;
-  font:750 20px/1.15 'Space Grotesk',sans-serif !important;
+  color:var(--ink-strong,#0f2740) !important;
+  font:650 18px/1.2 'Space Grotesk',sans-serif !important;
+  letter-spacing:-.01em !important;
 }
 .about-defence-proof__grid span{
-  color:#5c6d84 !important;
-  font-size:11px !important;
-  line-height:1.35 !important;
+  color:#66727f !important;
+  font-size:10.5px !important;
+  line-height:1.4 !important;
+  text-transform:uppercase !important;
+  letter-spacing:.03em !important;
 }
+/* Government Institutions is its own point, not part of the Defence figures —
+   give it the copper accent so it visually stands apart from the three
+   Defence-only stats beside it. */
+.about-defence-proof__grid > div:last-child strong{color:var(--copper-500,#b8722e) !important;}
 .about-defence-proof__link{
   display:inline-flex !important;
   align-items:center !important;
-  gap:8px !important;
-  margin-top:20px !important;
-  padding:11px 20px !important;
-  border-radius:999px !important;
-  background:#1f4c8f !important;
-  color:#fff !important;
-  font-size:12px !important;
+  gap:7px !important;
+  margin-top:18px !important;
+  padding:0 !important;
+  border-radius:0 !important;
+  background:none !important;
+  color:var(--ink-strong,#0f2740) !important;
+  font-size:12.5px !important;
   font-weight:700 !important;
   letter-spacing:.01em !important;
   text-decoration:none !important;
-  box-shadow:0 8px 18px rgba(31,76,143,.28) !important;
-  transition:transform .18s ease,box-shadow .18s ease !important;
+  box-shadow:none !important;
+  border-bottom:1.5px solid var(--copper-500,#b8722e) !important;
+  padding-bottom:2px !important;
+  transition:opacity .18s ease !important;
 }
 .about-defence-proof__link:hover{
-  transform:translateY(-1px) !important;
-  box-shadow:0 12px 22px rgba(31,76,143,.34) !important;
+  opacity:.7 !important;
+  transform:none !important;
+  box-shadow:none !important;
 }
-.about-defence-proof__link span{transition:transform .2s ease !important;}
+.about-defence-proof__link span{transition:transform .2s ease !important;color:var(--copper-500,#b8722e) !important;}
 .about-defence-proof__link:hover span{transform:translateX(4px) !important;}
 
 @media (max-width:900px){
   .about-defence-proof__grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
-  .about-defence-proof__grid > div{border-bottom:1px solid #e2e9f1 !important;}
+  .about-defence-proof__grid > div{border-bottom:1px solid #e6eaef !important;}
   .about-defence-proof__grid > div:nth-child(2n){border-right:0 !important;}
   .about-defence-proof__grid > div:nth-last-child(-n+2){border-bottom:0 !important;}
 }
 @media (max-width:600px){
-  .about-defence-proof{padding:20px 18px 18px !important;margin-top:22px !important;border-radius:14px !important;}
-  .about-defence-proof__eyebrow{font-size:8.5px !important;padding:4px 10px !important;}
-  .about-defence-proof h3{margin-bottom:14px !important;}
+  .about-defence-proof{padding:18px 16px 18px !important;margin-top:20px !important;border-radius:12px !important;}
+  .about-defence-proof h3{margin-bottom:12px !important;}
   .about-defence-proof__grid{grid-template-columns:1fr 1fr !important;}
-  .about-defence-proof__grid > div{padding:13px 12px 11px !important;}
-  .about-defence-proof__grid strong{font-size:17px !important;}
-  .about-defence-proof__grid span{font-size:10px !important;}
-  .about-defence-proof__link{width:100% !important;justify-content:center !important;margin-top:16px !important;}
+  .about-defence-proof__grid > div{padding:12px 12px 10px !important;}
+  .about-defence-proof__grid strong{font-size:16px !important;}
+  .about-defence-proof__grid span{font-size:9.5px !important;}
+  .about-defence-proof__link{margin-top:14px !important;}
 }
 @media (max-width:400px){
   .about-defence-proof__grid{grid-template-columns:1fr !important;}
-  .about-defence-proof__grid > div{border-right:0 !important;border-bottom:1px solid #e2e9f1 !important;}
+  .about-defence-proof__grid > div{border-right:0 !important;border-bottom:1px solid #e6eaef !important;}
   .about-defence-proof__grid > div:last-child{border-bottom:0 !important;}
 }
 
@@ -2132,3 +2158,102 @@ p,li,.lead{overflow-wrap:break-word !important;word-break:break-word !important;
   font-weight:700 !important;
 }
 .contact-support-card--highlight .contact-support-card__mark{display:none !important;}
+
+/* =========================================================
+   FINAL PASS — hero stat strip, clean-up
+   The strip right under the hero image ("1986 / 40+ / 30+ / 25+")
+   had accumulated many overlapping rules (hover backgrounds, per-item
+   accent colours, coloured side-bars only on items 3–4, etc.) which is
+   why it looked inconsistent. This is a single, final definition —
+   simple, evenly styled columns with one accent colour for the numbers
+   and a quiet divider between items. Appended last so it wins over the
+   earlier, conflicting versions above.
+   ========================================================= */
+.hero--modern + .credbar--fixed{
+  margin-top:0 !important;
+  border-top:1px solid #e4e9ef !important;
+  border-bottom:1px solid #e4e9ef !important;
+  background:#fff !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:0 !important;
+  padding:0 !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed__item{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:3px !important;
+  min-height:76px !important;
+  padding:14px 12px !important;
+  background:none !important;
+  border:0 !important;
+  border-right:1px solid #e4e9ef !important;
+  text-align:center !important;
+  transition:none !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed__item::before{content:none !important;}
+.hero--modern + .credbar--fixed .cred-fixed__item:last-child{border-right:0 !important;}
+.hero--modern + .credbar--fixed .cred-fixed__item:hover{background:none !important;}
+.hero--modern + .credbar--fixed .cred-fixed__item strong{
+  font-family:'Space Grotesk',sans-serif !important;
+  font-size:22px !important;
+  line-height:1 !important;
+  font-weight:650 !important;
+  color:var(--ink-strong,#0f2740) !important;
+  margin:0 !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed__item span{
+  display:block !important;
+  font-family:'Inter',sans-serif !important;
+  font-size:11px !important;
+  font-weight:500 !important;
+  line-height:1.3 !important;
+  color:#6b7a89 !important;
+  white-space:normal !important;
+}
+.hero--modern + .credbar--fixed .cred-fixed__item .cred-sub{
+  display:block !important;
+  font-size:10px !important;
+  color:#95a2ae !important;
+}
+
+@media (max-width:700px){
+  .hero--modern + .credbar--fixed .cred-fixed{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item{
+    min-height:70px !important;
+    padding:12px 10px !important;
+    border-right:1px solid #e4e9ef !important;
+    border-bottom:1px solid #e4e9ef !important;
+  }
+  .hero--modern + .credbar--fixed .cred-fixed__item:nth-child(2n){border-right:0 !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item:nth-last-child(-n+2){border-bottom:0 !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item strong{font-size:19px !important;}
+  .hero--modern + .credbar--fixed .cred-fixed__item span{font-size:10px !important;}
+}
+
+/* =========================================================
+   FINAL PASS — Products page
+   products-gallery.css (which owns most Products-page styling) wasn't
+   part of the files shared for this edit, so these use selectors
+   specific enough to win regardless of what's already defined there.
+   If the sizing/colour still isn't quite right once you see it live,
+   send that file over and I'll tune it precisely.
+   ========================================================= */
+/* Remove the orange highlight border on the first ("flagship") product
+   card — it read as an error state rather than a highlight. */
+#page-products .product-grid .product-card.product-card--flagship{
+  border:1px solid #e5e9ee !important;
+  outline:none !important;
+  box-shadow:0 1px 2px rgba(16,24,32,.04) !important;
+}
+/* Slightly larger "dynamic" text — the line that updates per selected
+   variant/capacity (e.g. "250 kVA", "1250 kVA Servo Voltage Stabilizer") —
+   for every product card. */
+#page-products .product-grid .product-card .product-identifier{
+  font-size:15.5px !important;
+  line-height:1.35 !important;
+}

@@ -1109,43 +1109,68 @@
   text-transform:uppercase!important;
   color:rgba(255,255,255,.6)!important;
 }
-.after-sales-support{background:#f7f9fb;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.products-hero-graphic{
+  flex:0 0 auto;
+  width:180px;
+  height:180px;
+  opacity:.9;
+}
+.products-hero-graphic svg{width:100%;height:100%;}
+@media (max-width:900px){
+  .products-hero-graphic{display:none;}
+}
+.after-sales-support{
+  background:#f7f9fb;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:44px 0 !important;
+}
+.after-sales-support .section-head{margin-bottom:0 !important;text-align:left !important;}
+.after-sales-support .section-head .eyebrow{justify-content:flex-start;}
+.after-sales-support .section-head h2{margin-bottom:8px;}
+.after-sales-support .section-head .lead{margin-left:0 !important;max-width:560px;}
 .after-sales-grid{
   display:grid;
   grid-template-columns:repeat(5,1fr);
-  gap:14px;
-  margin-top:28px;
+  gap:10px;
+  margin-top:22px;
 }
 .after-sales-item{
   display:flex;
-  flex-direction:column;
+  flex-direction:row;
   align-items:center;
   gap:10px;
-  text-align:center;
-  padding:22px 14px;
+  text-align:left;
+  padding:14px 14px;
   background:#fff;
   border:1px solid var(--line);
-  border-radius:12px;
+  border-radius:10px;
 }
 .after-sales-icon{
   display:flex;
   align-items:center;
   justify-content:center;
-  width:44px;
-  height:44px;
+  flex:0 0 auto;
+  width:36px;
+  height:36px;
   border-radius:50%;
   background:#eef4fb;
   color:var(--site-blue,#0b5fb0);
 }
-.after-sales-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
-.after-sales-label{font-family:'Space Grotesk',sans-serif;font-size:12.5px;font-weight:700;color:var(--ink-900,#101a2b);line-height:1.3;}
-@media (max-width:820px){
+.after-sales-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.after-sales-label{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--ink-900,#101a2b);line-height:1.25;}
+@media (max-width:980px){
+  .after-sales-grid{grid-template-columns:repeat(3,1fr);}
+}
+@media (max-width:600px){
   .after-sales-grid{grid-template-columns:repeat(2,1fr);}
+  .after-sales-item{flex-direction:column;text-align:center;padding:16px 10px;}
 }
 .product-card--flagship{
   position:relative!important;
   border:2px solid var(--site-orange,#c67a25)!important;
   box-shadow:0 14px 34px rgba(198,122,37,.16)!important;
+  scroll-margin-top:150px!important;
 }
 .product-flagship-badge{
   display:inline-block;
@@ -1158,16 +1183,19 @@
   text-transform:uppercase;
   padding:5px 12px;
   border-radius:20px;
-  margin-bottom:10px;
+  margin:20px 22px 10px;
 }
+.product-card--flagship > .product-label{padding-top:0!important;}
 .product-tagline{
   font-family:'Space Grotesk',sans-serif;
   font-size:15px;
   font-weight:600;
   color:var(--site-blue,#1f5bd7);
-  margin:4px 0 12px;
+  margin:4px 22px 12px;
 }
 .product-capacities{
+  margin-left:22px;
+  margin-right:22px;
   display:flex;
   gap:8px;
   flex-wrap:wrap;
@@ -1182,6 +1210,20 @@
   padding:4px 10px;
   border-radius:6px;
 }
+.product-thumbs--capacity .product-thumb{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  gap:4px!important;
+}
+.product-thumb-cap{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.03em;
+  color:#657284;
+}
+.product-thumbs--capacity .product-thumb.active .product-thumb-cap{color:var(--site-orange,#c67a25);}
 .product-card .product-label{
   color:var(--site-orange,#c67a25)!important;
   font-weight:700!important;
@@ -1190,6 +1232,43 @@
   color:var(--site-blue,#1f5bd7)!important;
   font-weight:600!important;
 }
+#product-family-list .product-card > .product-label{
+  color:#c67a25!important;
+  font-weight:700!important;
+}
+#product-family-list .product-info{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:12px!important;
+  padding:22px!important;
+}
+#product-family-list .product-info .product-identifier{
+  order:0!important;
+  margin:0!important;
+  padding:0!important;
+  min-height:0!important;
+  border:none!important;
+  background:none!important;
+  color:#1f5bd7!important;
+  font-family:'Space Grotesk',sans-serif!important;
+  font-size:13.5px!important;
+  line-height:1.3!important;
+  letter-spacing:.02em!important;
+  text-transform:none!important;
+  font-weight:700!important;
+}
+#product-family-list .product-info > p{
+  order:1!important;
+  margin:0!important;
+  color:#4a5b6a;
+}
+#product-family-list .product-usage{
+  order:2!important;
+  margin:0!important;
+  padding-top:12px!important;
+  border-top:1px solid #e0e7ed!important;
+}
+#product-family-list .product-card{padding-top:2px;}
 .product-image-placeholder{
   display:flex;
   flex-direction:column;
@@ -1415,8 +1494,8 @@
 <img alt="40 years of engineering" class="home-40-badge" src="images/brand/40.png">
 <div class="wrap hero-content">
 <div class="hero-copy">
-<h1>Power protection built for <em>critical applications.</em></h1>
-<p class="lead">Voltage stabilizers, UPS, battery chargers and other power electronics designed and manufactured in Delhi for Defence, public-sector, industrial and critical-power applications.</p>
+<h1>40+ Years of Engineering <em>Reliable Power Solutions</em></h1>
+<p class="lead hero-badge-line"><strong>Designed &amp; Manufactured in Delhi</strong><span class="hero-badge-line__sep" aria-hidden="true">|</span><span>Defence • Government • Industrial • Critical Applications</span></p>
 <div class="cta-row">
 <a class="btn btn--brand" data-page-link="products" href="#products">Explore Products <span>→</span></a>
 <a class="btn btn--light-outline" data-page-link="contact" href="#contact">Request a Quote</a>
@@ -1449,13 +1528,23 @@
 <div class="about-home__layout">
 <div class="about-home__intro">
 <div class="eyebrow">ABOUT US</div>
-<h2 id="about-home-title"><span class="decade-number">4 Decades</span> of engineering. Built for what matters.</h2>
-<p>Since 1986, we have built our capabilities around dependable electrical and power solutions for demanding applications. From our Delhi manufacturing facility, engineering, manufacturing, testing and service come together to deliver products designed for real-world performance.</p>
-<p>Our experience spans industry, Defence and public-sector institutions, where reliability, technical understanding and consistent support matter. With more than 25 years of defence-sector experience, we understand the importance of demanding requirements while maintaining the practical, responsive approach of an experienced engineering company.</p>
+<h2 id="about-home-title"><span class="decade-number">4 Decades</span> of engineering. Proven where reliability matters.</h2>
+<p>Since 1986, Sinetrac has designed and manufactured dependable power-conditioning and electrical solutions from Delhi for demanding industrial, institutional, Defence and Government applications.</p>
+<div class="about-defence-proof">
+<div class="about-defence-proof__eyebrow">DEFENCE &amp; GOVERNMENT CREDIBILITY</div>
+<h3>Proven in Defence &amp; Government Applications</h3>
+<div class="about-defence-proof__grid">
+<div><strong>25+ Years</strong><span>Defence Experience</span></div>
+<div><strong>MES</strong><span>E-in-C’s Branch Approvals</span></div>
+<div><strong>Northern • Western • Central • Southern</strong><span>Commands</span></div>
+<div><strong>DRDO</strong><span>Government Institutions</span></div>
+</div>
+<a class="about-defence-proof__link" data-page-link="approvals" href="#approvals">Access Approvals &amp; Performance <span>→</span></a>
+</div>
 </div>
 <div aria-label="Company strengths" class="about-home__credentials">
 <div class="about-credential about-credential--iso"><div aria-hidden="true" class="about-credential__icon"><svg viewbox="0 0 24 24"><path d="M12 3l7 3v5c0 4.7-3 8.1-7 10-4-1.9-7-5.3-7-10V6l7-3z"></path><path d="M8.5 12l2.2 2.2 4.8-5"></path></svg></div><div><h3>ISO 9001:2015</h3><small>Quality Management System · Certified 2026</small></div></div>
-<div class="about-credential"><div aria-hidden="true" class="about-credential__icon"><svg viewbox="0 0 24 24"><path d="M12 3l7 3v5c0 4.7-3 8.1-7 10-4-1.9-7-5.3-7-10V6l7-3z"></path><path d="M8.5 12l2.2 2.2 4.8-5"></path></svg></div><div><h3>Trusted by Leaders</h3></div></div>
+<div class="about-credential"><div aria-hidden="true" class="about-credential__icon"><svg viewbox="0 0 24 24"><path d="M12 3l7 3v5c0 4.7-3 8.1-7 10-4-1.9-7-5.3-7-10V6l7-3z"></path><path d="M8.5 12l2.2 2.2 4.8-5"></path></svg></div><div><h3>Customers' Choice — Sinetrac</h3></div></div>
 <div class="about-credential"><div aria-hidden="true" class="about-credential__icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12l2.5 2.5L16 9"></path></svg></div><div><h3>Certified Quality</h3></div></div>
 <div class="about-credential"><div aria-hidden="true" class="about-credential__icon"><svg viewbox="0 0 24 24"><path d="M4 13v-2a8 8 0 0116 0v2"></path><path d="M4 13h3v6H5a1 1 0 01-1-1v-5zM20 13h-3v6h2a1 1 0 001-1v-5z"></path><path d="M17 19c-1 2-3 2-5 2"></path></svg></div><div><h3>Support You Can Count On</h3></div></div>
 </div>
@@ -1555,7 +1644,7 @@
 <div class="wrap">
 <div class="section-head clients-intro">
 <div class="section-label">CLIENTS &amp; INSTITUTIONS</div>
-<h2>Trusted across entertainment, Defence, public-sector and institutional environments.</h2>
+<h2>Selected Customers &amp; Institutions</h2>
 <p class="lead">Sinetrac power-conditioning and control solutions are used by established institutions and businesses where dependable performance matters.</p>
 </div>
 <div aria-label="Selected client and institutional logos" class="client-logo-grid client-logo-grid--placeholders">
@@ -1597,8 +1686,8 @@
 <section class="section section--brand">
 <div class="wrap two-col">
 <div>
-<h2>The Engineering Advantage</h2>
-<p style="color:#c3d2de;max-width:560px;">Customers' Choice — why builders and institutions keep choosing Sinetrac.</p>
+<h2>Customers' Choice — Sinetrac</h2>
+<p style="color:#c3d2de;max-width:560px;">Why builders and institutions choose Sinetrac for dependable power solutions.</p>
 <ul class="pill-list" style="margin-top:24px;">
 <li><svg viewbox="0 0 24 24"><path d="M4 12l5 5L20 6"></path></svg><span>In-house engineering — design, R&amp;D and build under one roof</span></li>
 <li><svg viewbox="0 0 24 24"><path d="M4 12l5 5L20 6"></path></svg><span>Delhi manufacturing — full control over quality and lead times</span></li>
@@ -1677,6 +1766,13 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <h1>Power electronics built for demanding applications.</h1>
 <p>For over 4 decades, Sinetrac / Chime Electronics has designed and supplied dependable power electronics and control equipment from Delhi. From voltage regulation and backup power to DC systems, protection, lighting control and solar, our products are built for industrial, institutional and critical applications where reliable performance matters.</p>
 </div>
+<div class="products-hero-graphic" aria-hidden="true">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="92" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1.5"></circle>
+<circle cx="100" cy="100" r="66" fill="none" stroke="rgba(255,255,255,.20)" stroke-width="1.5"></circle>
+<path d="M108 48 L66 114 H92 L84 152 L134 86 H106 Z" fill="#f0a93b" stroke="none"></path>
+</svg>
+</div>
 </div>
 </section>
 <section class="products-wrap products-explorer">
@@ -1703,28 +1799,28 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 </section>
 <section class="products-wrap product-grid" id="product-family-list">
 <article class="product-card product-card--flagship" data-family="static-igbt-voltage-stabilizers" id="static-igbt-voltage-stabilizers">
-<div class="product-flagship-badge">Flagship Product</div>
 <div class="product-label" style="color:#c67a25!important;font-weight:700!important;">Static IGBT-Based Voltage Stabilizers</div>
-<div class="product-tagline">Fast &bull; Precise &bull; No Mechanical Tap Switching</div>
-<div class="product-capacities"><span>100 kVA</span><span>250 kVA</span><span>400 kVA</span></div>
 
 <div class="product-media">
 <div class="product-main-image">
 <img alt="Static IGBT-Based Voltage Stabilizer 250 kVA" id="static-igbt-main-image" src="images/products/Static IGBT- Based Voltage Stabilizer 250kVA.jfif">
 </img></div>
-<div class="product-thumbs">
-<button class="product-thumb active" data-product-title="Static IGBT-Based Voltage Stabilizer · 250 kVA" type="button">
-<img alt="Static IGBT-Based Voltage Stabilizer 250 kVA" src="images/products/Static IGBT- Based Voltage Stabilizer 250kVA.jfif">
-</img></button>
+<div class="product-thumbs product-thumbs--capacity">
 <button class="product-thumb" data-product-title="Static IGBT-Based Voltage Stabilizer · 3 Phase · 100 kVA" type="button">
 <img alt="Static IGBT-Based Voltage Stabilizer 3 Phase 100 kVA" src="images/products/Static IGBT-Based Voltage Stabilizer 3 Phase-100kVA.jfif">
-</img></button>
+</img><span class="product-thumb-cap">100 kVA</span></button>
+<button class="product-thumb active" data-product-title="Static IGBT-Based Voltage Stabilizer · 250 kVA" type="button">
+<img alt="Static IGBT-Based Voltage Stabilizer 250 kVA" src="images/products/Static IGBT- Based Voltage Stabilizer 250kVA.jfif">
+</img><span class="product-thumb-cap">250 kVA</span></button>
+<button class="product-thumb" data-product-title="Static IGBT-Based Voltage Stabilizer · 400 kVA" type="button">
+<img alt="Static IGBT-Based Voltage Stabilizer 400 kVA — photo coming soon" src="images/products/Static IGBT- Based Voltage Stabilizer 250kVA.jfif">
+</img><span class="product-thumb-cap">400 kVA</span></button>
 </div>
 </div>
 <div class="product-info">
 <div class="product-identifier" id="static-igbt-variant-label" style="color:#1f5bd7!important;font-weight:600!important;">Static IGBT-Based Voltage Stabilizer · 250 kVA</div>
 
-<p>DSP-controlled IGBT-based static voltage regulation for fast, precise correction without conventional mechanical tap switching.</p>
+<p><strong>Fast &bull; Precise &bull; No Mechanical Tap Switching.</strong> DSP-controlled IGBT-based static voltage regulation for fast, precise correction without conventional mechanical tap switching.</p>
 <div class="product-usage">
 <strong>Usage</strong>
 <div>
@@ -1774,11 +1870,11 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <article class="product-card" data-family="online-ups" id="online-ups"><div class="product-label" style="color:#c67a25!important;font-weight:700!important;">Online UPS</div>
 
 <div class="product-media">
-<div class="product-main-image"><img alt="100 kVA Online UPS" src="images/products/online-ups/ups-100kva.png"/></div>
+<div class="product-main-image"><img alt="100 kVA UPS" src="images/products/online-ups/100kva.png"/></div>
 <div class="product-thumbs">
 <!-- <button class="product-thumb active" type="button" data-product-title="100 kVA Online UPS"><img alt="100 kVA Online UPS" src="images/products/online-ups/ups-100kva.jpg"/></button> -->
-<button class="product-thumb" data-product-title="100 kVA Modular Online UPS" type="button"><img alt="100 kVA Modular Online UPS" src="images/products/online-ups/ups-100kva.png"/></button>
-<button class="product-thumb" data-product-title="5 kVA Online UPS" type="button"><img alt="5 kVA Online UPS" src="images/products/online-ups/ups-5kva.jpg"/></button>
+<button class="product-thumb" data-product-title="100 kVA Modular UPS" type="button"><img alt="100 kVA Modular Online UPS" src="images/products/online-ups/100kva.png"/></button>
+<button class="product-thumb" data-product-title="20 kVA Modular UPS" type="button"><img alt="20 kVA Online UPS" src="images/products/online-ups/20kVA.png"/></button>
 </div>
 </div>
 <div class="product-info">
@@ -1803,13 +1899,13 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <div class="product-usage"><strong>Usage</strong><div><span>Offices</span><span>Commercial buildings</span><span>Electronic equipment</span><span>General loads</span></div></div>
 </div>
 </article>
-<article class="product-card" data-family="battery-chargers-switch-tripping" id="battery-chargers-switch-tripping"><div class="product-label" style="color:#c67a25!important;font-weight:700!important;">Battery Chargers, FCBC &amp; DC Systems</div>
+<article class="product-card" data-family="battery-chargers-switch-tripping" id="battery-chargers-switch-tripping"><div class="product-label" style="color:#c67a25!important;font-weight:700!important;">Battery Chargers, FCBC &amp; DC Power Supply</div>
 
 <div class="product-media">
 <div class="product-main-image"><img alt="Single Phase FCBC 24V/30Amps" src="images/products/battery-chargers-switch-tripping/Single Phase FCBC 24V30Amps.png"/></div>
 <div class="product-thumbs">
 <button class="product-thumb active" data-product-title="Single Phase FCBC 24V/30Amps" type="button"><img alt="Single Phase FCBC 24V/30Amps" src="images/products/battery-chargers-switch-tripping/Single Phase FCBC 24V30Amps.png"/></button>
-<button class="product-thumb" data-product-title="Three Phase Input FCBC 220V/50 Amps" type="button"><img alt="Three Phase Input FCBC 220V/50 Amps" src="images/products/battery-chargers-switch-tripping/Three Phase Input FCBC 220V50 Amps..jpeg"/></button>
+<button class="product-thumb" data-product-title="Three Phase Input FCBC 220V DC/50 Amps" type="button"><img alt="Three Phase Input FCBC 220V DC/50 Amps" src="images/products/battery-chargers-switch-tripping/Three Phase Input FCBC 220V50 Amps..jpeg"/></button>
 <button class="product-thumb" data-product-title="Single Phase Battery Charger 110VDC/30 Amps" type="button"><img alt="Single Phase Battery Charger 110V DC 30 Amps.jpeg" src="images/products/battery-chargers-switch-tripping/Single Phase Battery Charger 110V DC 30 Amps.jpeg"/></button>
 <button class="product-thumb" data-product-title="Single Phase Input 30V DC/20 Amps. FCBC &amp; 2Volts Cells Bank" type="button"><img alt="Single Phase Input 30V DC20 Amps. FCBC &amp; 2Volts Cells Bank.jpeg" src="images/products/battery-chargers-switch-tripping/Single Phase Input 30V DC20 Amps. FCBC  2Volts Cells Bank.jpeg"/></button>
 </div>
@@ -1858,7 +1954,7 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <article class="product-card" data-family="water-level-indicators" id="water-level-indicators"><div class="product-label" style="color:#c67a25!important;font-weight:700!important;">DC Power Supply - Digital Water Level Indicators</div>
 
 <div class="product-media">
-<div class="product-main-image"><img alt="Water Level Indicator" src="images/products/water-level-indicators/Digital Water Level Sensor.jpeg"/></div>
+<div class="product-main-image"><img alt="Water Level Indicator" src="images/products/water-level-indicators/digital water level Sensor.png"/></div>
 </div>
 <div class="product-info">
 <div class="product-identifier" style="color:#1f5bd7!important;font-weight:600!important;">Digital Water Level Indicator</div>
@@ -1956,7 +2052,8 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <div class="section-head">
 <div class="eyebrow">Quick reference</div>
 <h2>Capacity &amp; model index</h2>
-<p class="lead">Pulled directly from Sinetrac / Chime Electronics certified datasheets. Full PDFs above will carry complete dimensional and installation detail.</p>
+<p class="lead">Explore our range of power solutions that are designed to support a wide variety of commercial and industrial applications.
+Our team works with you to recommend the right capacity and configuration for your specific requirements.</p>
 </div>
 <table class="spec-table" id="spec-servo" style="margin-bottom:26px;scroll-margin-top:110px;">
 <caption>Servo Voltage Stabilizers</caption>
@@ -2075,9 +2172,9 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 </div>
 <div class="tab-panel active" id="tab-approvals" role="tabpanel">
 <div class="approval-intro">
-<span class="approval-kicker">DEFENCE &amp; INSTITUTIONAL APPROVALS</span>
-<h2>Approvals &amp; Institutional Milestones</h2>
-<p>A documented record of product approvals, renewals and Defence Command-level institutional work.</p>
+<span class="approval-kicker">DEFENCE APPROVALS</span>
+<h2>Defence Approvals &amp; Command-Level Experience</h2>
+<p>Product approvals through E-in-C’s Branch, with documented approval and renewal experience across Defence Commands.</p>
 </div>
 <div class="approval-timeline">
 <article class="approval-event"><div class="approval-year">2001</div><div class="approval-dot"></div><div class="approval-content"><span class="approval-type">E-IN-C'S BRANCH</span><h3>Product Approval</h3><p class="approval-description">Approval of products including Servo Stabilizers, UPS, Battery Chargers and related power equipment.</p><button class="approval-document" data-document="images/approvals/approvals_overview_2001_2015_display_4x.jpg" data-document-title="E-in-C's Branch Product Approval — 2001" type="button"><span class="approval-document-image"><img alt="E-in-C's Branch approval documents" loading="lazy" src="images/approvals/approvals_overview_2001_2015_display_4x.jpg"/><span class="approval-image-overlay"><span class="zoom-icon">+</span></span></span><span class="approval-document-footer"><span>View approval document</span><span class="approval-open-arrow">↗</span></span></button></div></article>
@@ -2094,16 +2191,14 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 </div>
 <div class="tab-panel" id="tab-registrations" role="tabpanel">
 <div class="approval-intro">
-<span class="approval-kicker">REGISTRATIONS &amp; CERTIFICATIONS</span>
-<h2>Registrations &amp; Quality Credentials</h2>
-<p>Institutional registrations and certifications supporting work with Defence, public-sector and engineering-led organisations.</p>
+<span class="approval-kicker">COMPANY REGISTRATIONS</span>
+<h2>Registrations &amp; Statutory Credentials</h2>
+<p>Company registrations and statutory credentials, including MSME Udyam and Import Export Code (IEC).</p>
 </div>
 <div class="approval-timeline">
 <article class="approval-event"><div class="approval-year">2010</div><div class="approval-dot"></div><div class="approval-content"><span class="approval-type">MES</span><h3>MES Contractor Enlistment</h3><p class="approval-description">MES contractor enlistment recorded in 2010.</p></div></article>
 <article class="approval-event"><div class="approval-year">2010</div><div class="approval-dot"></div><div class="approval-content"><span class="approval-type">DGS&amp;D</span><h3>DGS&amp;D Registration</h3><p class="approval-description">Registration recorded with DGS&amp;D in 2010.</p></div></article>
-<article class="approval-event"><div class="approval-year">2015</div><div class="approval-dot"></div><div class="approval-content"><span class="approval-type">MES / DEFENCE</span><h3>E-in-C Renewal</h3><p class="approval-description">E-in-C's Branch renewal recorded in 2015.</p></div></article>
 <article class="approval-event"><div class="approval-year">2019</div><div class="approval-dot"></div><div class="approval-content"><span class="approval-type">MES</span><h3>Contractor Enlistment Renewal</h3><p class="approval-description">Contractor enlistment renewal recorded in 2019.</p></div></article>
-<article class="approval-event"><div class="approval-year">2019</div><div class="approval-dot"></div><div class="approval-content"><span class="approval-type">QCI</span><h3>QCI Certification</h3><p class="approval-description">Quality Council of India certification recorded in 2019.</p></div></article>
 <article class="approval-event"><div class="approval-year">2019</div><div class="approval-dot"></div><div class="approval-content"><span class="approval-type">GOVERNMENT E-MARKETPLACE</span><h3>GeM Registration</h3><p class="approval-description">Registered on the Government e-Marketplace in 2019.</p></div></article>
 <article class="approval-event">
 <div class="approval-year">2020</div>
@@ -2285,19 +2380,47 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <div class="wrap">
 <div class="gallery-grid-v3">
 <figure class="gallery-item-v3">
-<img alt="Solar rooftop installation" loading="lazy" src="images/products/solar/solar.png"/>
-<figcaption>
-<strong>Solar Rooftop Installation</strong>
-<span>Site Installation</span>
-</figcaption>
-</figure>
-<figure class="gallery-item-v3">
 <img alt="Sinetrac factory building" loading="lazy" src="images/plant/factory.png"/>
 <figcaption>
 <strong>Our Factory</strong>
 <span>Manufacturing Facility</span>
 </figcaption>
 </figure>
+
+<figure class="gallery-item-v3">
+<img alt="Static voltage stabilizer Installation" loading="lazy" src="images/products/static vol stab.png"/>
+<figcaption>
+<strong>Static Voltage Stabilizer Installation</strong>
+<span>Site Installation</span>
+</figcaption>
+</figure>
+
+
+<figure class="gallery-item-v3">
+<img alt="Solar rooftop installation" loading="lazy" src="images/products/solar/solar.png"/>
+<figcaption>
+<strong>Solar Rooftop Installation</strong>
+<span>Site Installation</span>
+</figcaption>
+</figure>
+
+<figure class="gallery-item-v3">
+<img alt="Delhi CWE Installation" loading="lazy" src="images/products/CWE Installtation.png"/>
+<figcaption>
+<strong>Delhi CWE Installation</strong>
+<span>Real-world Application</span>
+</figcaption>
+</figure>
+
+<figure class="gallery-item-v3">
+<img alt="Delhi Cantt Water Supply Installation" loading="lazy" src="images/plant/Delhi Cantt Water Supply Installation.jpeg"/>
+<figcaption>
+<strong>Delhi Cantt Water Supply Installation</strong>
+<span>Real-world Application</span>
+</figcaption>
+</figure>
+
+
 <figure class="gallery-item-v3">
 <img alt="Transformer being handled at the factory" loading="lazy" src="images/plant/loading-transformer.jpg"/>
 <figcaption>
@@ -2326,13 +2449,7 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <span>Testing &amp; Quality Assurance</span>
 </figcaption>
 </figure>
-<figure class="gallery-item-v3">
-<img alt="Delhi Cantt Water Supply Installation" loading="lazy" src="images/plant/Delhi Cantt Water Supply Installation.jpeg"/>
-<figcaption>
-<strong>Delhi Cantt Water Supply Installation</strong>
-<span>Real-world Application</span>
-</figcaption>
-</figure>
+
 <figure class="gallery-item-v3">
 <img alt="Sinetrac approvals and certifications" loading="lazy" src="images/plant/approvals-grid.jpg"/>
 <figcaption>
@@ -2354,37 +2471,8 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <div class="page-hero__icon"><div class="icon-plate"><svg viewbox="0 0 24 24"><path d="M12 22s7-7.4 7-13a7 7 0 10-14 0c0 5.6 7 13 7 13z"></path><circle cx="12" cy="9" r="2.4"></circle></svg></div></div>
 </div>
 </section>
-<section class="section section--tight after-sales-support">
-<div class="wrap">
-<div class="section-head" style="text-align:center;">
-<div class="eyebrow">Beyond the sale</div>
-<h2>Support Beyond Supply</h2>
-<p class="lead">Our relationship doesn't end at delivery. Every installation is backed by a dedicated after-sales team.</p>
-</div>
-<div class="after-sales-grid">
-<div class="after-sales-item">
-<span class="after-sales-icon"><svg viewbox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.1-3.1a5 5 0 01-6.7 6.7L5.5 21.5a2.1 2.1 0 01-3-3L11.9 8a5 5 0 016.7-6.7z"></path></svg></span>
-<span class="after-sales-label">Installation Support</span>
-</div>
-<div class="after-sales-item">
-<span class="after-sales-icon"><svg viewbox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"></path></svg></span>
-<span class="after-sales-label">Commissioning Assistance</span>
-</div>
-<div class="after-sales-item">
-<span class="after-sales-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg></span>
-<span class="after-sales-label">Service &amp; Maintenance</span>
-</div>
-<div class="after-sales-item">
-<span class="after-sales-icon"><svg viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M7 9h4M7 13h7"></path></svg></span>
-<span class="after-sales-label">Spare Parts</span>
-</div>
-<div class="after-sales-item">
-<span class="after-sales-icon"><svg viewbox="0 0 24 24"><path d="M12 22s7-7.4 7-13a7 7 0 10-14 0c0 5.6 7 13 7 13z"></path><circle cx="12" cy="9" r="2.4"></circle></svg></span>
-<span class="after-sales-label">Technical Assistance</span>
-</div>
-</div>
-</div>
-</section>
+<!-- After-sales support moved into the contact/map column. -->
+
 <section class="section">
 <div class="wrap two-col">
 <div class="form-panel">
@@ -2440,9 +2528,26 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <li><svg viewbox="0 0 24 24"><path d="M12 22s7-7.4 7-13a7 7 0 10-14 0c0 5.6 7 13 7 13z"></path><circle cx="12" cy="9" r="2.4"></circle></svg><span>E-17, Sector-3, DSIIDC Industrial Area, Delhi-110039</span></li>
 <li><svg viewbox="0 0 24 24"><path d="M12 22s7-7.4 7-13a7 7 0 10-14 0c0 5.6 7 13 7 13z"></path><circle cx="12" cy="9" r="2.4"></circle></svg><span>Ph: <a href="tel:+9146536498">+91 46536498</a></span></li>
 <li><svg viewbox="0 0 24 24"><path d="M12 22s7-7.4 7-13a7 7 0 10-14 0c0 5.6 7 13 7 13z"></path><circle cx="12" cy="9" r="2.4"></circle></svg><span>Mobile: <a href="tel:+919818211890">+91 9818211890</a></span></li>
+<li><svg viewbox="0 0 24 24"><path d="M12 22s7-7.4 7-13a7 7 0 10-14 0c0 5.6 7 13 7 13z"></path><circle cx="12" cy="9" r="2.4"></circle></svg><span>Mobile: <a href="tel:+91 9810818175">+91 9818211890</a></span></li>
+
 <li><svg viewbox="0 0 24 24"><path d="M12 22s7-7.4 7-13a7 7 0 10-14 0c0 5.6 7 13 7 13z"></path><circle cx="12" cy="9" r="2.4"></circle></svg><span>Email: <a href="mailto:sinetrac@gmail.com">sinetrac@gmail.com</a></span></li>
 </ul>
-<div class="form-panel" style="margin-top:26px;padding:0;overflow:hidden;">
+<div class="contact-support-card contact-support-card--highlight" aria-label="After-sales support">
+  <div class="contact-support-card__top">
+    <div class="eyebrow">BEYOND THE SALE</div>
+    <span class="contact-support-card__mark" aria-hidden="true">+</span>
+  </div>
+  <h3>Support Beyond Supply</h3>
+  <p>Our relationship doesn't end at delivery. Every installation is backed by a dedicated after-sales team.</p>
+  <div class="contact-support-card__grid">
+    <div><span>01</span><b>Installation Support</b></div>
+    <div><span>02</span><b>Commissioning Assistance</b></div>
+    <div><span>03</span><b>Service &amp; Maintenance</b></div>
+    <div><span>04</span><b>Spare Parts</b></div>
+    <div><span>05</span><b>Technical Assistance</b></div>
+  </div>
+</div>
+<div class="form-panel" style="margin-top:22px;padding:0;overflow:hidden;">
 <iframe height="280" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=DSIIDC+Industrial+Area+Delhi+110039&amp;output=embed" style="border:0;display:block;" title="Sinetrac — Delhi" width="100%"></iframe>
 </div>
 </div>
