@@ -2162,3 +2162,98 @@ p,li,.lead{overflow-wrap:break-word !important;word-break:break-word !important;
     justify-content:center !important;
   }
 }
+
+
+/* FINAL USER-REQUESTED TARGETED OVERRIDES */
+
+
+/* 1. Keep the requested Downloads headings exactly in kVA casing. */
+
+/* 2. Footer certification prominence. */
+.footer-certifications .footer-iso-badge__label {
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  letter-spacing: .02em !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+.footer-certifications .footer-iso-badge__sub {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: .04em !important;
+  color: #fff !important;
+}
+.footer-certifications .footer-iaf-logo {
+  width: 98px !important;
+  max-width: 98px !important;
+}
+
+/* 3. Enlarge the real logo, without enlarging a bordered container. */
+.footer-col--brand,
+.footer-branding {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.footer-branding .footer-brand-logo,
+.footer-col--brand .footer-brand-logo {
+  width: 225px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: #fff !important;
+}
+
+/* 4. Remove only the Chime Electronics header subcaption. */
+.site-header .company-tag {
+  display: none !important;
+}
+
+/* 5. Make all header ISO lines clearly visible. */
+.site-header .header-certification--iso {
+  min-width: 190px !important;
+  padding: 8px 14px !important;
+  gap: 4px !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+}
+.site-header .header-certification--iso .header-certification__label {
+  display: block !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  font-weight: 900 !important;
+  color: #0d4da1 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+.site-header .header-certification--iso .header-certification__certified {
+  display: block !important;
+  font-size: 10px !important;
+  line-height: 1.25 !important;
+  font-weight: 900 !important;
+  letter-spacing: .12em !important;
+  color: #173f78 !important;
+}
+.site-header .header-certification--iso .header-certification__sub {
+  display: block !important;
+  font-size: 9px !important;
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+  letter-spacing: .03em !important;
+  color: #173f78 !important;
+}
+@media (max-width: 900px) {
+  .site-header .header-certification--iso {
+    min-width: 150px !important;
+    padding: 5px 8px !important;
+  }
+  .site-header .header-certification--iso .header-certification__label { font-size: 10px !important; }
+  .site-header .header-certification--iso .header-certification__certified { font-size: 8px !important; }
+  .site-header .header-certification--iso .header-certification__sub { font-size: 7px !important; }
+  .footer-branding .footer-brand-logo,
+  .footer-col--brand .footer-brand-logo { width: 190px !important; }
+}
+

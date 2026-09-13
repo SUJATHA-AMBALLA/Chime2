@@ -2948,3 +2948,100 @@ body{padding-top:125px;}
   .form-panel{padding:20px 16px!important;}
   #page-contact .section{padding-top:38px!important;padding-bottom:42px!important;}
 }
+
+/* Final requested fixes */
+.footer-branding .footer-brand-logo,.footer-col--brand .footer-brand-logo{width:260px!important;max-width:100%!important;padding:0!important;margin:0!important;border:0!important;box-shadow:none!important;}
+.footer-branding,.footer-col--brand{padding-left:0!important;}
+.products-disclaimer{font-size:12px!important;color:#718096!important;margin:10px 0 0!important;}
+.product-main-image--placeholder{display:flex!important;align-items:center;justify-content:center;background:linear-gradient(135deg,#edf3f8,#dce7f0)!important;}
+.product-placeholder{text-align:center;font-family:'Space Grotesk',sans-serif;font-weight:800;letter-spacing:.08em;line-height:1.25;color:#24547c;font-size:22px;}
+@media(min-width:901px){#product-family-list .product-card:last-child{grid-column:2;}}
+@media(max-width:900px){.footer-branding .footer-brand-logo,.footer-col--brand .footer-brand-logo{width:230px!important;}}
+
+
+/* Final corrections: preserve the requested kVA casing and product note. */
+.spec-table caption { text-transform: none !important; }
+.products-disclaimer {
+  font-size: 11px !important;
+  line-height: 1.6 !important;
+  color: #718096 !important;
+  margin: 0 0 22px !important;
+  letter-spacing: .01em !important;
+  text-transform: none !important;
+}
+.gallery-item-v3 figcaption strong { text-transform: none !important; }
+
+
+/* Final placement corrections */
+.products-disclaimer {
+  display:block !important;
+  width:100% !important;
+  margin:8px 0 0 !important;
+  padding:0 4px 0 0 !important;
+  text-align:right !important;
+  font-size:10px !important;
+  line-height:1.4 !important;
+  color:#8a96a5 !important;
+  opacity:.72 !important;
+  letter-spacing:0 !important;
+}
+.home-40-badge {
+  top:5% !important;
+  right:5% !important;
+  bottom:auto !important;
+}
+@media (max-width:900px) {
+  .home-40-badge {
+    top:5% !important;
+    right:4% !important;
+    bottom:auto !important;
+  }
+}
+/* Final-row image on Products page */
+.product-page-feature-image {
+    grid-column: 2 / -1;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #eef4f8;
+    align-self: stretch;
+}
+
+.product-page-feature-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Tablet and mobile */
+@media (max-width: 900px) {
+    .product-page-feature-image {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .product-page-feature-image img {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        object-fit: contain;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 600px) {
+    .product-page-feature-image {
+        border-radius: 10px;
+    }
+
+    .product-page-feature-image img {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+    }
+}

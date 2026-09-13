@@ -798,9 +798,9 @@
 /* 2. HERO 40+ BADGE: only belongs to hero, never fixed over later sections. */
 .home-40-badge{
   position:absolute !important;
-  right:clamp(28px,5vw,82px) !important;
-  bottom:clamp(28px,5vw,58px) !important;
-  top:auto !important;
+  right:5% !important;
+  top:5% !important;
+  bottom:auto !important;
   left:auto !important;
   width:clamp(145px,13vw,195px) !important;
   height:auto !important;
@@ -811,15 +811,17 @@
 
 @media (max-width:900px){
   .home-40-badge{
-    right:22px !important;
-    bottom:28px !important;
+    right:4% !important;
+    top:5% !important;
+    bottom:auto !important;
     width:150px !important;
   }
 }
 @media (max-width:600px){
   .home-40-badge{
-    right:16px !important;
-    bottom:18px !important;
+    right:4% !important;
+    top:5% !important;
+    bottom:auto !important;
     width:120px !important;
   }
 }
@@ -1700,6 +1702,175 @@
   .process-node{font-size:12px !important;padding:9px 12px !important;}
 }
 </style>
+
+<style id="user-requested-final-tweaks">
+/* Downloads: gently rounded blue headings and correct kVA casing. */
+#page-catalogues .section-head h2,
+#page-catalogues .spec-table caption,
+#page-catalogues .dl-title {
+  border-radius: 9px !important;
+}
+#page-catalogues .section-head h2,
+#page-catalogues .spec-table caption {
+  padding: 5px 12px !important;
+}
+
+/* Header brand hierarchy. */
+.company-name { font-size: 27px !important; }
+.brand-lockup__logo { transform: scale(1.06); transform-origin: left center; }
+
+/* Show IAF before ISO without changing the existing HTML structure. */
+.header-certifications .header-certification--iaf,
+.site-nav__certifications .header-certification--iaf { order: -1 !important; }
+.header-certification--iso .header-certification__label {
+  font-weight: 800 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+/* Raise the hero badge slightly so it does not cover the product. */
+
+
+/* Footer: white only behind the real Sinetrac logo; certifications sit by Contact Us. */
+.footer-brand-logo {
+  background: #fff !important;
+  padding: 8px !important;
+  border-radius: 3px !important;
+  box-sizing: border-box !important;
+}
+.footer-branding { gap: 0 !important; }
+.footer-certifications {
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+  margin: 14px 0 18px !important;
+  flex-wrap: wrap !important;
+}
+.footer-certifications .footer-iaf-logo {
+  width: 88px !important;
+  height: auto !important;
+  display: block !important;
+}
+.footer-certifications .footer-iso-badge {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+}
+.footer-certifications .footer-iso-badge__label {
+  font-weight: 800 !important;
+  text-decoration: underline !important;
+}
+@media (max-width: 900px) {
+  .company-name { font-size: 18px !important; }
+  .brand-lockup__logo { transform: none; }
+  .footer-certifications { justify-content: center !important; }
+}
+</style>
+
+<style id="user-requested-final-tweaks-2">
+/* 1. Keep the requested Downloads headings exactly in kVA casing. */
+
+/* 2. Footer certification prominence. */
+.footer-certifications .footer-iso-badge__label {
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  letter-spacing: .02em !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+.footer-certifications .footer-iso-badge__sub {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: .04em !important;
+  color: #fff !important;
+}
+.footer-certifications .footer-iaf-logo {
+  width: 98px !important;
+  max-width: 98px !important;
+}
+
+/* 3. Enlarge the real logo, without enlarging a bordered container. */
+.footer-col--brand,
+.footer-branding {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.footer-branding .footer-brand-logo,
+.footer-col--brand .footer-brand-logo {
+  width: 225px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: #fff !important;
+}
+
+/* 4. Remove only the Chime Electronics header subcaption. */
+.site-header .company-tag {
+  display: none !important;
+}
+
+/* 5. Make all header ISO lines clearly visible. */
+.site-header .header-certification--iso {
+  min-width: 190px !important;
+  padding: 8px 14px !important;
+  gap: 4px !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+}
+.site-header .header-certification--iso .header-certification__label {
+  display: block !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  font-weight: 900 !important;
+  color: #0d4da1 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+.site-header .header-certification--iso .header-certification__certified {
+  display: block !important;
+  font-size: 10px !important;
+  line-height: 1.25 !important;
+  font-weight: 900 !important;
+  letter-spacing: .12em !important;
+  color: #173f78 !important;
+}
+.site-header .header-certification--iso .header-certification__sub {
+  display: block !important;
+  font-size: 9px !important;
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+  letter-spacing: .03em !important;
+  color: #173f78 !important;
+}
+@media (max-width: 900px) {
+  .site-header .header-certification--iso {
+    min-width: 150px !important;
+    padding: 5px 8px !important;
+  }
+  .site-header .header-certification--iso .header-certification__label { font-size: 10px !important; }
+  .site-header .header-certification--iso .header-certification__certified { font-size: 8px !important; }
+  .site-header .header-certification--iso .header-certification__sub { font-size: 7px !important; }
+  .footer-branding .footer-brand-logo,
+  .footer-col--brand .footer-brand-logo { width: 190px !important; }
+}
+</style>
+
+<style id="user-requested-final-fixes">
+/* Requested final refinements */
+.footer-branding .footer-brand-logo,.footer-col--brand .footer-brand-logo{width:260px!important;max-width:100%!important;padding:0!important;margin:0!important;border:0!important;box-shadow:none!important;}
+.footer-branding,.footer-col--brand{padding-left:0!important;}
+.footer-branding img{border:0!important;}
+.products-disclaimer{font-size:12px!important;color:#718096!important;margin:10px 0 0!important;}
+.product-main-image--placeholder{display:flex!important;align-items:center;justify-content:center;background:linear-gradient(135deg,#edf3f8,#dce7f0)!important;}
+.product-placeholder{text-align:center;font-family:'Space Grotesk',sans-serif;font-weight:800;letter-spacing:.08em;line-height:1.25;color:#24547c;font-size:22px;}
+@media(min-width:901px){#product-family-list .product-card:last-child{grid-column:2;}}
+@media(max-width:900px){.footer-branding .footer-brand-logo,.footer-col--brand .footer-brand-logo{width:230px!important;}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -1768,7 +1939,7 @@
 <span aria-hidden="true" class="brand-lockup__divider"></span>
 <span class="brand-lockup__text">
 <span class="company-name">Chime Electronics</span>
-<span class="company-tag">Power Electronics &amp; Control Equipment</span>
+
 </span>
 </a>
 <div aria-label="Quality certifications" class="header-certifications">
@@ -1889,7 +2060,7 @@
 </div>
 <div aria-label="Company strengths" class="about-home__credentials">
 <div class="about-credential about-credential--iso"><div aria-hidden="true" class="about-credential__icon"><svg viewbox="0 0 24 24"><path d="M12 3l7 3v5c0 4.7-3 8.1-7 10-4-1.9-7-5.3-7-10V6l7-3z"></path><path d="M8.5 12l2.2 2.2 4.8-5"></path></svg></div><div><h3>ISO 9001:2015</h3><small>Quality Management System · Certified 2026</small></div></div>
-<div class="about-credential"><div aria-hidden="true" class="about-credential__icon"><svg viewbox="0 0 24 24"><path d="M12 3l7 3v5c0 4.7-3 8.1-7 10-4-1.9-7-5.3-7-10V6l7-3z"></path><path d="M8.5 12l2.2 2.2 4.8-5"></path></svg></div><div><h3>Customers' Choice — Sinetrac</h3></div></div>
+<div class="about-credential"><div aria-hidden="true" class="about-credential__icon"><svg viewbox="0 0 24 24"><path d="M12 3l7 3v5c0 4.7-3 8.1-7 10-4-1.9-7-5.3-7-10V6l7-3z"></path><path d="M8.5 12l2.2 2.2 4.8-5"></path></svg></div><div><h3>Why Customers Choose Sinetrac</h3></div></div>
 <div class="about-credential"><div aria-hidden="true" class="about-credential__icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12l2.5 2.5L16 9"></path></svg></div><div><h3>Certified Quality</h3></div></div>
 <div class="about-credential"><div aria-hidden="true" class="about-credential__icon"><svg viewbox="0 0 24 24"><path d="M4 13v-2a8 8 0 0116 0v2"></path><path d="M4 13h3v6H5a1 1 0 01-1-1v-5zM20 13h-3v6h2a1 1 0 001-1v-5z"></path><path d="M17 19c-1 2-3 2-5 2"></path></svg></div><div><h3>Support You Can Count On</h3></div></div>
 </div>
@@ -1977,6 +2148,11 @@
 <span class="ct-name">Solar Generation Plants</span>
 <span class="ct-arrow"><svg style="stroke:currentColor" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </a>
+<a class="category-tile" data-page-link="products" data-scrollto="phase-sequence-correctors" href="#products" style="background:#f8fbff;">
+<span class="ct-icon"><svg viewbox="0 0 48 48"><path d="M8 12h32v24H8z"></path><path d="M14 18h20M14 24h20M14 30h12"></path><path d="M36 8v8M32 12h8"></path></svg></span>
+<span class="ct-name">Phase Sequence Correctors</span>
+<span class="ct-arrow"><svg style="stroke:currentColor" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</a>
 <a class="category-tile" data-page-link="products" data-scrollto="water-level-indicators" href="#products" style="background:#fffaf8;">
 <span class="ct-icon"><svg viewbox="0 0 48 48"><path d="M24 6c8 10 12 16 12 22a12 12 0 01-24 0c0-6 4-12 12-22z"></path><line stroke-dasharray="2 3" x1="16" x2="32" y1="30" y2="30"></line></svg></span>
 <span class="ct-name">Water Level Indicators</span>
@@ -2031,7 +2207,7 @@
 <section class="section section--brand">
 <div class="wrap two-col">
 <div>
-<h2>Customers' Choice — Sinetrac</h2>
+<h2>Why Customers Choose Sinetrac</h2>
 <ul class="pill-list" style="margin-top:24px;">
 <li><svg viewbox="0 0 24 24"><path d="M4 12l5 5L20 6"></path></svg><span>In-house engineering — design, R&amp;D and build under one roof</span></li>
 <li><svg viewbox="0 0 24 24"><path d="M4 12l5 5L20 6"></path></svg><span>Delhi manufacturing — full control over quality and lead times</span></li>
@@ -2138,6 +2314,7 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <button class="product-filter" data-filter="solar" type="button">Solar</button>
 <button class="product-filter" data-filter="isolation-transformers" type="button">Isolation</button>
 <button class="product-filter" data-filter="water-level-indicators" type="button">Water level</button>
+<button class="product-filter" data-filter="phase-sequence-correctors" type="button">Phase sequence</button>
 </div>
 </section>
 <section class="products-wrap product-grid" id="product-family-list">
@@ -2289,6 +2466,13 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <div class="product-usage"><strong>Usage</strong><div><span>Rooftop solar</span><span>Institutional sites</span><span>Commercial power</span><span>Hybrid applications</span></div></div>
 </div>
 </article>
+<article class="product-card" data-family="phase-sequence-correctors" id="phase-sequence-correctors">
+<div class="product-label" style="color:#c67a25!important;font-weight:700!important;">Phase Sequence Correctors</div>
+<div class="product-media"><div class="product-main-image product-main-image--placeholder"><div class="product-placeholder">PHASE<br/>SEQUENCE<br/>CORRECTORS</div></div></div>
+<div class="product-info"><div class="product-identifier" style="color:#1f5bd7!important;font-weight:600!important;">Phase Sequence Correctors</div>
+<p>Protection and correction equipment designed to help maintain the required three-phase sequence for connected electrical systems.</p>
+<div class="product-usage"><strong>Usage</strong><div><span>Three-phase systems</span><span>Control panels</span><span>Industrial equipment</span><span>Protection systems</span></div></div></div>
+</article>
 <article class="product-card" data-family="water-level-indicators" id="water-level-indicators"><div class="product-label" style="color:#c67a25!important;font-weight:700!important;">DC Power Supply - Digital Water Level Indicators</div>
 
 <div class="product-media">
@@ -2301,11 +2485,19 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <div class="product-usage"><strong>Usage</strong><div><span>Water tanks</span><span>Pumps</span><span>Building services</span><span>Utilities</span></div></div>
 </div>
 </article>
+
+<div class="product-page-feature-image">
+    <img
+        src="images/girl.jpeg"
+        alt="Electronics assembly and testing at Sinetrac"
+    />
+</div>
 </section>
 <section class="products-wrap products-download-note">
 <div><div class="products-eyebrow">Technical information</div><h2>Need the engineering details?</h2><p>Technical specifications, catalogues and product documentation are available in Downloads.</p></div>
 <a class="product-spec product-spec--light" data-page-link="catalogues" href="#catalogues">Open Downloads <span>→</span></a>
 </section>
+<p class="products-disclaimer">Products shown are for illustrative purposes; actual products may vary based on your requirements and application needs.</p>
 </section>
 <section class="page" data-page="catalogues" id="page-catalogues" style="display:none;">
 <section class="page-hero">
@@ -2396,7 +2588,7 @@ Our team works with you to recommend the right capacity and configuration for yo
 <table class="spec-table" id="spec-servo" style="margin-bottom:26px;scroll-margin-top:110px;">
 <caption>Servo Voltage Stabilizers - 1 kVA to 3000 kVA </caption>
 <thead><tr><th>Parameter</th><th>Specification</th></tr></thead>
-<tbody><tr><td>Input Working Range</td><td class="mono">Single Ph: 173–277V to 120–280V · Three Ph: 300–480V to 208–485V</td></tr><tr><td>Output Voltage</td><td class="mono">220/230/240V (1-Ph) settable · 380/400/415V (3-Ph) settable</td></tr><tr><td>Response Time</td><td class="mono">5 milliseconds</td></tr><tr><td>Output Regulation</td><td class="mono">1% to 2.5% (depending on output set)</td></tr><tr><td>Efficiency</td><td class="mono">Greater than 95%, up to 98% at rated load</td></tr><tr><td>Winding</td><td class="mono">As specified for the project</td></tr><tr><td>Cooling</td><td class="mono">Air cooled up to 100 kVA · Oil cooled from 30 kVA to 3000kVA </td></tr></tbody>
+<tbody><tr><td>Input Working Range</td><td class="mono">Single Ph: 173–277V to 120–280V · Three Ph: 300–480V to 208–485V</td></tr><tr><td>Output Voltage</td><td class="mono">220/230/240V (1-Ph) settable · 380/400/415V (3-Ph) settable</td></tr><tr><td>Response Time</td><td class="mono">5 milliseconds</td></tr><tr><td>Output Regulation</td><td class="mono">1% to 2.5% (depending on output set)</td></tr><tr><td>Efficiency</td><td class="mono">Greater than 95%, up to 98% at rated load</td></tr><tr><td>Winding</td><td class="mono">As specified for the project</td></tr><tr><td>Cooling</td><td class="mono">Air cooled up to 100 kVA · Oil cooled from 30 kVA to 3000 kVA </td></tr></tbody>
 </table><table class="spec-table" id="spec-automatic" style="margin-bottom:26px;scroll-margin-top:110px;">
 <caption>Automatic Voltage Stabilizers - Single Phase – 0.5 kVA to 10 kVA</caption>
 <thead><tr><th>Parameter</th><th>Specification</th></tr></thead>
@@ -2688,7 +2880,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Sinetrac factory building" loading="lazy" src="images/plant/factory.png"/>
 <figcaption>
 <strong>Our Factory</strong>
-<span>Manufacturing Facility</span>
 </figcaption>
 </figure>
 
@@ -2697,7 +2888,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Sinetrac Hi-Frequency Inverter display at India International Trade Fair" loading="lazy" src="images/gallery/PIC.JPG.jpeg"/>
 <figcaption>
 <strong>IITF Exhibition Stall</strong>
-<span>India International Trade Fair · Hi-Frequency Inverter</span>
 </figcaption>
 </figure>
 
@@ -2706,7 +2896,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Sinetrac Hi-Frequency Inverter display at India International Trade Fair" loading="lazy" src="images/gallery/PIC0001.JPG.jpeg"/>
 <figcaption>
 <strong>IITF Exhibition Stall</strong>
-<span>India International Trade Fair · Hi-Frequency Inverter</span>
 </figcaption>
 
 </figure>
@@ -2714,7 +2903,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Sinetrac Hi-Frequency Inverter display at India International Trade Fair" loading="lazy" src="images/gallery/PIC0002.JPG.jpeg"/>
 <figcaption>
 <strong>IITF Exhibition Stall</strong>
-<span>India International Trade Fair · Hi-Frequency Inverter</span>
 </figcaption>
 </figure>
 
@@ -2722,7 +2910,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Sinetrac Hi-Frequency Inverter display at India International Trade Fair" loading="lazy" src="images/gallery/PIC0003.JPG.jpeg"/>
 <figcaption>
 <strong>IITF Exhibition Stall</strong>
-<span>India International Trade Fair · Hi-Frequency Inverter</span>
 </figcaption>
 </figure>
 
@@ -2731,7 +2918,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Sinetrac Hi-Frequency Inverter display at India International Trade Fair" loading="lazy" src="images/gallery/PIC0004.JPG.jpeg"/>
 <figcaption>
 <strong>IITF Exhibition Stall</strong>
-<span>India International Trade Fair · Hi-Frequency Inverter</span>
 </figcaption>
 </figure>
 
@@ -2739,7 +2925,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Sinetrac Hi-Frequency Inverter display at India International Trade Fair" loading="lazy" src="images/gallery/PIC0005.JPG.jpeg"/>
 <figcaption>
 <strong>IITF Exhibition Stall</strong>
-<span>India International Trade Fair · Hi-Frequency Inverter</span>
 </figcaption>
 </figure>
 
@@ -2747,7 +2932,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Sinetrac Hi-Frequency Inverter display at India International Trade Fair" loading="lazy" src="images/gallery/PIC0006.JPG.jpeg"/>
 <figcaption>
 <strong>IITF Exhibition Stall</strong>
-<span>India International Trade Fair · Hi-Frequency Inverter</span>
 </figcaption>
 </figure>
 
@@ -2755,7 +2939,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Sinetrac Hi-Frequency Inverter display at India International Trade Fair" loading="lazy" src="images/gallery/PIC0007.JPG.jpeg"/>
 <figcaption>
 <strong>IITF Exhibition Stall</strong>
-<span>India International Trade Fair · Hi-Frequency Inverter</span>
 </figcaption>
 </figure>
 
@@ -2764,7 +2947,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Sinetrac Hi-Frequency Inverter display at India International Trade Fair" loading="lazy" src="images/gallery/PIC0008.JPG.jpeg"/>
 <figcaption>
 <strong>IITF Exhibition Stall</strong>
-<span>India International Trade Fair · Hi-Frequency Inverter</span>
 </figcaption>
 </figure>
 
@@ -2772,7 +2954,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Static voltage stabilizer Installation" loading="lazy" src="images/products/static vol stab.png"/>
 <figcaption>
 <strong>Static Voltage Stabilizer Installation</strong>
-<span>Site Installation</span>
 </figcaption>
 </figure>
 
@@ -2780,7 +2961,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="R and R Hospital Delhi Installation" loading="lazy" src="images/gallery/RnR.jpeg"/>
 <figcaption>
 <strong>R and R Hospital Delhi Installation</strong>
-<span>Site Installation</span>
 </figcaption>
 </figure>
 
@@ -2789,7 +2969,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Solar rooftop installation" loading="lazy" src="images/products/solar/Solar installation.png"/>
 <figcaption>
 <strong>Solar Rooftop Installation</strong>
-<span>Site Installation</span>
 </figcaption>
 </figure>
 
@@ -2797,7 +2976,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Delhi CWE Installation" loading="lazy" src="images/plant/CWE.png"/>
 <figcaption>
 <strong>CWE Delhi cantt Installation</strong>
-<span>Real-world Application</span>
 </figcaption>
 </figure>
 
@@ -2805,7 +2983,6 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Delhi Cantt Water Supply Installation" loading="lazy" src="images/plant/Delhi Cantt Water Supply Installation.jpeg"/>
 <figcaption>
 <strong>Delhi Cantt Water Supply Installation</strong>
-<span>Real-world Application</span>
 </figcaption>
 </figure>
 
@@ -2814,28 +2991,24 @@ Our team works with you to recommend the right capacity and configuration for yo
 <img alt="Transformer being handled at the factory" loading="lazy" src="images/plant/loading-transformer.jpg"/>
 <figcaption>
 <strong>Manufacturing &amp; Assembly</strong>
-<span>Inside the factory</span>
 </figcaption>
 </figure>
 <figure class="gallery-item-v3">
 <img alt="Testing panel at Sinetrac factory" loading="lazy" src="images/plant/test-panel.jpg"/>
 <figcaption>
 <strong>Testing Facility</strong>
-<span>Testing &amp; Quality Control</span>
 </figcaption>
 </figure>
 <figure class="gallery-item-v3">
 <img alt="Vacuum impregnation process" loading="lazy" src="images/plant/vacuum-impregnation.jpg"/>
 <figcaption>
 <strong>Vacuum Impregnation</strong>
-<span>Manufacturing Process</span>
 </figcaption>
 </figure>
 <figure class="gallery-item-v3">
 <img alt="Voltage and frequency testing" loading="lazy" src="images/plant/voltage-frequency-test.jpg"/>
 <figcaption>
 <strong>Electrical Testing</strong>
-<span>Testing &amp; Quality Assurance</span>
 </figcaption>
 </figure>
 
@@ -2967,17 +3140,19 @@ Our team works with you to recommend the right capacity and configuration for yo
 <div class="footer-col footer-col--brand">
 <div class="footer-branding">
 <img alt="Sinetrac" class="footer-brand-logo" src="images/brand/logo.png"/>
-<img alt="IAF Multilateral Recognition Arrangement" class="footer-iaf-logo" src="images/brand/iaf-seal.png"/>
-<div class="footer-iso-badge">
-<span class="footer-iso-badge__label">ISO 9001:2015</span>
-<span class="footer-iso-badge__sub">Certified Quality Management</span>
-</div>
 </div>
 </div>
 <div class="footer-col footer-col--contact">
 <h2>Contact Us</h2>
 <p class="co-name-big">Chime Electronics</p>
-<p class="co-line">E-17, Sector-3, DSIIDC Industrial Area, Delhi-110039</p>
+<p class="co-line">E-17, Sector-3, DSIIDC Industrial Area,<br/>Delhi-110039</p>
+<div class="footer-certifications" aria-label="Quality certifications">
+  <img alt="IAF Multilateral Recognition Arrangement" class="footer-iaf-logo" src="images/brand/iaf-seal.png"/>
+  <div class="footer-iso-badge">
+    <span class="footer-iso-badge__label">ISO 9001:2015</span>
+    <span class="footer-iso-badge__sub">Certified Quality Management</span>
+  </div>
+</div>
 <p class="co-line"><strong>Ph:</strong> <a href="tel:+9146536498">+91 46536498</a></p>
 <p class="co-line"><strong>Mobile:</strong> <a href="tel:+919818211890">+91 9818211890</a></p>
 <p class="co-line"><strong>Mobile:</strong> <a href="tel:+919810818175">+91 9810818175</a></p>
