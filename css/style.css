@@ -3051,3 +3051,18 @@ body{padding-top:125px;}
         object-fit: contain;
     }
 }
+/* 40+ badge — final positioning */
+.home-40-badge {
+  top: 7% !important;
+  right: 3% !important;
+  bottom: auto !important;
+}
+
+/* Mobile: keep badge clear of the heading */
+@media (max-width: 900px) {
+  .home-40-badge {
+    top: 16% !important;
+    right: 3% !important;
+    bottom: auto !important;
+  }
+}
