@@ -2257,3 +2257,64 @@ p,li,.lead{overflow-wrap:break-word !important;word-break:break-word !important;
   .footer-col--brand .footer-brand-logo { width: 190px !important; }
 }
 
+/* Applications strip below home Products */
+.applications-strip {
+  padding: 22px 0 24px;
+  background: #f5f8fc;
+  border-top: 1px solid #e1e8f0;
+  border-bottom: 1px solid #e1e8f0;
+}
+
+.applications-strip .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.applications-strip__label {
+  color: #1f5bd7;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.applications-strip p {
+  margin: 0;
+  color: #405364;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.applications-strip p span {
+  color: #c67a25;
+  padding: 0 7px;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .applications-strip {
+    padding: 18px 14px;
+  }
+
+  .applications-strip .wrap {
+    display: block;
+  }
+
+  .applications-strip__label {
+    margin-bottom: 7px;
+  }
+
+  .applications-strip p {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .applications-strip p span {
+    padding: 0 4px;
+  }
+}s

@@ -2165,6 +2165,29 @@ institutional applications.</p>
 </div>
 </div>
 </section>
+<section class="applications-strip">
+  <div class="wrap">
+    <div class="applications-strip__label">Applications</div>
+
+    <p>
+      Defence &amp; Military Installations
+      <span>|</span>
+      Manufacturing
+      <span>|</span>
+      Hospitals
+      <span>|</span>
+      Data &amp; IT
+      <span>|</span>
+      Cinema &amp; Entertainment
+      <span>|</span>
+      Infrastructure
+      <span>|</span>
+      Government Institutions
+      <span>|</span>
+      Utilities
+    </p>
+  </div>
+</section>
 <section class="clients-section">
 <div class="wrap">
 <div class="section-head clients-intro">
@@ -2368,10 +2391,14 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <div class="product-info">
 <div class="product-identifier" style="color:#1f5bd7!important;font-weight:600!important;">1250 kVA Servo Voltage Stabilizer</div>
 
-<p>Automatic voltage correction equipment for installations where stable supply is important to connected electrical loads and machinery.
-<br>
-  Large-capacity solutions available up to 3000 kVA and beyond, engineered to customer
-specific requirements. 
+<p>
+  Automatic voltage correction equipment for installations where stable supply
+  is important to connected electrical loads and machinery.
+
+  <span class="product-capacity-note">
+    Large-capacity solutions available up to 3000 kVA and beyond, engineered to
+    customer specific requirements.
+  </span>
 </p>
 <div class="product-usage"><strong>Usage</strong><div><span>Industrial machinery</span><span>Process equipment</span><span>Production lines</span><span>Critical loads</span></div></div>
 </div>
@@ -3126,7 +3153,7 @@ Our team works with you to recommend the right capacity and configuration for yo
 </main>
 <footer class="footer">
 <div class="wrap footer-grid footer-grid--three">
-<div class="footer-col footer-col--form">
+<!-- <div class="footer-col footer-col--form">
 <h2>Request a Technical & Commercial Quote</h2>
 <form action="https://formsubmit.co/sinetrac@gmail.com" class="footer-form" method="POST">
 <input name="_subject" type="hidden" value="New Website Price Query"/>
@@ -3150,7 +3177,16 @@ Our team works with you to recommend the right capacity and configuration for yo
 <div class="field full" style="margin-bottom:18px;"><label>Message</label><textarea name="message" placeholder="Tell us anything else our engineers should know…" rows="4"></textarea></div>
 <button class="btn btn--copper" type="submit">Send Enquiry</button>
 </form>
-</div>
+</div> -->
+<div class="footer-col footer-col--form">
+  <h2 id="footer-form-heading">
+    Request a Technical & Commercial Quote
+  </h2>
+
+  <p id="footer-form-description" class="footer-form-description">
+    Send us your capacity, input voltage range, output requirement and
+    application. We will recommend a suitable configuration.
+  </p>
 <div class="footer-col footer-col--brand">
 <div class="footer-branding">
 <img alt="Sinetrac" class="footer-brand-logo" src="images/brand/logo.png"/>
@@ -3159,7 +3195,11 @@ Our team works with you to recommend the right capacity and configuration for yo
 <div class="footer-col footer-col--contact">
 <h2>Contact Us</h2>
 <p class="co-name-big">Chime Electronics</p>
-<p class="co-line">E-17, Sector-3, DSIIDC Industrial Area,<br/>Delhi-110039</p>
+<p class="co-line">
+  E-17, Sector-3,<br/>
+  DSIIDC Industrial Area,<br/>
+  Delhi-110039
+</p>
 <div class="footer-certifications" aria-label="Quality certifications">
   <img alt="IAF Multilateral Recognition Arrangement" class="footer-iaf-logo" src="images/brand/iaf-seal.png"/>
   <div class="footer-iso-badge">
@@ -3171,6 +3211,23 @@ Our team works with you to recommend the right capacity and configuration for yo
 <p class="co-line"><strong>Mobile:</strong> <a href="tel:+919818211890">+91 9818211890</a></p>
 <p class="co-line"><strong>Mobile:</strong> <a href="tel:+919810818175">+91 9810818175</a></p>
 <p class="co-line"><strong>Email:</strong> <a href="mailto:sinetrac@gmail.com">sinetrac@gmail.com</a></p>
+</div>
+
+<div class="footer-col footer-col--certifications">
+  <div class="footer-certifications" aria-label="Quality certifications">
+    <img
+      alt="IAF Multilateral Recognition Arrangement"
+      class="footer-iaf-logo"
+      src="images/brand/iaf-seal.png"
+    />
+
+    <div class="footer-iso-badge">
+      <span class="footer-iso-badge__label">ISO 9001:2015</span>
+      <span class="footer-iso-badge__sub">
+        Certified Quality Management
+      </span>
+    </div>
+  </div>
 </div>
 </div>
 <div class="footer-copy"><div class="wrap">
@@ -3267,6 +3324,50 @@ document.addEventListener('click', function (event) {
       target.scrollIntoView({behavior:'smooth',block:'start'});
       highlightProduct(target);
     },120);
+  });
+})();
+
+</script>
+<script id="contact-footer-heading">
+(function () {
+  const heading = document.getElementById('footer-form-heading');
+  const description = document.getElementById('footer-form-description');
+
+  if (!heading || !description) return;
+
+  function updateFooterText() {
+    const contactPage = document.getElementById('page-contact');
+    const isContactPage =
+      contactPage && getComputedStyle(contactPage).display !== 'none';
+
+    if (isContactPage) {
+      heading.textContent = 'Discuss Your Requirement With Our Engineers';
+
+      description.textContent =
+        'Send us your capacity, input voltage range, output requirement and application. We will recommend a suitable configuration.';
+    } else {
+      heading.textContent = 'Request a Technical & Commercial Quote';
+
+      description.textContent =
+        'Share your requirement with our team and we will recommend the appropriate configuration.';
+    }
+  }
+
+  updateFooterText();
+
+  const observer = new MutationObserver(updateFooterText);
+
+  document.querySelectorAll('.page').forEach(function (page) {
+    observer.observe(page, {
+      attributes: true,
+      attributeFilter: ['style', 'class']
+    });
+  });
+
+  document.querySelectorAll('[data-page-link]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      setTimeout(updateFooterText, 80);
+    });
   });
 })();
 </script>
