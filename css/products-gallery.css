@@ -2705,3 +2705,134 @@ body{ padding-top:var(--header-h) !important; }
   .footer-certifications{flex-wrap:wrap !important;}
   .footer-copy .wrap{flex-direction:column !important;text-align:center !important;gap:4px !important;}
 }
+
+/* =========================================================
+   REQUESTED GALLERY CLEANUP — 25 SEP
+   ========================================================= */
+.gallery-grid-v3{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:22px !important;
+  align-items:start !important;
+}
+.gallery-item-v3 figcaption{
+  min-height:0 !important;
+  padding:10px 14px 11px !important;
+  gap:2px !important;
+  text-align:center !important;
+  align-items:center !important;
+}
+.gallery-item-v3 figcaption strong{
+  margin:0 auto !important;
+  line-height:1.25 !important;
+}
+.gallery-item-v3 figcaption span{
+  margin:0 auto !important;
+  line-height:1.3 !important;
+}
+
+
+/* =========================================================
+   PRODUCTS PAGE — MATCH OTHER PAGE HERO HEADING
+   Home hero remains unchanged.
+   ========================================================= */
+#page-products .page-hero h1{
+  font-size:36px !important;
+  line-height:1.15 !important;
+}
+
+/* =========================================================
+   PRODUCT CARDS — DYNAMIC VARIANT TITLE DIRECTLY BELOW IMAGE
+   Keep the selected capacity/variant visible before the description.
+   ========================================================= */
+.products-v3 .product-card > .product-label{
+  order:1 !important;
+}
+.products-v3 .product-card > .product-media{
+  order:2 !important;
+}
+.products-v3 .product-card > .product-info{
+  display:contents !important;
+}
+.products-v3 .product-card > .product-info .product-identifier{
+  order:3 !important;
+  display:flex !important;
+  align-items:center !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+  margin:0 !important;
+  padding:12px 24px 10px !important;
+  min-height:0 !important;
+  border-top:1px solid #e3e9f0 !important;
+  border-bottom:0 !important;
+  background:#fff8f1 !important;
+  color:#d86b12 !important;
+  font-size:13px !important;
+  line-height:1.35 !important;
+  letter-spacing:.025em !important;
+  text-transform:none !important;
+  font-weight:800 !important;
+}
+.products-v3 .product-card > .product-info > p{
+  order:4 !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+  margin:0 !important;
+  padding:18px 24px 8px !important;
+}
+.products-v3 .product-card > .product-info > .product-usage{
+  order:5 !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+  margin:0 !important;
+  padding:0 24px 24px !important;
+}
+
+@media (max-width:600px){
+  .products-v3 .product-card > .product-info .product-identifier{
+    padding:11px 16px 10px !important;
+    font-size:12px !important;
+  }
+  .products-v3 .product-card > .product-info > p{
+    padding:16px 16px 8px !important;
+  }
+  .products-v3 .product-card > .product-info > .product-usage{
+    padding:0 16px 20px !important;
+  }
+}
+
+/* =========================================================
+   PRODUCTS HERO — MATCH THE COMPACT INTERNAL-PAGE HERO
+   Keep Home unchanged.
+   ========================================================= */
+.products-v3 .products-hero-inner{
+  min-height:0 !important;
+  padding:64px 0 52px !important;
+  align-items:center !important;
+  gap:40px !important;
+}
+.products-v3 .products-kicker{
+  font-size:10px !important;
+  margin-bottom:14px !important;
+}
+.products-v3 .products-hero h1{
+  font-size:36px !important;
+  line-height:1.15 !important;
+  letter-spacing:-.025em !important;
+  max-width:760px !important;
+  margin:0 !important;
+}
+.products-v3 .products-hero p{
+  max-width:600px !important;
+  font-size:16px !important;
+  line-height:1.55 !important;
+  margin:10px 0 0 !important;
+}
+.products-v3 .products-hero-graphic{
+  width:104px !important;
+  height:104px !important;
+  flex:0 0 104px !important;
+}
+.products-v3 .products-hero-graphic svg{
+  width:104px !important;
+  height:104px !important;
+}

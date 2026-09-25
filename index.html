@@ -549,7 +549,9 @@
   .process-quality-gate{margin-top:2px!important;}
 }
 
+
 </style>
+
 <style id="final-client-polish-v2">
 /* =========================================================
    FINAL CLIENT POLISH V2
@@ -736,6 +738,41 @@
 .text-pvr{
   color:#c46713 !important;
   font-weight:800 !important;
+}
+
+/* =========================================================
+   ISO / IAF HEADER — MINIMAL VERSION
+   ========================================================= */
+
+.brand-lockup__iso{
+  display:flex !important;
+  align-items:center !important;
+  gap:4px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:none !important;
+  box-shadow:none !important;
+  opacity:.55 !important;
+  transform:scale(.72) !important;
+  transform-origin:left center !important;
+}
+
+.brand-lockup__iso-seal{
+  width:24px !important;
+  height:20px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  opacity:.8 !important;
+}
+
+.brand-lockup__iso-text{
+  display:none !important;
 }
 </style>
 <style id="final-client-polish-v3">
@@ -1624,6 +1661,120 @@
   }
 }
 </style>
+
+<style id="iso-header-final-fix">
+@media (min-width:901px){
+  .site-header .header-certification--iso{
+    min-width:210px !important;
+    padding:10px 15px !important;
+    background:#f3f7ff !important;
+    border:1px solid #b8cce7 !important;
+    border-left:4px solid #2555b2 !important;
+    border-radius:7px !important;
+    box-shadow:0 3px 10px rgba(37,85,178,.12) !important;
+    box-sizing:border-box !important;
+  }
+  .site-header .header-certification--iso .header-certification__label{
+    display:block !important;
+    font-size:15px !important;
+    font-weight:900 !important;
+    line-height:1.2 !important;
+    color:#0d4da1 !important;
+    text-decoration:underline !important;
+    text-decoration-line:underline !important;
+    text-decoration-thickness:2px !important;
+    text-underline-offset:4px !important;
+  }
+  .site-header .header-certification--iso .header-certification__certified{
+    display:block !important;
+    margin-top:4px !important;
+    font-size:12px !important;
+    font-weight:900 !important;
+    line-height:1.2 !important;
+    letter-spacing:.14em !important;
+    color:#173f78 !important;
+    text-decoration:underline !important;
+    text-decoration-line:underline !important;
+    text-decoration-thickness:2px !important;
+    text-underline-offset:3px !important;
+  }
+  .site-header .header-certification--iso .header-certification__sub{
+    display:block !important;
+    margin-top:4px !important;
+    font-size:10px !important;
+    font-weight:700 !important;
+    line-height:1.2 !important;
+    color:#365579 !important;
+  }
+}
+</style>
+
+<style id="iso-badge-declutter">
+/* The ISO badge had grown into a boxed, underlined, extra-bold callout that
+   outweighed the actual nav links next to it. Dial it back to a quiet
+   three-line label so it reads as a credential, not a competing menu item. */
+@media (min-width:901px){
+  .site-header .header-certification--iso{
+    min-width:0 !important;
+    background:transparent !important;
+    border:none !important;
+    border-left:1px solid #d9e2ec !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    padding:0 0 0 16px !important;
+  }
+  .site-header .header-certification--iso .header-certification__label{
+    font-size:15px !important;
+    font-weight:900 !important;
+    text-decoration:underline !important;
+    text-decoration-thickness:1.5px !important;
+    text-underline-offset:3px !important;
+    color:#0a4d90 !important;
+  }
+  .site-header .header-certification--iso .header-certification__certified{
+    margin-top:3px !important;
+    font-size:11px !important;
+    font-weight:800 !important;
+    letter-spacing:.09em !important;
+    text-decoration:underline !important;
+    text-decoration-thickness:1.5px !important;
+    text-underline-offset:2px !important;
+    color:#2c3e52 !important;
+  }
+  .site-header .header-certification--iso .header-certification__sub{
+    margin-top:3px !important;
+    font-size:9px !important;
+    font-weight:500 !important;
+    text-decoration:none !important;
+    color:#8493a3 !important;
+  }
+}
+</style>
+
+<style id="hero-text-breathing-room">
+/* The hero headline had gone very small (24px) with tight negative letter
+   spacing and cramped line-height in a late homepage.css pass, which read
+   as squeezed/compressed. Give it back size and air. */
+@media (min-width:1001px){
+  .hero--modern h1{
+    font-size:34px !important;
+    line-height:1.28 !important;
+    letter-spacing:-.01em !important;
+    font-weight:600 !important;
+  }
+  .hero--modern h1 em{
+    margin-top:14px !important;
+    font-size:26px !important;
+    line-height:1.25 !important;
+  }
+  .hero--modern p.lead.hero-badge-line{
+    margin-top:14px !important;
+    font-size:15px !important;
+    line-height:1.6 !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
