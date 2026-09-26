@@ -1118,13 +1118,18 @@
   gap:3px !important;
   padding:16px 14px !important;
   border-right:1px solid #e4e9f0 !important;
+  border-left:3px solid #2555b2 !important;
+  box-sizing:border-box !important;
 }
 .cred-fixed__item:last-child{border-right:0 !important;}
+.cred-fixed__item:nth-child(2n){border-left-color:#c97a22 !important;}
 .cred-fixed__item strong{
-  font-size:23px !important;
+  font-size:20px !important;
   font-weight:700 !important;
-  color:#16233c !important;
+  color:#2555b2 !important;
+  white-space:nowrap !important;
 }
+.cred-fixed__item:nth-child(2n) strong{color:#c97a22 !important;}
 .cred-fixed__item span{
   font-size:11.5px !important;
   color:#6b7891 !important;
@@ -1132,8 +1137,13 @@
 }
 .cred-fixed__item .cred-sub{opacity:.7 !important;font-weight:500 !important;}
 @media (max-width:700px){
-  .cred-fixed__item{min-height:76px !important;padding:12px 8px !important;}
-  .cred-fixed__item strong{font-size:18px !important;}
+  .hero--modern + .credbar--fixed .cred-fixed,
+  .cred-fixed{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+  .cred-fixed__item{min-height:80px !important;padding:12px 10px !important;border-bottom:1px solid #e4e9f0 !important;}
+  .cred-fixed__item:nth-child(2n){border-right:0 !important;}
+  .cred-fixed__item:nth-child(3),
+  .cred-fixed__item:nth-child(4){border-bottom:0 !important;}
+  .cred-fixed__item strong{font-size:18px !important;white-space:normal !important;}
   .cred-fixed__item span{font-size:9.5px !important;}
 }
 
@@ -2463,7 +2473,7 @@ Our team of engineers will recommend the appropriate configuration.</h2>
 <div><div class="products-eyebrow">Technical information</div><h2>Need the engineering details?</h2><p>Technical specifications, catalogues and product documentation are available in Downloads.</p></div>
 <a class="product-spec product-spec--light" data-page-link="catalogues" href="#catalogues">Open Downloads <span>→</span></a>
 </section>
-<p class="products-disclaimer">Products shown are for illustrative purposes; actual products may vary based on your requirements and application needs.</p>
+<p class="products-disclaimer">*Products shown are for illustrative purposes; actual products may vary based on your requirements and application needs.</p>
 </section>
 <section class="page" data-page="catalogues" id="page-catalogues" style="display:none;">
 <section class="page-hero">
@@ -2871,7 +2881,7 @@ Our team works with you to recommend the right capacity and configuration for yo
 <figure class="gallery-item-v3">
 <img alt="Voltage and frequency testing" loading="lazy" src="images/plant/voltage-frequency-test.jpg"/>
 <figcaption>
-<strong>Double Voltage Double Frequency Test Equipment (DDVF)</strong>
+<strong>Double Voltage Double Frequency Test Equipment (DVDF)</strong>
 </figcaption>
 </figure>
 
@@ -2879,7 +2889,7 @@ Our team works with you to recommend the right capacity and configuration for yo
 <figure class="gallery-item-v3">
 <img alt="Static voltage stabilizer Installation" loading="lazy" src="images/products/navy Installation.jpeg"/>
 <figcaption>
-<strong>Static Voltage Stabilizer Installation (NAVY SITE)</strong>
+<strong>Static IGBT Voltage Stabilizer Installation (NAVY SITE)</strong>
 </figcaption>
 </figure>
 
@@ -3069,7 +3079,7 @@ Our team works with you to recommend the right capacity and configuration for yo
       <h2>Chime Electronics</h2>
     </div>
     <ul class="pill-list">
-      <li><svg viewbox="0 0 24 24"><path d="M12 22s7-7.4 7-13a7 7 0 10-14 0c0 5.6 7 13 7 13z"></path><circle cx="12" cy="9" r="2.4"></circle></svg><span>E-17, Sector-3, DSIIDC Industrial Area, Delhi-110039</span></li>
+      <li><svg viewbox="0 0 24 24"><path d="M12 22s7-7.4 7-13a7 7 0 10-14 0c0 5.6 7 13 7 13z"></path><circle cx="12" cy="9" r="2.4"></circle></svg><span>E-17, Sector-3, DSIIDC Industrial Area, Bawana, Delhi-110039</span></li>
       <li><svg viewbox="0 0 24 24"><path d="M12 22s7-7.4 7-13a7 7 0 10-14 0c0 5.6 7 13 7 13z"></path><circle cx="12" cy="9" r="2.4"></circle></svg><span>Ph: <a href="tel:+9146536498">+91 46536498</a></span></li>
       <li><svg viewbox="0 0 24 24"><path d="M12 22s7-7.4 7-13a7 7 0 10-14 0c0 5.6 7 13 7 13z"></path><circle cx="12" cy="9" r="2.4"></circle></svg><span>Mobile: <a href="tel:+919818211890">+91 9818211890</a></span></li>
       <li><svg viewbox="0 0 24 24"><path d="M12 22s7-7.4 7-13a7 7 0 10-14 0c0 5.6 7 13 7 13z"></path><circle cx="12" cy="9" r="2.4"></circle></svg><span>Mobile: <a href="tel:+919810818175">+91 9810818175</a></span></li>
@@ -3085,7 +3095,7 @@ Our team works with you to recommend the right capacity and configuration for yo
 </section>
 </section>
 </main>
-<footer class="footer">
+<footer class="footer footer--default">
 <div class="wrap footer-grid footer-grid--three">
   <div class="footer-col footer-col--form">
     <h2>Request a Technical &amp; Commercial Quote</h2>
@@ -3124,7 +3134,7 @@ Our team works with you to recommend the right capacity and configuration for yo
   <div class="footer-col footer-col--contact">
     <h2>Contact Us</h2>
     <p class="co-name-big">Chime Electronics</p>
-    <p class="co-line">E-17, Sector-3,<br/>DSIIDC Industrial Area,<br/>Delhi-110039</p>
+    <p class="co-line">E-17, Sector-3,<br/>DSIIDC Industrial Area,<br/>Bawana,Delhi-110039</p>
     <p class="co-line"><strong>Ph:</strong> <a href="tel:+9146536498">+91 46536498</a></p>
     <p class="co-line"><strong>Mobile:</strong> <a href="tel:+919818211890">+91 9818211890</a></p>
     <p class="co-line"><strong>Mobile:</strong> <a href="tel:+919810818175">+91 9810818175</a></p>
@@ -3152,6 +3162,61 @@ Our team works with you to recommend the right capacity and configuration for yo
 </div>
 <div class="footer-copy"><div class="wrap">
   <p>© <span id="yr"></span> Sinetrac / Chime Electronics. All rights reserved.</p>
+  <p>Manufactured in Delhi | Supplied &amp; Serviced Globally</p>
+</div></div>
+</footer>
+<footer class="footer footer--contact-only" aria-label="Contact Us footer" style="display:none;">
+<div class="wrap footer-grid footer-grid--contact-three">
+  <div class="footer-col footer-col--form">
+    <h2>Request a Technical &amp; Commercial Quote</h2>
+    <form action="https://formsubmit.co/sinetrac@gmail.com" class="footer-form" method="POST">
+      <input name="_subject" type="hidden" value="New Website Price Query"/>
+      <input name="_captcha" type="hidden" value="false"/>
+      <input name="_template" type="hidden" value="table"/>
+      <div class="form-row">
+        <div class="field"><label>Name / Organisation</label><input name="name_organisation" placeholder="e.g. XYZ Engineering Works" required type="text"/></div>
+        <div class="field"><label>City</label><input name="city" placeholder="City" required type="text"/></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>Mobile</label><input name="mobile" placeholder="10-digit mobile number" required type="tel"/></div>
+        <div class="field"><label>Product of Interest</label>
+          <select name="product_of_interest">
+            <option>Static IGBT-Based Voltage Stabilizer</option><option>Servo Voltage Stabilizer</option><option>Automatic Voltage Stabilizer</option>
+            <option>Online UPS</option><option>Battery Charger / Switch Tripping System</option>
+            <option>Three Phase Sequence Corrector</option><option>Street Light Timer</option>
+            <option>Solar Generation Plant</option><option>Isolation Transformer</option>
+            <option>Water Level Indicator</option>
+            <option>Other / Not Listed</option>
+          </select>
+        </div>
+      </div>
+      <div class="field full" style="margin-bottom:18px;"><label>Message</label><textarea name="message" placeholder="Tell us anything else our engineers should know…" rows="4"></textarea></div>
+      <button class="btn btn--copper" type="submit">Send Enquiry</button>
+    </form>
+  </div>
+
+  <div class="footer-col footer-col--contact-merged">
+    <div class="footer-contact-merged">
+      <img alt="Sinetrac" class="footer-contact-merged__logo" src="images/brand/logo.png"/>
+      <div class="footer-contact-merged__text">
+        <h2>Discuss Your Requirement With Our Engineers</h2>
+        <p>Send us your capacity, input voltage range, output requirement and application. We will recommend a suitable configuration.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-col footer-col--certifications">
+    <div class="footer-certifications" aria-label="Quality certifications">
+      <img class="footer-iaf-logo" src="images/brand/iaf-seal.png" alt="IAF Multilateral Recognition Arrangement"/>
+      <div class="footer-iso-badge">
+        <span class="footer-iso-badge__label">ISO 9001:2015</span>
+        <span class="footer-iso-badge__sub">CERTIFIED QUALITY MANAGEMENT</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-copy"><div class="wrap">
+  <p>© <span class="yr-contact"></span> Sinetrac / Chime Electronics. All rights reserved.</p>
   <p>Manufactured in Delhi | Supplied &amp; Serviced Globally</p>
 </div></div>
 </footer>
@@ -3288,6 +3353,130 @@ document.addEventListener('click', function (event) {
     link.addEventListener('click', function () {
       setTimeout(updateFooterText, 80);
     });
+  });
+})();
+</script>
+
+<style id="contact-footer-isolated">
+/* =========================================================
+   CONTACT US FOOTER — ISOLATED VERSION
+   The original footer is untouched. This layout exists only
+   while #page-contact is the visible page.
+   ========================================================= */
+.footer--contact-only .footer-grid--contact-three{
+  display:grid !important;
+  grid-template-columns:minmax(0,1.2fr) minmax(260px,1.15fr) minmax(130px,.55fr) !important;
+  align-items:start !important;
+  gap:36px !important;
+}
+.footer--contact-only .footer-col--contact-merged{
+  min-width:0 !important;
+  padding:0 !important;
+}
+.footer-contact-merged{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  width:100% !important;
+}
+.footer-contact-merged__logo{
+  display:block !important;
+  width:190px !important;
+  max-width:100% !important;
+  height:auto !important;
+  margin:0 0 24px !important;
+  padding:0 !important;
+  border:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+}
+.footer-contact-merged__text{
+  max-width:410px !important;
+}
+.footer-contact-merged__text h2{
+  margin:0 0 10px !important;
+  color:#fff !important;
+  font-size:20px !important;
+  line-height:1.28 !important;
+  font-weight:700 !important;
+}
+.footer-contact-merged__text p{
+  margin:0 !important;
+  color:rgba(255,255,255,.78) !important;
+  font-size:13px !important;
+  line-height:1.7 !important;
+}
+.footer--contact-only .footer-col--certifications{
+  min-width:0 !important;
+  padding-top:3px !important;
+}
+.footer--contact-only .footer-col--certifications .footer-certifications{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  gap:14px !important;
+}
+.footer--contact-only .footer-col--certifications .footer-iaf-logo{
+  width:88px !important;
+  max-width:88px !important;
+}
+.footer--contact-only .footer-col--certifications .footer-iso-badge{
+  width:100% !important;
+  max-width:145px !important;
+  box-sizing:border-box !important;
+}
+@media (max-width:1000px) and (min-width:701px){
+  .footer--contact-only .footer-grid--contact-three{
+    grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) !important;
+  }
+  .footer--contact-only .footer-col--certifications{
+    grid-column:2 !important;
+  }
+}
+@media (max-width:700px){
+  .footer--contact-only .footer-grid--contact-three{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+  }
+  .footer--contact-only .footer-col--certifications{
+    grid-column:auto !important;
+  }
+  .footer-contact-merged__logo{
+    width:190px !important;
+    margin-bottom:20px !important;
+  }
+  .footer-contact-merged__text h2{font-size:18px !important;}
+  .footer-contact-merged__text p{font-size:13px !important;}
+}
+</style>
+<script id="isolated-contact-footer-toggle">
+(function(){
+  function syncContactFooter(){
+    var contactPage=document.getElementById('page-contact');
+    var defaultFooter=document.querySelector('.footer--default');
+    var contactFooter=document.querySelector('.footer--contact-only');
+    if(!contactPage || !defaultFooter || !contactFooter) return;
+
+    var isContactPage=getComputedStyle(contactPage).display !== 'none';
+
+    defaultFooter.style.display=isContactPage ? 'none' : '';
+    contactFooter.style.display=isContactPage ? '' : 'none';
+
+    if(isContactPage){
+      var year=new Date().getFullYear();
+      contactFooter.querySelectorAll('.yr-contact').forEach(function(el){el.textContent=year;});
+    }
+  }
+
+  syncContactFooter();
+
+  var observer=new MutationObserver(syncContactFooter);
+  document.querySelectorAll('.page').forEach(function(page){
+    observer.observe(page,{attributes:true,attributeFilter:['style','class']});
+  });
+
+  document.addEventListener('click',function(){
+    setTimeout(syncContactFooter,80);
   });
 })();
 </script>
